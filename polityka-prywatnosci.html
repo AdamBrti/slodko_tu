@@ -3,31 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Polityka prywatności i pliki cookies — SłodkoTu</title>
-  <meta name="description" content="Polityka prywatności serwisu SłodkoTu: przetwarzanie danych, pliki cookies, mapa OpenStreetMap, czcionki Google, kontakt." />
+  <title>Polityka prywatności — SłodkoTu</title>
+  <meta name="description" content="Kto i jak przetwarza dane w SłodkoTu: kontakt, cele, narzędzia zewnętrzne, Twoje prawa." />
   <meta name="theme-color" content="#fdfbf8" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <a class="skip-link" href="#main">Przejdź do treści</a>
+<body data-i18n-page="privacy">
+  <a class="skip-link" href="#main" data-i18n="skip_to_content">Przejdź do treści</a>
 
   <header class="site-header" id="top">
     <div class="site-header__inner">
-      <a class="brand" href="index.html" aria-label="SłodkoTu — strona główna">
+      <a class="brand" href="index.html" data-i18n-aria="brand_home_aria" aria-label="SłodkoTu — strona główna">
         <img class="brand__logo" src="Logo Słodko Tu.jpg" width="96" height="96" alt="SłodkoTu — logo" decoding="async" />
         <span class="brand__text brand-mark brand-mark--nowrap"><span class="brand-mark__slodko">Słodko</span> <span class="brand__heart" aria-hidden="true">♥</span> <span class="brand-mark__tu">Tu</span></span>
       </a>
-      <nav class="nav" aria-label="Nawigacja główna">
+      <nav class="nav" data-i18n-aria="nav_aria" aria-label="Nawigacja główna">
         <ul class="nav__list">
-          <li><a href="index.html#o-nas">O nas</a></li>
-          <li><a href="index.html#uslugi">Usługi</a></li>
-          <li><a href="cennik.html">Cennik</a></li>
-          <li><a href="index.html#efekty">Galeria</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
-          <li><a href="index.html#kontakt">Kontakt</a></li>
+          <li><a href="index.html#o-nas" data-i18n="nav_about">O nas</a></li>
+          <li><a href="index.html#uslugi" data-i18n="nav_services">Usługi</a></li>
+          <li><a href="cennik.html" data-i18n="nav_pricing">Cennik</a></li>
+          <li><a href="index.html#efekty" data-i18n="nav_gallery">Galeria</a></li>
+          <li><a href="index.html#faq" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="index.html#kontakt" data-i18n="nav_contact">Kontakt</a></li>
         </ul>
       </nav>
-      <a class="btn btn--nav" href="https://wa.me/48910000001?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20um%C3%B3wi%C4%87%20wizyt%C4%99.">Umów wizytę</a>
+      <div class="site-header__tools">
+        <div class="lang-switch" role="group" data-i18n-aria="aria_lang_pick" aria-label="Wybór języka">
+          <button type="button" class="lang-switch__btn is-active" data-lang="pl" lang="pl" aria-pressed="true">PL</button>
+          <button type="button" class="lang-switch__btn" data-lang="en" lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang="de" lang="de" aria-pressed="false">DE</button>
+        </div>
+        <a class="btn btn--nav" data-i18n="nav_book" data-i18n-wa="wa_booking" href="https://wa.me/48910000001?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20um%C3%B3wi%C4%87%20wizyt%C4%99.">Umów wizytę</a>
+      </div>
     </div>
   </header>
 
@@ -35,122 +42,102 @@
     <article class="section section--legal">
       <div class="section__inner legal-page">
         <header class="legal-page__head">
-          <h1 class="legal-page__title">Polityka prywatności i pliki cookies</h1>
-          <p class="legal-page__meta">Obowiązuje od: <time datetime="2026-05-09">9 maja 2026</time> · serwis: strona internetowa <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span></p>
+          <h1 class="legal-page__title" data-i18n="legal_privacy_h1">Polityka prywatności</h1>
+          <p class="legal-page__meta" data-i18n-html="legal_privacy_meta_html">Obowiązuje od <time datetime="2026-05-09">9 maja 2026</time>. Piszemy krótko i po ludzku — jeśli czegoś nie rozumiesz, napisz lub zadzwoń, chętnie wyjaśnimy.</p>
         </header>
 
-        <div class="legal-page__body">
-          <h2>1. Administrator danych</h2>
-          <p>Administratorem Twoich danych osobowych w rozumieniu RODO jest osoba prowadząca działalność gospodarczą pod firmą <strong>SłodkoTu</strong> (beauty studio).</p>
-          <p><strong>Uzupełnij formalnie:</strong> pełna nazwa przedsiębiorstwa, adres siedziby / do korespondencji, NIP oraz wskazany adres e-mail do spraw związanych z ochroną danych osobowych. Na dziś kontakt możliwy jest także pod numerem telefonu widocznym na stronie głównej.</p>
-
-          <h2>2. Zakres niniejszej polityki</h2>
-          <p>Dokument opisuje zasady przetwarzania danych w związku z korzystaniem z naszej strony internetowej (serwisu informacyjnego o studiu oraz możliwości kontaktu). Nie zastępuje dokumentacji medycznej ani regulaminu świadczenia usług w gabinecie — jeśli taki regulamin udostępniasz osobno, linkuj go z stopki strony.</p>
-
-          <h2>3. Jakie dane i skąd</h2>
+        <div class="legal-page__body" data-i18n-legal="privacy">
+          <h2>Kto jest administratorem danych</h2>
+          <p>Administratorem danych osobowych jest <strong>Aleksandra Podlipska</strong>, prowadząca jednoosobową działalność gospodarczą pod marką <strong>SłodkoTu</strong> (beauty studio).</p>
           <ul class="legal-page__list">
-            <li><strong>Dane techniczne przeglądania</strong> — m.in. adres IP, data i czas żądania, typ przeglądarki, informacje o urządzeniu, o ile są rejestrowane przez hosting lub sieć CDN (zależnie od infrastruktury, na której utrzymujesz stronę). <strong>Uzupełnij:</strong> nazwa i dane operatora hostingu.</li>
-            <li><strong>Dane, które podajesz dobrowolnie</strong> — np. treść wiadomości wysłanej do nas przez WhatsApp, telefon lub e-mail (wtedy przetwarzanie odbywa się także według zasad danego komunikatora / operatora).</li>
-            <li><strong>Pliki cookies i podobne technologie</strong> — patrz sekcja 5.</li>
+            <li><strong>E-mail:</strong> <a href="mailto:kontakt@slodkotu.pl">kontakt@slodkotu.pl</a> (podmień na właściwy adres skrzynki, jeśli jeszcze nie działa)</li>
+            <li><strong>Telefon / WhatsApp:</strong> numery podane w sekcji <a href="index.html#kontakt">Kontakt</a> na stronie głównej</li>
+            <li><strong>NIP:</strong> 8581876599 · <strong>REGON:</strong> 388954285</li>
+            <li><strong>Adres korespondencyjny:</strong> ul. Pomorska 7, 74-100 Gryfino</li>
+            <li><strong>Adres wpisany do CEIDG:</strong> ul. Jarosława Iwaszkiewicza 20, 70-786 Szczecin</li>
           </ul>
 
-          <h2>4. Cele i podstawy prawne przetwarzania</h2>
+          <h2>Jakie dane możemy przetwarzać</h2>
+          <p>W praktyce mogą to być m.in.:</p>
           <ul class="legal-page__list">
-            <li><strong>Udostępnienie strony i zapewnienie bezpieczeństwa IT</strong> — art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes administratora: prowadzenie serwisu, ochrona przed nadużyciami).</li>
-            <li><strong>Kontakt w sprawie wizyty lub pytań</strong> — art. 6 ust. 1 lit. b RODO (działania przed zawarciem umowy / umowa) lub lit. f (kontakt inicjowany przez Ciebie), w zależności od sytuacji.</li>
-            <li><strong>Marketing bez zgody (np. odpowiedź na zapytanie)</strong> — co do zasady w ramach kontaktu; newsletter tylko przy osobnej zgodzie.</li>
-            <li><strong>Osadzona mapa i czcionki z zewnętrznych serwerów</strong> — po wyrażeniu zgody: art. 6 ust. 1 lit. a RODO; bez zgody te elementy nie są wczytywane z serwerów podmiotów trzecich (patrz banner cookies).</li>
-            <li><strong>Pamięć wyboru cookies</strong> — art. 6 ust. 1 lit. a RODO (zgoda), przechowywana lokalnie w przeglądarce.</li>
+            <li><strong>imię</strong> (np. przy zapisie na wizytę lub w wiadomości),</li>
+            <li><strong>numer telefonu</strong>,</li>
+            <li><strong>adres e-mail</strong>,</li>
+            <li><strong>treść wiadomości</strong> (WhatsApp, SMS, e-mail),</li>
+            <li><strong>informacje związane z rezerwacją</strong> — termin, zakres usługi, ewentualne ustalenia,</li>
+            <li><strong>dane techniczne</strong> związane z wejściem na stronę (np. logi u operatora hostingu),</li>
+            <li><strong>pliki cookies i zapis w przeglądarce</strong> — opisane osobno w <a href="polityka-cookies.html">polityce cookies</a>.</li>
           </ul>
 
-          <h2>5. Pliki cookies i localStorage</h2>
-          <p>Stosujemy niewielki zapis w przeglądarce (<strong>localStorage</strong>) pod kluczem technicznym <code>slodkotu_cookie_prefs</code>, aby zapamiętać Twój wybór: <strong>tylko niezbędne</strong> albo <strong>akceptacja</strong> osadzeń (mapa, czcionki). Nie jest to plik cookie HTTP, ale pełni podobną funkcję informacyjną — informujemy o tym zgodnie z wymogami przejrzystości.</p>
-          <p>Jeśli w przyszłości dodasz analitykę (np. Google Analytics) lub piksele reklamowe, koniecznie zaktualizuj tę tabelę i mechanizm zgody.</p>
-          <div class="legal-table-wrap" role="region" aria-label="Tabela plików cookies i podobnych">
-            <table class="legal-table">
-              <thead>
-                <tr>
-                  <th scope="col">Nazwa / zakres</th>
-                  <th scope="col">Cel</th>
-                  <th scope="col">Okres</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>slodkotu_cookie_prefs</code> (localStorage)</td>
-                  <td>Zapamiętanie decyzji w banerze cookies</td>
-                  <td>Do czasu usunięcia danych w przeglądarce lub zmiany ustawień</td>
-                </tr>
-                <tr>
-                  <td>Żądania do <strong>fonts.googleapis.com</strong> / <strong>fonts.gstatic.com</strong> (Google)</td>
-                  <td>Wczytanie czcionek wyświetlanych na stronie — po wyborze „Akceptuję”</td>
-                  <td>Zgodnie z polityką Google; sesyjne / trwałe — zależnie od konfiguracji Google</td>
-                </tr>
-                <tr>
-                  <td>Żądania do <strong>openstreetmap.org</strong> (iframe mapy)</td>
-                  <td>Wyświetlenie mapy okolicy studia — po wyborze „Akceptuję”</td>
-                  <td>Zgodnie z polityką OpenStreetMap Foundation / operatorów OSM</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p>Źródła: <a href="https://policies.google.com/privacy?hl=pl" rel="noopener noreferrer">Polityka prywatności Google</a>, informacje o <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" rel="noopener noreferrer">prywatności OpenStreetMap Foundation</a>.</p>
+          <h2>Po co nam te dane</h2>
+          <ul class="legal-page__list">
+            <li>żeby <strong>odpowiedzieć</strong> na kontakt i <strong>umówić lub potwierdzić wizytę</strong>,</li>
+            <li>żeby <strong>świadczyć usługę</strong> zgodnie z ustaleniami,</li>
+            <li>żeby w razie potrzeby <strong>informować o własnych usługach</strong> w granicach rozsądku (np. przypomnienie wizyty) — nie wysyłamy masowych newsletterów bez osobnej zgody,</li>
+            <li>żeby strona <strong>działała bezpiecznie</strong> (hosting, SSL).</li>
+          </ul>
+          <p><strong>Statystyki strony:</strong> na dzień dzisiejszy <strong>nie korzystamy</strong> z Google Analytics ani innego narzędzia analitycznego śledzącego użytkowników na tej stronie. Gdyby się to zmieniło — zaktualizujemy ten dokument i poinformujemy o zgodzie w banerze cookies.</p>
 
-          <h2>6. Odbiorcy danych</h2>
-          <p>Dane mogą być przekazywane podmiotom wspierającym nas technicznie — przede wszystkim <strong>dostawcy hostingu</strong> (uzupełnij nazwę) oraz, po Twojej zgodzie, <strong>Google (czcionki)</strong> i <strong>operatorom związanym z mapą OSM</strong> w zakresie niezbędnym do wyświetlenia treści osadzonej.</p>
-          <p>Linki zewnętrzne (np. WhatsApp, Instagram) prowadzą do serwisów tych podmiotów; tam obowiązują odrębne polityki prywatności.</p>
+          <h2>Podstawy prawne (w skrócie)</h2>
+          <p>Opieramy się na przepisach RODO, najczęściej na: <strong>wykonaniu umowy lub działaniach przed jej zawarciem</strong> (umówienie wizyty), <strong>Twojej zgodzie</strong> (np. cookies poza niezbędnym minimum, w przyszłości analityka), <strong>naszym uzasadnionym interesie</strong> (np. bezpieczeństwo strony, prosta korespondencja po kontakcie od Ciebie).</p>
 
-          <h2>7. Okres przechowywania</h2>
-          <p>Logi serwera — zgodnie z ustawieniami hostingu (zwykle od kilku dni do kilku tygodni), o ile hosting je zbiera. Wiadomości kontaktowe — przez czas potrzebny do obsługi sprawy, a następnie przez okres wymagany przepisami (np. podatkowymi, rachunkowymi), jeśli ma to zastosowanie.</p>
+          <h2>Narzędzia i serwisy zewnętrzne</h2>
+          <p><strong>Na tej stronie korzystamy lub możemy kierować do:</strong></p>
+          <ul class="legal-page__list">
+            <li><strong>WhatsApp</strong> — gdy wybierzesz link lub numer; obowiązują zasady Meta/WhatsApp,</li>
+            <li><strong>Instagram</strong> — zwykły link do profilu (bez osadzonego „widgetu” na stronie),</li>
+            <li><strong>Google Fonts</strong> oraz <strong>mapa OpenStreetMap</strong> — tylko po wyrażeniu zgody w banerze; wtedy część danych technicznych może trafić do Google lub operatorów OSM,</li>
+            <li><strong>hosting</strong> strony www — podmiot u którego stoi serwer (szczegóły na żądanie).</li>
+          </ul>
+          <p><strong>Czego na tej stronie nie stosujemy w chwili obecnej:</strong> Google Analytics 4, Google Tag Manager, Meta Pixel, osadzonego Instagramu, Calendly, Booksy. Jeśli coś z tego dodamy — najpierw zaktualizujemy dokumenty i — gdzie trzeba — zgody.</p>
 
-          <h2>8. Twoje prawa</h2>
-          <p>Przysługuje Ci m.in.: dostęp do danych, sprostowanie, usunięcie, ograniczenie przetwarzania, sprzeciw wobec przetwarzania na podstawie art. 6 ust. 1 lit. f RODO, przenoszenie danych (w zakresie przewidzianym prawem), cofnięcie zgody w dowolnym momencie (bez wpływu na zgodność z prawem przetwarzania przed cofnięciem). Możesz wnieść skargę do Prezesa Urzędu Ochrony Danych Osobowych (PUODO).</p>
+          <h2>Hosting i bezpieczeństwo</h2>
+          <p>Strona korzysta z połączenia szyfrowanego (<strong>HTTPS / SSL</strong>) oraz hostingu zapewniającego standardową ochronę danych przesyłanych przez serwer.</p>
 
-          <h2>9. Przekazywanie poza EOG</h2>
-          <p>Korzystanie z usług Google może wiązać się z przekazaniem danych do państw spoza Europejskiego Obszaru Gospodarczego — Google stosuje mechanizmy zgodności (m.in. klauzule umowne). Szczegóły: polityka prywatności Google.</p>
+          <h2>Zdjęcia i wizerunek</h2>
+          <p>Jeśli kiedykolwiek będziemy chciały opublikować <strong>Twoje zdjęcie</strong> (np. portfolio, Instagram, reklama), zrobimy to wyłącznie po <strong>wyraźnej, dobrowolnej zgodie</strong> — najlepiej na piśmie (krótki formularz/PDF) lub innym ustalonym sposobem. Bez zgody nie publikujemy wizerunku do celów marketingowych.</p>
 
-          <h2>10. Zmiany polityki</h2>
-          <p>Możemy zaktualizować niniejszy dokument, gdy zmieni się serwis, przepisy lub sposób przetwarzania danych. Aktualna wersja będzie zawsze pod tym adresem URL; data obowiązywania u góry dokumentu zostanie zmieniona.</p>
+          <h2>Twoje prawa</h2>
+          <p>Masz prawo m.in. do <strong>dostępu</strong> do swoich danych, ich <strong>poprawienia</strong>, <strong>usunięcia</strong> lub <strong>ograniczenia</strong> przetwarzania, gdzie przepisy na to pozwalają. Możesz też <strong>cofnąć zgodę</strong> (jeśli przetwarzanie na niej opierało się) oraz wnieść skargę do <strong>PUODO</strong>. W sprawach danych osobowych napisz na e-mail administratora lub skorzystaj z kontaktu jak przy rezerwacji.</p>
 
-          <h2>11. Zmiana ustawień cookies</h2>
-          <p>Możesz wycofać zgodę lub ustawić ponownie wybór, czyszcząc dane witryny w przeglądarce lub korzystając z przycisku poniżej (powrót na stronę główną z pustym wyborem i ponownym banerem).</p>
-          <p><button type="button" class="btn btn--outline" id="cookie-prefs-reset">Zmień ustawienia plików cookies</button></p>
+          <h2>Pliki cookies</h2>
+          <p>Jak działają cookies i zapis ustawień w przeglądarce — w osobnym, krótkim dokumencie: <a href="polityka-cookies.html">Polityka cookies</a>.</p>
+          <p><button type="button" class="btn btn--outline" id="cookie-prefs-reset">Zmień ustawienia cookies</button></p>
+
+          <h2>Zmiany</h2>
+          <p>Gdy zmienimy sposób przetwarzania danych lub narzędzia na stronie, zaktualizujemy ten tekst i datę u góry.</p>
         </div>
       </div>
     </article>
   </main>
 
-  <div id="cookie-consent-banner" class="cookie-consent" hidden role="region" aria-label="Pliki cookies i osadzenia zewnętrzne">
+  <div id="cookie-consent-banner" class="cookie-consent" hidden role="region" data-i18n-aria="cookie_banner_aria" aria-label="Pliki cookies i osadzenia zewnętrzne">
     <div class="cookie-consent__inner">
-      <p class="cookie-consent__text">Używamy zapisu w przeglądarce, by zapamiętać Twój wybór. Czcionki z Google oraz mapa OpenStreetMap wczytują się dopiero po kliknięciu <strong>Akceptuję</strong> — wtedy Twój adres IP może zostać przekazany tym dostawcom. <a href="polityka-prywatnosci.html">Pełna polityka prywatności</a>.</p>
+      <p class="cookie-consent__text" data-i18n-html="cookie_banner_html_short">Czcionki z Google i mapa OSM ładują się po <strong>Akceptuję</strong>. Szczegóły: <a href="polityka-cookies.html">polityka cookies</a> i <a href="polityka-prywatnosci.html">prywatność</a>.</p>
       <div class="cookie-consent__actions">
-        <button type="button" class="cookie-consent__btn cookie-consent__btn--ghost" data-cookie-essential>Tylko niezbędne</button>
-        <button type="button" class="cookie-consent__btn cookie-consent__btn--solid" data-cookie-accept>Akceptuję</button>
+        <button type="button" class="cookie-consent__btn cookie-consent__btn--ghost" data-cookie-essential data-i18n="cookie_essential">Tylko niezbędne</button>
+        <button type="button" class="cookie-consent__btn cookie-consent__btn--solid" data-cookie-accept data-i18n="cookie_accept">Akceptuję</button>
       </div>
     </div>
   </div>
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <p class="site-footer__row"><strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin Zdroje · <a href="index.html">Strona główna</a> · <a href="cennik.html">Cennik</a></p>
+      <p class="site-footer__row" data-i18n-html="footer_sub_html"><strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin Zdroje · <a href="index.html">Strona główna</a> · <a href="cennik.html">Cennik</a></p>
       <p class="site-footer__row site-footer__links">
-        <a href="polityka-prywatnosci.html" aria-current="page">Polityka prywatności</a>
+        <a href="polityka-prywatnosci.html" aria-current="page" data-i18n="footer_privacy">Prywatność</a>
         <span class="site-footer__sep">·</span>
-        <a href="#">Regulamin</a>
+        <a href="polityka-cookies.html" data-i18n="footer_cookies">Cookies</a>
+        <span class="site-footer__sep">·</span>
+        <a href="regulamin.html" data-i18n="footer_terms">Regulamin</a>
       </p>
       <p class="site-footer__legal">© <span id="year"></span> <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span></p>
     </div>
   </footer>
 
   <script src="js/cookie-consent.js" defer></script>
+  <script src="js/legal-i18n.js" defer></script>
+  <script src="js/i18n.js" defer></script>
   <script src="js/main.js" defer></script>
-  <script>
-    document.getElementById("cookie-prefs-reset").addEventListener("click", function () {
-      try {
-        localStorage.removeItem("slodkotu_cookie_prefs");
-      } catch (e) {}
-      window.location.href = "index.html";
-    });
-  </script>
 </body>
 </html>

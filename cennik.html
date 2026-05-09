@@ -8,77 +8,84 @@
   <meta name="theme-color" content="#f9f6f2" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <a class="skip-link" href="#main">Przejdź do treści</a>
+<body data-i18n-page="cennik">
+  <a class="skip-link" href="#main" data-i18n="skip_to_content">Przejdź do treści</a>
 
   <header class="site-header" id="top">
     <div class="site-header__inner">
-      <a class="brand" href="index.html" aria-label="SłodkoTu — strona główna">
+      <a class="brand" href="index.html" data-i18n-aria="brand_home_aria" aria-label="SłodkoTu — strona główna">
         <img class="brand__logo" src="Logo Słodko Tu.jpg" width="96" height="96" alt="SłodkoTu — logo" decoding="async" />
         <span class="brand__text brand-mark brand-mark--nowrap"><span class="brand-mark__slodko">Słodko</span> <span class="brand__heart" aria-hidden="true">♥</span> <span class="brand-mark__tu">Tu</span></span>
       </a>
-      <nav class="nav" aria-label="Nawigacja główna">
+      <nav class="nav" data-i18n-aria="nav_aria" aria-label="Nawigacja główna">
         <ul class="nav__list">
-          <li><a href="index.html#o-nas">O nas</a></li>
-          <li><a href="index.html#uslugi">Usługi</a></li>
-          <li><a href="cennik.html" aria-current="page">Cennik</a></li>
-          <li><a href="index.html#efekty">Galeria</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
-          <li><a href="index.html#kontakt">Kontakt</a></li>
+          <li><a href="index.html#o-nas" data-i18n="nav_about">O nas</a></li>
+          <li><a href="index.html#uslugi" data-i18n="nav_services">Usługi</a></li>
+          <li><a href="cennik.html" aria-current="page" data-i18n="nav_pricing">Cennik</a></li>
+          <li><a href="index.html#efekty" data-i18n="nav_gallery">Galeria</a></li>
+          <li><a href="index.html#faq" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="index.html#kontakt" data-i18n="nav_contact">Kontakt</a></li>
         </ul>
       </nav>
-      <a class="btn btn--nav" href="https://wa.me/48910000001?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20um%C3%B3wi%C4%87%20wizyt%C4%99.">Umów wizytę</a>
+      <div class="site-header__tools">
+        <div class="lang-switch" role="group" data-i18n-aria="aria_lang_pick" aria-label="Wybór języka">
+          <button type="button" class="lang-switch__btn is-active" data-lang="pl" lang="pl" aria-pressed="true">PL</button>
+          <button type="button" class="lang-switch__btn" data-lang="en" lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang="de" lang="de" aria-pressed="false">DE</button>
+        </div>
+        <a class="btn btn--nav" data-i18n="nav_book" data-i18n-wa="wa_booking" href="https://wa.me/48910000001?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20um%C3%B3wi%C4%87%20wizyt%C4%99.">Umów wizytę</a>
+      </div>
     </div>
   </header>
 
-  <aside class="contact-rail" aria-label="Szybki kontakt">
-    <a class="contact-rail__btn contact-rail__btn--wa" href="https://wa.me/48910000001" rel="noopener noreferrer" aria-label="WhatsApp">
+  <aside class="contact-rail" data-i18n-aria="aria_quick_contact" aria-label="Szybki kontakt">
+    <a class="contact-rail__btn contact-rail__btn--wa" href="https://wa.me/48910000001" rel="noopener noreferrer" data-i18n-aria="aria_wa" aria-label="WhatsApp">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
-    <a class="contact-rail__btn contact-rail__btn--phone" href="tel:+48910000001" aria-label="Zadzwoń">
+    <a class="contact-rail__btn contact-rail__btn--phone" href="tel:+48910000001" data-i18n-aria="aria_phone" aria-label="Zadzwoń">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     </a>
-    <a class="contact-rail__btn contact-rail__btn--ig" href="https://instagram.com/" rel="noopener noreferrer" aria-label="Instagram">
+    <a class="contact-rail__btn contact-rail__btn--ig" href="https://instagram.com/" rel="noopener noreferrer" data-i18n-aria="aria_ig" aria-label="Instagram">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
     </a>
   </aside>
 
-  <main id="main">
+  <main id="main" class="page--cennik">
     <header class="section cennik-page-head" aria-labelledby="cennik-heading">
       <div class="section__inner">
-        <p class="cennik-back"><a href="index.html#uslugi">← Wróć do usług</a></p>
-        <h1 id="cennik-heading" class="section__title">Cennik</h1>
-        <p class="section__subtitle">Najpierw w kilku zdaniach czym są zabiegi — poniżej ramki z orientacyjnymi cenami i wariantami. Końcową kwotę ustalimy po konsultacji i doborze stref.</p>
+        <p class="cennik-back"><a href="index.html#uslugi" data-i18n="cennik_back">← Wróć do usług</a></p>
+        <h1 id="cennik-heading" class="section__title" data-i18n="cennik_h1">Cennik</h1>
+        <p class="section__subtitle" data-i18n="cennik_subtitle">Najpierw w kilku zdaniach czym są zabiegi — poniżej ramki z orientacyjnymi cenami i wariantami. Końcową kwotę ustalimy po konsultacji i doborze stref.</p>
       </div>
     </header>
 
     <section class="section section--about" id="depilacja-pasta-cukrowa" aria-labelledby="cennik-sugar-heading">
       <div class="section__inner">
-        <h2 id="cennik-sugar-heading" class="section__title">Depilacja pastą cukrową</h2>
+        <h2 id="cennik-sugar-heading" class="section__title" data-i18n="cennik_sugar_h2">Depilacja pastą cukrową</h2>
         <div class="cennik-intro">
-          <p>Depilacja cukrowa polega na usuwaniu włosów przy użyciu pasty na bazie cukru, wody i soku cytrynowego — bez żywicy ani chemii typowej dla wosku. Pasta obejmuje głównie włos, a nie skórę, dlatego zabieg bywa mniej bolesny i łagodniejszy dla osób z cerą wrażliwą.</p>
-          <p>Pasta pracuje w temperaturze zbliżonej do ciała, nie „nadpalając” skóry. Można nią usuwać włosy krótsze niż przy wosku (nawet ok. 3–5 mm, zależnie od strefy). Efekt to gładkość na kilka tygodni oraz wolniejsze odrastanie włosów przy regularnych wizytach.</p>
+          <p data-i18n="cennik_sugar_p1">Depilacja cukrowa polega na usuwaniu włosów przy użyciu pasty na bazie cukru, wody i soku cytrynowego — bez żywicy ani chemii typowej dla wosku. Pasta obejmuje głównie włos, a nie skórę, dlatego zabieg bywa mniej bolesny i łagodniejszy dla osób z cerą wrażliwą.</p>
+          <p data-i18n="cennik_sugar_p2">Pasta pracuje w temperaturze zbliżonej do ciała, nie „nadpalając” skóry. Można nią usuwać włosy krótsze niż przy wosku (nawet ok. 3–5 mm, zależnie od strefy). Efekt to gładkość na kilka tygodni oraz wolniejsze odrastanie włosów przy regularnych wizytach.</p>
         </div>
 
         <div class="price-cards">
           <article class="price-card">
-            <h3 class="price-card__label">Wersja podstawowa — pojedyncze strefy</h3>
-            <p class="price-card__hint">Orientacyjnie za jedną strefę</p>
+            <h3 class="price-card__label" data-i18n="price_sugar_basic_label">Wersja podstawowa — pojedyncze strefy</h3>
+            <p class="price-card__hint" data-i18n="price_sugar_basic_hint">Orientacyjnie za jedną strefę</p>
             <ul class="price-card__rows">
-              <li><span class="price-card__name">Pachy</span> <span class="price-card__amount">od … zł</span></li>
-              <li><span class="price-card__name">Łydki / uda (jedna partia)</span> <span class="price-card__amount">od … zł</span></li>
-              <li><span class="price-card__name">Bikini klasyczne</span> <span class="price-card__amount">od … zł</span></li>
-              <li><span class="price-card__name">Bikini głębokie</span> <span class="price-card__amount">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_underarms">Pachy</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_legs">Łydki / uda (jedna partia)</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_bikini_cl">Bikini klasyczne</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_bikini_deep">Bikini głębokie</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
             </ul>
           </article>
           <article class="price-card">
-            <h3 class="price-card__label">Wersja rozszerzona — pakiety</h3>
-            <p class="price-card__hint">Łączenie kilku stref w jednej wizycie</p>
+            <h3 class="price-card__label" data-i18n="price_sugar_pack_label">Wersja rozszerzona — pakiety</h3>
+            <p class="price-card__hint" data-i18n="price_sugar_pack_hint">Łączenie kilku stref w jednej wizycie</p>
             <ul class="price-card__rows">
-              <li><span class="price-card__name">Nogi całość</span> <span class="price-card__amount">od … zł</span></li>
-              <li><span class="price-card__name">Nogi + bikini klasyczne</span> <span class="price-card__amount">od … zł</span></li>
-              <li><span class="price-card__name">Nogi + bikini głębokie</span> <span class="price-card__amount">od … zł</span></li>
-              <li><span class="price-card__name">Pakiet „od szyi w dół” (wg ustalenia)</span> <span class="price-card__amount">wycena indyw.</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_legs_full">Nogi całość</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_combo1">Nogi + bikini klasyczne</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_combo2">Nogi + bikini głębokie</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_pack_neck_down">Pakiet „od szyi w dół” (wg ustalenia)</span> <span class="price-card__amount" data-i18n="price_quote_ind">wycena indyw.</span></li>
             </ul>
           </article>
         </div>
@@ -87,38 +94,38 @@
 
     <section class="section" id="opalanie-natryskowe" aria-labelledby="cennik-tan-heading">
       <div class="section__inner">
-        <h2 id="cennik-tan-heading" class="section__title">Opalanie natryskowe</h2>
+        <h2 id="cennik-tan-heading" class="section__title" data-i18n="cennik_tan_h2">Opalanie natryskowe</h2>
         <div class="cennik-intro">
-          <p>Opalanie natryskowe (spray tan) to aplikacja kosmetyku z DHA na skórę — bez promieni UV. DHA reaguje z warstwą rogową naskórka i daje efekt opalenizny, który stopniowo się utrwala (zwykle w ciągu kilku–kilkunastu godzin po wizycie).</p>
-          <p>Można dobrać odcień od bardzo delikatnego po wyraźniejszy „glow”. Zabieg często wybierany przed ślubem, sesją lub wakacjami. Po aplikacji ważne są wskazówki dotyczące pielęgnacji i pierwszego prysznica — dostaniesz je przy wizycie.</p>
+          <p data-i18n="cennik_tan_p1">Opalanie natryskowe (spray tan) to aplikacja kosmetyku z DHA na skórę — bez promieni UV. DHA reaguje z warstwą rogową naskórka i daje efekt opalenizny, który stopniowo się utrwala (zwykle w ciągu kilku–kilkunastu godzin po wizycie).</p>
+          <p data-i18n="cennik_tan_p2">Można dobrać odcień od bardzo delikatnego po wyraźniejszy „glow”. Zabieg często wybierany przed ślubem, sesją lub wakacjami. Po aplikacji ważne są wskazówki dotyczące pielęgnacji i pierwszego prysznica — dostaniesz je przy wizycie.</p>
         </div>
 
         <div class="price-cards">
           <article class="price-card">
-            <h3 class="price-card__label">Wersja podstawowa — ciało</h3>
-            <p class="price-card__hint">Jeden poziom kolorytu do wyboru</p>
+            <h3 class="price-card__label" data-i18n="price_tan_body_label">Wersja podstawowa — ciało</h3>
+            <p class="price-card__hint" data-i18n="price_tan_body_hint">Jeden poziom kolorytu do wyboru</p>
             <ul class="price-card__rows">
-              <li><span class="price-card__name">Aplikacja: tors + ramiona</span> <span class="price-card__amount">od … zł</span></li>
-              <li><span class="price-card__name">Aplikacja: całe ciało (bez twarzy)</span> <span class="price-card__amount">od … zł</span></li>
-              <li><span class="price-card__name">Aplikacja: całe ciało + twarz</span> <span class="price-card__amount">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_torso">Aplikacja: tors + ramiona</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_body_no_face">Aplikacja: całe ciało (bez twarzy)</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_body_face">Aplikacja: całe ciało + twarz</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
             </ul>
           </article>
           <article class="price-card">
-            <h3 class="price-card__label">Wersja rozszerzona i dodatki</h3>
-            <p class="price-card__hint">Mocniejszy odcień lub strefy dodatkowe</p>
+            <h3 class="price-card__label" data-i18n="price_tan_extra_label">Wersja rozszerzona i dodatki</h3>
+            <p class="price-card__hint" data-i18n="price_tan_extra_hint">Mocniejszy odcień lub strefy dodatkowe</p>
             <ul class="price-card__rows">
-              <li><span class="price-card__name">Ciemniejszy / intensywniejszy ton</span> <span class="price-card__amount">dopłata … zł</span></li>
-              <li><span class="price-card__name">Tylko nogi lub tylko ręce</span> <span class="price-card__amount">od … zł</span></li>
-              <li><span class="price-card__name">Kontur / rozświetlenie (wg oferty studia)</span> <span class="price-card__amount">od … zł</span></li>
-              <li><span class="price-card__name">Próba przed ważnym wydarzeniem (osobna wizyta)</span> <span class="price-card__amount">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_tone_extra">Ciemniejszy / intensywniejszy ton</span> <span class="price-card__amount" data-i18n="price_extra">dopłata … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_legs_only">Tylko nogi lub tylko ręce</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_contour">Kontur / rozświetlenie (wg oferty studia)</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
+              <li><span class="price-card__name" data-i18n="price_row_trial">Próba przed ważnym wydarzeniem (osobna wizyta)</span> <span class="price-card__amount" data-i18n="price_from">od … zł</span></li>
             </ul>
           </article>
         </div>
 
-        <p class="cennik-note">Kwoty „od … zł” i dopłaty są przykładowe — <strong>uzupełnij je w pliku</strong> zgodnie z aktualnym cennikiem <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. Przy rezerwacji przez WhatsApp możesz podać strefy — wstępnie wycenimy wizytę.</p>
+        <p class="cennik-note" data-i18n-html="cennik_note_html">Kwoty „od … zł” i dopłaty mają charakter orientacyjny — o <strong>aktualny cennik</strong> zapytaj przy rezerwacji przez WhatsApp lub telefon. Przy zapisie możesz podać strefy — wstępnie wycenimy wizytę.</p>
         <p class="cennik-actions">
-          <a class="btn btn--solid" href="https://wa.me/48910000001?text=Dzie%C5%84%20dobry%2C%20pytam%20o%20cennik%20i%20termin.">Umów przez WhatsApp</a>
-          <a class="btn btn--outline" href="index.html#kontakt">Kontakt</a>
+          <a class="btn btn--solid" data-i18n="hero_cta_wa" data-i18n-wa="wa_cennik" href="https://wa.me/48910000001?text=Dzie%C5%84%20dobry%2C%20pytam%20o%20cennik%20i%20termin.">Umów przez WhatsApp</a>
+          <a class="btn btn--outline" href="index.html#kontakt" data-i18n="nav_contact">Kontakt</a>
         </p>
       </div>
     </section>
@@ -126,36 +133,40 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <p class="site-footer__row"><strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin Zdroje · <a href="cennik.html">Cennik</a></p>
+      <p class="site-footer__row" data-i18n-html="footer_cennik_html"><strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin Zdroje · <a href="cennik.html">Cennik</a></p>
       <p class="site-footer__row site-footer__links">
-        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="polityka-prywatnosci.html" data-i18n="footer_privacy">Prywatność</a>
         <span class="site-footer__sep">·</span>
-        <a href="#">Regulamin</a>
+        <a href="polityka-cookies.html" data-i18n="footer_cookies">Cookies</a>
+        <span class="site-footer__sep">·</span>
+        <a href="regulamin.html" data-i18n="footer_terms">Regulamin</a>
       </p>
       <p class="site-footer__legal">© <span id="year"></span> <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span></p>
     </div>
   </footer>
 
-  <div id="cookie-consent-banner" class="cookie-consent" hidden role="region" aria-label="Pliki cookies i osadzenia zewnętrzne">
+  <div id="cookie-consent-banner" class="cookie-consent" hidden role="region" data-i18n-aria="cookie_banner_aria" aria-label="Pliki cookies i osadzenia zewnętrzne">
     <div class="cookie-consent__inner">
-      <p class="cookie-consent__text">
+      <p class="cookie-consent__text" data-i18n-html="cookie_banner_html_cennik">
         Czcionki z Google ładują się dopiero po wyborze <strong>Akceptuję</strong>. <strong>Tylko niezbędne</strong> oznacza wyświetlanie strony z czcionkami systemowymi.
-        <a href="polityka-prywatnosci.html">Polityka prywatności i cookies</a>.
+        <a href="polityka-cookies.html">Cookies</a> · <a href="polityka-prywatnosci.html">Prywatność</a>.
       </p>
       <div class="cookie-consent__actions">
-        <button type="button" class="cookie-consent__btn cookie-consent__btn--ghost" data-cookie-essential>Tylko niezbędne</button>
-        <button type="button" class="cookie-consent__btn cookie-consent__btn--solid" data-cookie-accept>Akceptuję</button>
+        <button type="button" class="cookie-consent__btn cookie-consent__btn--ghost" data-cookie-essential data-i18n="cookie_essential">Tylko niezbędne</button>
+        <button type="button" class="cookie-consent__btn cookie-consent__btn--solid" data-cookie-accept data-i18n="cookie_accept">Akceptuję</button>
       </div>
     </div>
   </div>
 
-  <div class="float-dock" role="navigation" aria-label="Szybki kontakt">
-    <a class="float-dock__btn float-dock__btn--wa" href="https://wa.me/48910000001" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-    <a class="float-dock__btn float-dock__btn--phone" href="tel:+48910000001" aria-label="Telefon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-    <a class="float-dock__btn float-dock__btn--ig" href="https://instagram.com/" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+  <div class="float-dock" role="navigation" data-i18n-aria="aria_float_contact" aria-label="Szybki kontakt">
+    <a class="float-dock__btn float-dock__btn--wa" href="https://wa.me/48910000001" data-i18n-aria="aria_wa" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+    <a class="float-dock__btn float-dock__btn--phone" href="tel:+48910000001" data-i18n-aria="aria_phone" aria-label="Telefon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+    <a class="float-dock__btn float-dock__btn--ig" href="https://instagram.com/" data-i18n-aria="aria_ig" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
   </div>
 
   <script src="js/cookie-consent.js" defer></script>
+  <script src="js/legal-i18n.js" defer></script>
+  <script src="js/i18n.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
