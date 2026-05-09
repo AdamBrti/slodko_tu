@@ -1,0 +1,4 @@
+# Plik tylko po to, żeby wymusić commit/push i uruchomić CI (Cloudflare Pages).
+# Możesz go usunąć albo zmienić treść przy kolejnym ręcznym triggerze.
+
+2026-05-09
