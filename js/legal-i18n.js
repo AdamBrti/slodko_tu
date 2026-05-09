@@ -160,6 +160,7 @@
     "<p>The client <strong>must inform us</strong> about contraindications and circumstances affecting the treatment (e.g. pregnancy, dermatological therapy). We are not liable for consequences of withholding important information.</p>" +
     "<h2>6. Payments, deposits, vouchers</h2>" +
     "<p>If you introduce <strong>prepayments, vouchers or deposits</strong> — add the rules here (validity, refund, cancellation). For now, align this section with how you actually run the studio.</p>" +
+    "<p>Guide prices on the <strong>German-language version</strong> of the site may be higher than on the Polish version — they reflect typical <strong>EU / German market brackets</strong> and include an allowance for <strong>currency conversion and related settlement costs</strong> for guests paying from euro-area banking. <strong>The service is invoiced and paid in Polish zloty (PLN)</strong> at the price agreed individually before the visit (e.g. WhatsApp, phone); website brackets do not replace that quote.</p>" +
     "<h2>7. Complaints</h2>" +
     "<p>Please report service-related complaints <strong>soon after the visit</strong> — ideally via the same channel you used to book. We will try to resolve matters in a calm conversation.</p>" +
     "<h2>8. Final provisions</h2>" +
@@ -179,6 +180,7 @@
     "<p>Die Kundin / der Kunde <strong>verpflichtet sich mitzuteilen</strong>, was die Behandlung betrifft (z. B. Schwangerschaft, dermatologische Therapie). Für Folgen verschwiegener wesentlicher Angaben übernehmen wir keine Haftung.</p>" +
     "<h2>6. Zahlungen, Anzahlungen, Gutscheine</h2>" +
     "<p>Wenn Sie <strong>Anzahlungen, Gutscheine oder Kautionen</strong> einführen — ergänzen Sie hier die Regeln (Gültigkeit, Rückzahlung, Storno). Passen Sie den Text an Ihre tatsächliche Praxis im Studio an.</p>" +
+    "<p>Orientierungsbeträge auf der <strong>deutschsprachigen Website</strong> können höher sein als auf der polnischen Fassung — sie orientieren sich an üblichen <strong>EU-/DE-Marktpreisen</strong> und enthalten einen Anteil für <strong>Umrechnungs- und damit verbundene Abwicklungskosten</strong> bei Gästen aus dem Euro-Raum. <strong>Abrechnung der Leistung erfolgt in polnischen Złoty (PLN)</strong> zum vor dem Termin individuell vereinbarten Preis (z. B. WhatsApp, Telefon); die Website-Werte ersetzen kein konkretes Angebot.</p>" +
     "<h2>7. Reklamationen</h2>" +
     "<p>Reklamationen zur Leistung bitte <strong>unmittelbar nach dem Besuch</strong> melden — am besten über denselben Kanal wie bei der Buchung. Wir klären das in einem ruhigen Gespräch.</p>" +
     "<h2>8. Schlussbestimmungen</h2>" +

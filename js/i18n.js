@@ -641,13 +641,13 @@
     de.price_row_combo1 = "Beine + klassischer Bikini";
     de.price_row_combo2 = "Beine + tiefer Bikini";
     de.price_row_pack_neck_down = "Paket „von Hals abwärts“";
-    de.price_amt_pachy = "ab 50 PLN";
-    de.price_amt_lydki = "ab 90 PLN";
-    de.price_amt_bikini_cl = "ab 100 PLN";
-    de.price_amt_bikini_deep = "ab 140 PLN";
-    de.price_amt_legs_full = "ab 150 PLN";
-    de.price_amt_combo1 = "ab 220 PLN";
-    de.price_amt_combo2 = "ab 270 PLN";
+    de.price_amt_pachy = "ab 70 PLN";
+    de.price_amt_lydki = "ab 120 PLN";
+    de.price_amt_bikini_cl = "ab 125 PLN";
+    de.price_amt_bikini_deep = "ab 175 PLN";
+    de.price_amt_legs_full = "ab 190 PLN";
+    de.price_amt_combo1 = "ab 275 PLN";
+    de.price_amt_combo2 = "ab 330 PLN";
     de.cennik_tan_h2 = "Spray-Tanning";
     de.cennik_tan_p1 =
       "DHA-Spray-Tan ohne UV, mit natürlichem Glow. Ton passen wir Ihrer Haut an — oft vor Hochzeit, Shooting oder Urlaub. Kurze Pflegehinweise erhalten Sie beim Termin.";
@@ -656,11 +656,11 @@
     de.price_row_torso = "Torso + Arme";
     de.price_row_body_no_face = "Ganzer Körper (ohne Gesicht)";
     de.price_row_body_face = "Ganzer Körper + Gesicht";
-    de.price_amt_tan_torso = "ab 110 PLN";
-    de.price_amt_tan_body = "ab 170 PLN";
-    de.price_amt_tan_full = "ab 210 PLN";
+    de.price_amt_tan_torso = "ab 130 PLN";
+    de.price_amt_tan_body = "ab 200 PLN";
+    de.price_amt_tan_full = "ab 250 PLN";
     de.cennik_note_html =
-      'Die oben genannten Beträge sind orientierend. <strong>Vollständige Preise und das passende Paket</strong> vereinbaren wir individuell im Kontakt — schreiben Sie per WhatsApp oder rufen Sie an, nach kurzer Absprache nennen wir eine Richtpreis-Einschätzung.';
+      'Die oben genannten Beträge sind orientierend und an typische <strong>EU-/DE-Rahmenpreise</strong> angelehnt — im Vergleich zur polnischen Basisversion der Website können sie höher ausfallen; darin ist u. a. ein Anteil für <strong>Umrechnungs- und Zahlungsfolgekosten</strong> berücksichtigt (siehe AGB). <strong>Abrechnung am Termin in PLN</strong> nach individueller Vereinbarung. <strong>Vollständiges Paket und Endbetrag</strong> klären wir im Kontakt — schreiben Sie per WhatsApp oder rufen Sie an, nach kurzer Absprache nennen wir eine Richtpreis-Einschätzung.';
     de.img_gallery_1 = "Studio-Innenraum — Leinen und weiches Licht";
     de.img_gallery_2 = "Zuckerpaste und Keramik im Behandlungsraum";
     de.img_gallery_3 = "Hautdetail im natürlichen Licht";
