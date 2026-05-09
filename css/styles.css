@@ -1929,6 +1929,18 @@ a:hover {
   margin-bottom: 0;
 }
 
+.cennik-intro--tight {
+  max-width: 38rem;
+  margin-bottom: 1.35rem;
+}
+
+.price-cards.price-cards--single {
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 1fr;
+}
+
 .price-cards {
   display: grid;
   gap: 1.25rem;

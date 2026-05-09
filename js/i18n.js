@@ -22,14 +22,14 @@
     },
     cennik: {
       en: {
-        title: "Pricing — SłodkoTu | sugar depilation and spray tan Szczecin Zdroje",
+        title: "Guide prices — SłodkoTu | sugar paste and spray tan Szczecin Zdroje",
         description:
-          "SłodkoTu price guide in Szczecin Zdroje: sugar waxing, bikini, spray tan. Overview and sample prices — contact us to confirm.",
+          "A short overview of popular treatments at SłodkoTu in Zdroje. Full pricing is agreed individually when you get in touch.",
       },
       de: {
-        title: "Preise — SłodkoTu | Zuckerpaste und Spray-Tan Stettin Zdroje",
+        title: "Orientierungspreise — SłodkoTu | Zuckerpaste und Spray-Tan Stettin Zdroje",
         description:
-          "Preisübersicht SłodkoTu in Stettin Zdroje: Zuckerpaste, Bikini, Spray-Tan — zur Bestätigung kontaktieren Sie uns.",
+          "Kurzer Überblick über häufige Leistungen bei SłodkoTu in Zdroje. Den vollständigen Preis klären wir individuell im Kontakt.",
       },
     },
     privacy: {
@@ -340,10 +340,10 @@
       contact_big_ig: "Instagram",
       contact_map_zoom: "Larger map",
       cennik_back: "← Back to services",
-      cennik_h1: "Pricing",
+      cennik_h1: "Guide prices",
       price_from: "from … PLN",
       price_extra: "add-on … PLN",
-      price_quote_ind: "individual quote",
+      price_quote_ind: "Individual pricing",
     };
 
     en.hero_title =
@@ -421,42 +421,42 @@
     en.legal_terms_meta_html =
       'Applies to beauty services at <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. From <time datetime="2026-05-09">9 May 2026</time>. Draft text — align with your practice; consult a lawyer if in doubt.';
     en.cennik_subtitle =
-      "First, a short explanation of the treatments — then boxes with guide prices and options. The final amount is agreed after consultation and area selection.";
+      "A calm overview of our most booked visits — no endless tables. Full pricing and the final amount are agreed individually when you message or call.";
     en.cennik_sugar_h2 = "Sugar paste hair removal";
     en.cennik_sugar_p1 =
-      "Sugar paste hair removal uses a paste made from sugar, water and lemon juice — no resin or typical wax chemistry. The paste mainly coats the hair, not the skin, so the treatment is often less painful and gentler on sensitive skin.";
-    en.cennik_sugar_p2 =
-      "The paste works at a temperature close to body heat without “burning” the skin. It can remove shorter hair than wax (even about 3–5 mm, depending on the area). You can expect smoothness for several weeks and slower regrowth with regular visits.";
-    en.price_sugar_basic_label = "Basic — single areas";
-    en.price_sugar_basic_hint = "Guide price per area";
-    en.price_sugar_pack_label = "Extended — packages";
-    en.price_sugar_pack_hint = "Combining several areas in one visit";
+      "Warm sugar-and-lemon paste — gentler than wax, often kinder to sensitive skin and bikini areas. Expect smooth skin for weeks and calmer regrowth with regular appointments.";
+    en.price_sugar_basic_label = "Most chosen areas";
+    en.price_sugar_basic_hint = "Sample brackets — exact quote after we plan zones together";
+    en.price_sugar_pack_label = "Most chosen packages";
+    en.price_sugar_pack_hint = "One visit, several areas — unhurried pace";
     en.price_row_underarms = "Underarms";
-    en.price_row_legs = "Lower legs / thighs (one section)";
+    en.price_row_legs = "Lower legs / thighs";
     en.price_row_bikini_cl = "Classic bikini";
     en.price_row_bikini_deep = "Deep bikini";
     en.price_row_legs_full = "Full legs";
     en.price_row_combo1 = "Legs + classic bikini";
     en.price_row_combo2 = "Legs + deep bikini";
-    en.price_row_pack_neck_down = "“Neck down” package (as agreed)";
+    en.price_row_pack_neck_down = "“Neck down” package";
+    en.price_amt_pachy = "from 50 PLN";
+    en.price_amt_lydki = "from 90 PLN";
+    en.price_amt_bikini_cl = "from 100 PLN";
+    en.price_amt_bikini_deep = "from 140 PLN";
+    en.price_amt_legs_full = "from 150 PLN";
+    en.price_amt_combo1 = "from 220 PLN";
+    en.price_amt_combo2 = "from 270 PLN";
     en.cennik_tan_h2 = "Spray tanning";
     en.cennik_tan_p1 =
-      "Spray tanning applies a cosmetic with DHA to the skin — without UV. DHA reacts with the outer layer of the skin and develops a tan that sets over several to several hours after the visit.";
-    en.cennik_tan_p2 =
-      "We can choose a shade from very subtle to a stronger glow. Popular before weddings, shoots or holidays. After application, aftercare and first-shower tips matter — you’ll receive them at the visit.";
-    en.price_tan_body_label = "Basic — body";
-    en.price_tan_body_hint = "One depth level to choose";
-    en.price_tan_extra_label = "Extended and add-ons";
-    en.price_tan_extra_hint = "Deeper tone or extra areas";
-    en.price_row_torso = "Application: torso + arms";
-    en.price_row_body_no_face = "Application: full body (no face)";
-    en.price_row_body_face = "Application: full body + face";
-    en.price_row_tone_extra = "Darker / more intense tone";
-    en.price_row_legs_only = "Legs only or arms only";
-    en.price_row_contour = "Contour / glow (per studio offer)";
-    en.price_row_trial = "Trial before an important event (separate visit)";
+      "DHA spray tan without UV, with a natural glow. We match the tone to your skin — popular before weddings, shoots or holidays. Short aftercare tips are given at your visit.";
+    en.price_tan_overview_label = "Popular applications";
+    en.price_tan_overview_hint = "Indicative — full scope agreed when you book";
+    en.price_row_torso = "Torso + arms";
+    en.price_row_body_no_face = "Full body (no face)";
+    en.price_row_body_face = "Full body + face";
+    en.price_amt_tan_torso = "from 110 PLN";
+    en.price_amt_tan_body = "from 170 PLN";
+    en.price_amt_tan_full = "from 210 PLN";
     en.cennik_note_html =
-      '“From … PLN” amounts and add-ons are indicative — ask for the <strong>current price list</strong> when booking via WhatsApp or phone. You can list areas when you message us for a preliminary quote.';
+      'The amounts above are indicative. <strong>Full pricing and the right package for you</strong> are agreed individually when you get in touch — message on WhatsApp or call and we’ll prepare a preliminary quote after a short chat.';
     en.img_gallery_1 = "Studio interior — linen and soft light";
     en.img_gallery_2 = "Sugar paste and ceramics in the treatment room";
     en.img_gallery_3 = "Skin detail in natural light";
@@ -544,10 +544,10 @@
       contact_big_ig: "Instagram",
       contact_map_zoom: "Karte vergrößern",
       cennik_back: "← Zurück zu den Leistungen",
-      cennik_h1: "Preise",
+      cennik_h1: "Orientierungspreise",
       price_from: "ab … PLN",
       price_extra: "Aufpreis … PLN",
-      price_quote_ind: "individuelles Angebot",
+      price_quote_ind: "Individuelle Preisierung",
     };
 
     de.hero_title =
@@ -625,42 +625,42 @@
     de.legal_terms_meta_html =
       'Gilt für Beauty-Leistungen im Studio <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. Ab <time datetime="2026-05-09">9. Mai 2026</time>. Entwurf — an Ihre Praxis anpassen; bei Zweifeln juristisch prüfen.';
     de.cennik_subtitle =
-      "Zuerst kurz, worum es bei den Behandlungen geht — dann Kästen mit Richtpreisen und Varianten. Den Endpreis vereinbaren wir nach Beratung und Zonenauswahl.";
+      "Ein ruhiger Überblick über häufig gebuchte Besuche — ohne endlose Tabellen. Vollständige Preise und den Endbetrag vereinbaren wir individuell per Nachricht oder Anruf.";
     de.cennik_sugar_h2 = "Haarentfernung mit Zuckerpaste";
     de.cennik_sugar_p1 =
-      "Zuckerpaste entfernt Haare mit Paste aus Zucker, Wasser und Zitronensaft — ohne Harz und typische Wachs-Chemie. Die Paste liegt vor allem am Haar, nicht an der Haut, daher oft weniger schmerzhaft und sanfter bei empfindlicher Haut.";
-    de.cennik_sugar_p2 =
-      "Die Paste arbeitet nahe Körpertemperatur ohne „Versengen“ der Haut. Auch kürzere Haare als beim Wachs sind möglich (ca. 3–5 mm, je nach Zone). Ergebnis: Glätte für mehrere Wochen und langsameres Nachwachsen bei regelmäßigen Terminen.";
-    de.price_sugar_basic_label = "Basis — einzelne Zonen";
-    de.price_sugar_basic_hint = "Richtpreis pro Zone";
-    de.price_sugar_pack_label = "Erweitert — Pakete";
-    de.price_sugar_pack_hint = "Mehrere Zonen in einem Besuch";
+      "Warme Paste aus Zucker und Zitronensaft — sanfter als Wachs, oft angenehmer bei empfindlicher Haut und im Bikini-Bereich. Glatte Haut für Wochen und ruhigeres Nachwachsen bei regelmäßigen Terminen.";
+    de.price_sugar_basic_label = "Beliebteste Zonen";
+    de.price_sugar_basic_hint = "Beispiel-Rahmen — genauer Preis nach Zonenplanung";
+    de.price_sugar_pack_label = "Beliebteste Pakete";
+    de.price_sugar_pack_hint = "Ein Termin, mehrere Zonen — ohne Hetze";
     de.price_row_underarms = "Achseln";
-    de.price_row_legs = "Unterschenkel / Oberschenkel (ein Bereich)";
+    de.price_row_legs = "Unterschenkel / Oberschenkel";
     de.price_row_bikini_cl = "Klassischer Bikini";
     de.price_row_bikini_deep = "Tiefer Bikini";
     de.price_row_legs_full = "Beine komplett";
     de.price_row_combo1 = "Beine + klassischer Bikini";
     de.price_row_combo2 = "Beine + tiefer Bikini";
-    de.price_row_pack_neck_down = "Paket „von Hals abwärts“ (nach Absprache)";
+    de.price_row_pack_neck_down = "Paket „von Hals abwärts“";
+    de.price_amt_pachy = "ab 50 PLN";
+    de.price_amt_lydki = "ab 90 PLN";
+    de.price_amt_bikini_cl = "ab 100 PLN";
+    de.price_amt_bikini_deep = "ab 140 PLN";
+    de.price_amt_legs_full = "ab 150 PLN";
+    de.price_amt_combo1 = "ab 220 PLN";
+    de.price_amt_combo2 = "ab 270 PLN";
     de.cennik_tan_h2 = "Spray-Tanning";
     de.cennik_tan_p1 =
-      "Spray-Tanning (Spray Tan) bringt ein kosmetisches Produkt mit DHA auf die Haut — ohne UV. DHA reagiert mit der Hornschicht und entwickelt einen Bräunungston in den Stunden nach dem Besuch.";
-    de.cennik_tan_p2 =
-      "Der Ton reicht von sehr dezent bis kräftiger Glow — oft vor Hochzeit, Shooting oder Urlaub. Danach sind Pflegehinweise und erste Dusche wichtig — erhalten Sie beim Termin.";
-    de.price_tan_body_label = "Basis — Körper";
-    de.price_tan_body_hint = "Eine Farbtiefe zur Wahl";
-    de.price_tan_extra_label = "Erweitert und Zusätze";
-    de.price_tan_extra_hint = "Intensiverer Ton oder Extra-Zonen";
-    de.price_row_torso = "Anwendung: Torso + Arme";
-    de.price_row_body_no_face = "Anwendung: ganzer Körper (ohne Gesicht)";
-    de.price_row_body_face = "Anwendung: ganzer Körper + Gesicht";
-    de.price_row_tone_extra = "Dunklerer / intensiverer Ton";
-    de.price_row_legs_only = "Nur Beine oder nur Arme";
-    de.price_row_contour = "Kontur / Glow (laut Studio-Angebot)";
-    de.price_row_trial = "Probe vor wichtigem Anlass (separater Termin)";
+      "DHA-Spray-Tan ohne UV, mit natürlichem Glow. Ton passen wir Ihrer Haut an — oft vor Hochzeit, Shooting oder Urlaub. Kurze Pflegehinweise erhalten Sie beim Termin.";
+    de.price_tan_overview_label = "Beliebte Anwendungen";
+    de.price_tan_overview_hint = "Orientierend — Umfang klären wir bei der Buchung";
+    de.price_row_torso = "Torso + Arme";
+    de.price_row_body_no_face = "Ganzer Körper (ohne Gesicht)";
+    de.price_row_body_face = "Ganzer Körper + Gesicht";
+    de.price_amt_tan_torso = "ab 110 PLN";
+    de.price_amt_tan_body = "ab 170 PLN";
+    de.price_amt_tan_full = "ab 210 PLN";
     de.cennik_note_html =
-      'Beträge „ab … PLN“ und Aufpreise sind Richtwerte — den <strong>aktuellen Preis</strong> erfragen Sie bei Buchung per WhatsApp oder Telefon. Nennen Sie gern Zonen — wir schätzen vorab ein.';
+      'Die oben genannten Beträge sind orientierend. <strong>Vollständige Preise und das passende Paket</strong> vereinbaren wir individuell im Kontakt — schreiben Sie per WhatsApp oder rufen Sie an, nach kurzer Absprache nennen wir eine Richtpreis-Einschätzung.';
     de.img_gallery_1 = "Studio-Innenraum — Leinen und weiches Licht";
     de.img_gallery_2 = "Zuckerpaste und Keramik im Behandlungsraum";
     de.img_gallery_3 = "Hautdetail im natürlichen Licht";
