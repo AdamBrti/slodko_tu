@@ -1,0 +1,46 @@
+# Deploy statycznej strony do Cloudflare Pages po każdym pushu na main.
+#
+# W GitHub: Settings → Secrets and variables → Actions → New repository secret:
+#   CLOUDFLARE_API_TOKEN      — Cloudflare → My Profile → API Tokens → Create Token
+#                               szablon „Edit Cloudflare Workers” lub custom:
+#                               Account → Cloudflare Pages → Edit
+#   CLOUDFLARE_ACCOUNT_ID     — Cloudflare dashboard → w prawym sidebarze konta (Account ID)
+#   CLOUDFLARE_PAGES_PROJECT_NAME — nazwa projektu Pages (Workers & Pages → Twoja strona → nazwa)
+#
+# Projekt Pages musi już istnieć (Create project → Direct Upload lub dowolnie); pierwszy deploy z Actions
+# podłączy katalog główny repozytorium jako artefakt.
+#
+# Jeśli wcześniej podłączyłeś to samo repo do Pages przez „Connect to Git” i build się wywalał
+# (np. pusty npm), wyłącz tam automatyczne buildy albo usuń powiązanie z Git — inaczej możesz
+# mieć dwa źródła deployu albo konflikt.
+
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: cloudflare-pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy . --project-name=${{ secrets.CLOUDFLARE_PAGES_PROJECT_NAME }}
+          gitHubToken: ${{ github.token }}
