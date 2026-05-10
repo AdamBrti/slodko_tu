@@ -442,33 +442,37 @@ a:hover {
 /* ——— Hero ——— */
 .hero {
   position: relative;
-  min-height: min(88vh, 46rem);
+  /* Wyższy pas = więcej zdjęcia nad tekstem; tekst „siada” niżej jak na podwiatr */
+  min-height: min(92vh, 52rem);
   display: flex;
   align-items: flex-end;
-  padding: calc(var(--header-h) + 2rem) max(1.25rem, 5vw) clamp(3.25rem, 8vw, 5.5rem);
+  padding: calc(var(--header-h) + 1.5rem) max(1.25rem, 5vw) clamp(2rem, 5vw, 3.75rem);
+  padding-bottom: max(clamp(2rem, 5vw, 3.75rem), env(safe-area-inset-bottom, 0px));
 }
 
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: url("../assets/moodboard/zweryfikowane/hero_landing.png") center 20% / cover no-repeat;
+  /* Trochę wyżej punkt ciężkości kadru — pod spodem zostaje więcej „miejsca” na warstwę tekstową */
+  background: url("../assets/moodboard/zweryfikowane/hero_landing.png") center 28% / cover no-repeat;
 }
 
 .hero__scrim {
   position: absolute;
   inset: 0;
-  /* Czytelność wyśrodkowanego bloku (jak editorial na podwiatr): lżej po bokach, mocniej u dołu */
+  /* Ta sama paleta cream — mocniejszy pas u dołu pod czytelność przy niższym tekście */
   background:
     radial-gradient(
-      ellipse 95% 85% at 50% 42%,
-      color-mix(in srgb, var(--cream) 52%, transparent) 0%,
-      transparent 62%
+      ellipse 98% 78% at 50% 48%,
+      color-mix(in srgb, var(--cream) 48%, transparent) 0%,
+      transparent 58%
     ),
     linear-gradient(
       180deg,
-      color-mix(in srgb, var(--cream) 28%, transparent) 0%,
-      color-mix(in srgb, var(--cream) 42%, transparent) 38%,
-      color-mix(in srgb, var(--cream) 86%, transparent) 100%
+      color-mix(in srgb, var(--cream) 22%, transparent) 0%,
+      color-mix(in srgb, var(--cream) 36%, transparent) 42%,
+      color-mix(in srgb, var(--cream) 90%, transparent) 88%,
+      color-mix(in srgb, var(--cream) 94%, transparent) 100%
     );
 }
 
