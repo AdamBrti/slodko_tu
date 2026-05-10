@@ -297,9 +297,7 @@
       legal_terms_h1: "Terms of service",
       hero_aria_bg: "Studio mood — soft light, intimate treatment room",
       hero_kicker: "Beauty studio · Szczecin, Zdroje",
-      hero_script_place: "Szczecin — Zdroje",
-      hero_lead:
-        "Smooth skin, a natural glow and calm time just for you. Sugar paste and spray tan tailored to your skin.",
+      hero_lead: "Sugar paste and spray tan — calm visits, with real care for your skin.",
       hero_cta_wa: "Book via WhatsApp",
       hero_cta_ig: "Instagram",
       about_sign: "You matter here",
@@ -500,9 +498,7 @@
       legal_terms_h1: "Leistungsbedingungen",
       hero_aria_bg: "Studio-Stimmung — weiches Licht, ruhiger Behandlungsraum",
       hero_kicker: "Beauty-Studio · Stettin, Zdroje",
-      hero_script_place: "Stettin — Zdroje",
-      hero_lead:
-        "Glatte Haut, natürlicher Glow und ruhige Zeit nur für Sie. Zuckerpaste und Spray-Tan, abgestimmt auf Ihre Haut.",
+      hero_lead: "Zuckerpaste und Spray-Tan — ruhige Termine, mit Blick auf Ihre Haut.",
       hero_cta_wa: "Über WhatsApp buchen",
       hero_cta_ig: "Instagram",
       about_sign: "Hier sind Sie wichtig",

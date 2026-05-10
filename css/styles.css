@@ -444,8 +444,8 @@ a:hover {
   position: relative;
   min-height: min(88vh, 46rem);
   display: flex;
-  align-items: center;
-  padding: calc(var(--header-h) + 2.75rem) max(1.25rem, 5vw) clamp(3.5rem, 9vw, 5.25rem);
+  align-items: flex-end;
+  padding: calc(var(--header-h) + 2rem) max(1.25rem, 5vw) clamp(3.25rem, 8vw, 5.5rem);
 }
 
 .hero__bg {
@@ -457,13 +457,19 @@ a:hover {
 .hero__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    105deg,
-    color-mix(in srgb, var(--cream) 94%, transparent) 0%,
-    color-mix(in srgb, var(--cream) 72%, transparent) 38%,
-    color-mix(in srgb, var(--cream) 25%, transparent) 72%,
-    transparent 100%
-  );
+  /* Czytelność wyśrodkowanego bloku (jak editorial na podwiatr): lżej po bokach, mocniej u dołu */
+  background:
+    radial-gradient(
+      ellipse 95% 85% at 50% 42%,
+      color-mix(in srgb, var(--cream) 52%, transparent) 0%,
+      transparent 62%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--cream) 28%, transparent) 0%,
+      color-mix(in srgb, var(--cream) 42%, transparent) 38%,
+      color-mix(in srgb, var(--cream) 86%, transparent) 100%
+    );
 }
 
 .hero__layout {
@@ -474,65 +480,86 @@ a:hover {
   width: 100%;
 }
 
-.hero__copy {
-  max-width: 30rem;
+/* Układ jak strona główna podwiatr: krótki „eyebrow”, potem wyśrodkowany blok z tytułem i CTA */
+.hero__editorial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  width: 100%;
 }
 
 .hero__kicker {
-  margin: 0 0 0.85rem;
+  margin: 0;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: color-mix(in srgb, var(--chocolate-muted) 88%, var(--gold) 12%);
+  text-align: center;
+}
+
+.hero__main {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero__title {
-  margin: 0 0 1.25rem;
+  margin: 0 0 1rem;
   font-family: var(--font-display);
   font-size: clamp(2.25rem, 1.1rem + 3.8vw, 4.5rem);
   font-weight: 500;
   line-height: 1.06;
   letter-spacing: 0.02em;
   color: var(--chocolate);
-}
-
-.hero__script {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(1.65rem, 1rem + 2.8vw, 2.35rem);
-  font-weight: 400;
-  display: block;
-  margin: 0.35rem 0 1rem;
-  line-height: 1.12;
-  letter-spacing: 0.03em;
-  color: color-mix(in srgb, var(--chocolate) 78%, var(--rose) 22%);
+  text-wrap: balance;
 }
 
 .hero__lead {
-  margin: 0 0 1.5rem;
+  margin: 0 auto 1.35rem;
   font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
   color: var(--chocolate-muted);
-  max-width: 36ch;
-  line-height: 1.75;
+  max-width: 38ch;
+  line-height: 1.7;
 }
 
 .hero__ctas {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  justify-content: center;
 }
 
 .hero__trust {
-  margin: 1.15rem 0 0;
+  margin: 1.15rem auto 0;
   padding: 0;
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: color-mix(in srgb, var(--chocolate-muted) 92%, transparent);
-  max-width: 34ch;
-  line-height: 1.5;
+  max-width: 46ch;
+  line-height: 1.55;
+  text-wrap: balance;
+}
+
+@media (min-width: 960px) {
+  .hero__editorial {
+    align-items: flex-start;
+  }
+
+  .hero__kicker {
+    text-align: left;
+    max-width: 22rem;
+  }
+
+  .hero__main {
+    align-self: center;
+    max-width: 44rem;
+    text-align: center;
+  }
 }
 
 .btn--solid {
