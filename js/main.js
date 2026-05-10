@@ -95,4 +95,42 @@
       });
     });
   });
+
+  var header = document.querySelector(".site-header");
+  if (header && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var lastScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+    var langCollapsed = false;
+    var scrollTicking = false;
+
+    function setLangCollapsed(on) {
+      if (on === langCollapsed) return;
+      langCollapsed = on;
+      header.classList.toggle("site-header--lang-hidden", on);
+    }
+
+    function onScrollFrame() {
+      var y = window.scrollY || document.documentElement.scrollTop || 0;
+      var dy = y - lastScrollY;
+      if (y < 48) {
+        setLangCollapsed(false);
+      } else if (dy > 10 && y > 88) {
+        setLangCollapsed(true);
+      } else if (dy < -10) {
+        setLangCollapsed(false);
+      }
+      lastScrollY = y;
+      scrollTicking = false;
+    }
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!scrollTicking) {
+          scrollTicking = true;
+          requestAnimationFrame(onScrollFrame);
+        }
+      },
+      { passive: true }
+    );
+  }
 })();
