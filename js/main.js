@@ -1,6 +1,66 @@
 (function () {
+  function applySiteConfig() {
+    var cfg = window.SLODKOTU_SITE;
+    if (!cfg || !cfg.phoneWaDigits) return;
+    var wa = String(cfg.phoneWaDigits).replace(/\D/g, "");
+    var tel = cfg.phoneTel || "+" + wa;
+    var disp = cfg.phoneDisplay || tel;
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
+      var h = a.getAttribute("href");
+      if (!h) return;
+      a.setAttribute("href", h.replace(/wa\.me\/\d+/, "wa.me/" + wa));
+    });
+
+    document.querySelectorAll('a[href^="tel:"]').forEach(function (a) {
+      a.setAttribute("href", "tel:" + tel.replace(/\s/g, ""));
+    });
+
+    document.querySelectorAll("[data-phone-display]").forEach(function (el) {
+      el.textContent = disp;
+    });
+
+    var igUrl = cfg.instagramUrl;
+    document.querySelectorAll(".js-instagram-link").forEach(function (a) {
+      if (!igUrl) {
+        a.setAttribute("hidden", "");
+        a.setAttribute("aria-hidden", "true");
+        a.style.display = "none";
+      } else {
+        a.removeAttribute("hidden");
+        a.removeAttribute("aria-hidden");
+        a.style.display = "";
+        a.setAttribute("href", igUrl);
+      }
+    });
+
+    document.querySelectorAll(".js-instagram-line").forEach(function (el) {
+      if (!igUrl) {
+        el.setAttribute("hidden", "");
+        el.style.display = "none";
+      } else {
+        el.removeAttribute("hidden");
+        el.style.display = "";
+      }
+    });
+
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(function (script) {
+      try {
+        var str = script.textContent;
+        str = str.replace(/"telephone"\s*:\s*"\+?\d+"/g, '"telephone": "' + tel.replace(/\s/g, "") + '"');
+        script.textContent = str;
+      } catch (e) {}
+    });
+
+    document.querySelectorAll("[data-i18n-wa]").forEach(function (el) {
+      el.dataset.i18nWaBase = el.getAttribute("href") || "";
+    });
+  }
+
   var y = document.getElementById("year");
   if (y) y.textContent = String(new Date().getFullYear());
+
+  applySiteConfig();
 
   document.body.addEventListener("click", function (e) {
     var btn = e.target && e.target.closest && e.target.closest("#cookie-prefs-reset");

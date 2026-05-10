@@ -44,6 +44,16 @@
     document.head.appendChild(c);
   }
 
+  function mapIframeTitle() {
+    var lang = (document.documentElement.getAttribute("lang") || "pl").toLowerCase().slice(0, 2);
+    var titles = {
+      pl: "Mapa okolicy — Szczecin, Zdroje",
+      en: "Area map — Szczecin, Zdroje",
+      de: "Karte der Umgebung — Stettin, Zdroje",
+    };
+    return titles[lang] || titles.pl;
+  }
+
   function injectMap() {
     var slot = document.getElementById("contact-map-slot");
     if (!slot) return;
@@ -52,7 +62,7 @@
     var ph = document.getElementById("contact-map-placeholder");
     var ifr = document.createElement("iframe");
     ifr.className = "contact-map";
-    ifr.title = "Mapa — Szczecin Zdroje";
+    ifr.title = mapIframeTitle();
     ifr.loading = "lazy";
     ifr.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
     ifr.src = src;

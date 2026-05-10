@@ -9,7 +9,7 @@
     "<h2>Who is the data controller</h2>" +
     "<p>The controller of your personal data is <strong>Aleksandra Podlipska</strong>, running a sole proprietorship under the brand <strong>SłodkoTu</strong> (beauty studio).</p>" +
     "<ul class=\"legal-page__list\">" +
-    "<li><strong>Email:</strong> <a href=\"mailto:kontakt@slodkotu.pl\">kontakt@slodkotu.pl</a> (replace with the working address if needed)</li>" +
+    "<li><strong>Email:</strong> <a href=\"mailto:kontakt@slodkotu.pl\">kontakt@slodkotu.pl</a></li>" +
     "<li><strong>Phone / WhatsApp:</strong> numbers given in the <a href=\"index.html#kontakt\">Contact</a> section on the home page</li>" +
     "<li><strong>Tax ID (NIP):</strong> 8581876599 · <strong>REGON:</strong> 388954285</li>" +
     "<li><strong>Correspondence address:</strong> ul. Pomorska 7, 74-100 Gryfino, Poland</li>" +
@@ -61,7 +61,7 @@
     "<h2>Wer ist für die Datenverarbeitung verantwortlich</h2>" +
     "<p>Verantwortlich ist <strong>Aleksandra Podlipska</strong>, Inhaberin eines Einzelunternehmens unter der Marke <strong>SłodkoTu</strong> (Beauty-Studio).</p>" +
     "<ul class=\"legal-page__list\">" +
-    "<li><strong>E-Mail:</strong> <a href=\"mailto:kontakt@slodkotu.pl\">kontakt@slodkotu.pl</a> (bitte durch die gültige Adresse ersetzen, falls nötig)</li>" +
+    "<li><strong>E-Mail:</strong> <a href=\"mailto:kontakt@slodkotu.pl\">kontakt@slodkotu.pl</a></li>" +
     "<li><strong>Telefon / WhatsApp:</strong> Nummern im Bereich <a href=\"index.html#kontakt\">Kontakt</a> auf der Startseite</li>" +
     "<li><strong>Steuernummer (NIP):</strong> 8581876599 · <strong>REGON:</strong> 388954285</li>" +
     "<li><strong>Korrespondenzadresse:</strong> ul. Pomorska 7, 74-100 Gryfino, Polen</li>" +
@@ -159,7 +159,7 @@
     "<h2>5. Your responsibility</h2>" +
     "<p>The client <strong>must inform us</strong> about contraindications and circumstances affecting the treatment (e.g. pregnancy, dermatological therapy). We are not liable for consequences of withholding important information.</p>" +
     "<h2>6. Payments, deposits, vouchers</h2>" +
-    "<p>If you introduce <strong>prepayments, vouchers or deposits</strong> — add the rules here (validity, refund, cancellation). For now, align this section with how you actually run the studio.</p>" +
+    "<p>Payment is usually due <strong>after the treatment in the studio</strong>, in the form agreed when booking (cash or transfer — as confirmed on site or in messages). Where <strong>prepayments, vouchers or deposits</strong> apply, we explain validity, refund and cancellation rules at the time of booking.</p>" +
     "<p>Guide prices on the <strong>German-language version</strong> of the site may be higher than on the Polish version — they reflect typical <strong>EU / German market brackets</strong> and include an allowance for <strong>currency conversion and related settlement costs</strong> for guests paying from euro-area banking. <strong>The service is invoiced and paid in Polish zloty (PLN)</strong> at the price agreed individually before the visit (e.g. WhatsApp, phone); website brackets do not replace that quote.</p>" +
     "<h2>7. Complaints</h2>" +
     "<p>Please report service-related complaints <strong>soon after the visit</strong> — ideally via the same channel you used to book. We will try to resolve matters in a calm conversation.</p>" +
@@ -179,7 +179,7 @@
     "<h2>5. Ihre Verantwortung</h2>" +
     "<p>Die Kundin / der Kunde <strong>verpflichtet sich mitzuteilen</strong>, was die Behandlung betrifft (z. B. Schwangerschaft, dermatologische Therapie). Für Folgen verschwiegener wesentlicher Angaben übernehmen wir keine Haftung.</p>" +
     "<h2>6. Zahlungen, Anzahlungen, Gutscheine</h2>" +
-    "<p>Wenn Sie <strong>Anzahlungen, Gutscheine oder Kautionen</strong> einführen — ergänzen Sie hier die Regeln (Gültigkeit, Rückzahlung, Storno). Passen Sie den Text an Ihre tatsächliche Praxis im Studio an.</p>" +
+    "<p>Die Bezahlung erfolgt in der Regel <strong>nach der Behandlung im Studio</strong>, in der bei der Buchung vereinbarten Form (Bar oder Überweisung — wie vor Ort oder in Nachrichten bestätigt). Bei <strong>Anzahlungen, Gutscheinen oder Kautionen</strong> erläutern wir Gültigkeit, Rückzahlung und Storno zum Zeitpunkt der Buchung.</p>" +
     "<p>Orientierungsbeträge auf der <strong>deutschsprachigen Website</strong> können höher sein als auf der polnischen Fassung — sie orientieren sich an üblichen <strong>EU-/DE-Marktpreisen</strong> und enthalten einen Anteil für <strong>Umrechnungs- und damit verbundene Abwicklungskosten</strong> bei Gästen aus dem Euro-Raum. <strong>Abrechnung der Leistung erfolgt in polnischen Złoty (PLN)</strong> zum vor dem Termin individuell vereinbarten Preis (z. B. WhatsApp, Telefon); die Website-Werte ersetzen kein konkretes Angebot.</p>" +
     "<h2>7. Reklamationen</h2>" +
     "<p>Reklamationen zur Leistung bitte <strong>unmittelbar nach dem Besuch</strong> melden — am besten über denselben Kanal wie bei der Buchung. Wir klären das in einem ruhigen Gespräch.</p>" +
