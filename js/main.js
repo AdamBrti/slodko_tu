@@ -178,9 +178,15 @@
     });
   })();
 
+  /**
+   * Zwijanie przełącznika języków przy scrollu w dół — tylko desktop (min-width: 900px),
+   * zgodnie z @media nagłówka w CSS. Na telefonach nagłówek ma zawijane wiersze; animacja
+   * max-width na .site-header__lang zmienia wysokość sticky bara → skoki scrollY i „miganie”.
+   */
   var header = document.querySelector(".site-header");
   if (header && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    var lastScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+    var mqlDesktop = window.matchMedia("(min-width: 900px)");
+    var lastScrollY = 0;
     var langCollapsed = false;
     var scrollTicking = false;
 
@@ -190,29 +196,50 @@
       header.classList.toggle("site-header--lang-hidden", on);
     }
 
-    function onScrollFrame() {
-      var y = window.scrollY || document.documentElement.scrollTop || 0;
-      var dy = y - lastScrollY;
-      if (y < 48) {
-        setLangCollapsed(false);
-      } else if (dy > 10 && y > 88) {
-        setLangCollapsed(true);
-      } else if (dy < -10) {
-        setLangCollapsed(false);
-      }
-      lastScrollY = y;
-      scrollTicking = false;
+    function readScrollY() {
+      return window.scrollY || document.documentElement.scrollTop || 0;
     }
 
-    window.addEventListener(
-      "scroll",
-      function () {
-        if (!scrollTicking) {
-          scrollTicking = true;
-          requestAnimationFrame(onScrollFrame);
-        }
-      },
-      { passive: true }
-    );
+    function onScrollFrame() {
+      scrollTicking = false;
+      if (!mqlDesktop.matches) {
+        setLangCollapsed(false);
+        return;
+      }
+      var y = readScrollY();
+      var dy = y - lastScrollY;
+      lastScrollY = y;
+      if (y < 48) {
+        setLangCollapsed(false);
+      } else if (dy > 14 && y > 88) {
+        setLangCollapsed(true);
+      } else if (dy < -14) {
+        setLangCollapsed(false);
+      }
+    }
+
+    function onScroll() {
+      if (!scrollTicking) {
+        scrollTicking = true;
+        requestAnimationFrame(onScrollFrame);
+      }
+    }
+
+    function syncScrollCollapseForViewport() {
+      window.removeEventListener("scroll", onScroll);
+      if (mqlDesktop.matches) {
+        lastScrollY = readScrollY();
+        window.addEventListener("scroll", onScroll, { passive: true });
+      } else {
+        setLangCollapsed(false);
+      }
+    }
+
+    if (mqlDesktop.addEventListener) {
+      mqlDesktop.addEventListener("change", syncScrollCollapseForViewport);
+    } else if (mqlDesktop.addListener) {
+      mqlDesktop.addListener(syncScrollCollapseForViewport);
+    }
+    syncScrollCollapseForViewport();
   }
 })();
