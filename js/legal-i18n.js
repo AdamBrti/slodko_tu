@@ -41,10 +41,11 @@
     "<ul class=\"legal-page__list\">" +
     "<li><strong>WhatsApp</strong> — when you choose a link or number; Meta/WhatsApp terms apply,</li>" +
     "<li><strong>Instagram</strong> — a normal link to the profile (no embedded widget on the site),</li>" +
-    "<li><strong>Google Fonts</strong> and <strong>OpenStreetMap</strong> — only after consent in the banner; some technical data may then be processed by Google or OSM operators,</li>" +
+    "<li><strong>Google Fonts</strong> and the <strong>embedded Google Maps</strong> frame — only after consent in the banner; some technical data may then be processed by Google (including when fonts load),</li>" +
+    "<li><strong>Booksy</strong> — the site may show a <strong>plain link</strong> to the external booking service (no Booksy widget embedded on our domain); after you leave for Booksy, that service’s rules and privacy policy apply and Booksy acts as a separate controller for data you enter there,</li>" +
     "<li><strong>website hosting</strong> — the provider where the server runs (details on request).</li>" +
     "</ul>" +
-    "<p><strong>What we do not use on this site at the moment:</strong> Google Analytics 4, Google Tag Manager, Meta Pixel, embedded Instagram, Calendly, Booksy. If we add any of these, we will update the documents and — where needed — consents first.</p>" +
+    "<p><strong>What we do not use on this site at the moment:</strong> Google Analytics 4, Google Tag Manager, Meta Pixel, embedded Instagram, Calendly, an <strong>embedded Booksy widget</strong> (an external link is not an embed). If we add any of these, we will update the documents and — where needed — consents first.</p>" +
     "<h2>Hosting and security</h2>" +
     "<p>The site uses encrypted connection (<strong>HTTPS / SSL</strong>) and hosting with standard protection of data sent through the server.</p>" +
     "<h2>Photos and image</h2>" +
@@ -93,10 +94,11 @@
     "<ul class=\"legal-page__list\">" +
     "<li><strong>WhatsApp</strong> — wenn Sie Link oder Nummer wählen; es gelten die Regeln von Meta/WhatsApp,</li>" +
     "<li><strong>Instagram</strong> — normaler Profil-Link (ohne eingebettetes Widget),</li>" +
-    "<li><strong>Google Fonts</strong> und <strong>OpenStreetMap</strong> — erst nach Zustimmung im Banner; dann können u. a. IP und technische Daten an Google bzw. OSM-Anbieter übermittelt werden,</li>" +
+    "<li><strong>Google Fonts</strong> und die <strong>eingebettete Google-Maps-Karte</strong> — erst nach Zustimmung im Banner; dann können u. a. IP und technische Daten an Google übermittelt werden,</li>" +
+    "<li><strong>Booksy</strong> — auf der Seite kann ein <strong>normaler Link</strong> zum externen Buchungsdienst stehen (kein eingebettetes Booksy-Widget auf unserer Domain); nach dem Wechsel zu Booksy gelten dort die Regeln und Booksy ist für dort eingegebene Daten eigener Verantwortlicher,</li>" +
     "<li><strong>Hosting</strong> der Website — Anbieter des Servers (Details auf Anfrage).</li>" +
     "</ul>" +
-    "<p><strong>Was wir derzeit nicht einsetzen:</strong> Google Analytics 4, Google Tag Manager, Meta Pixel, eingebettetes Instagram, Calendly, Booksy als Einbindung. Vor Erweiterungen aktualisieren wir die Texte und holen nötige Einwilligungen ein.</p>" +
+    "<p><strong>Was wir derzeit nicht einsetzen:</strong> Google Analytics 4, Google Tag Manager, Meta Pixel, eingebettetes Instagram, Calendly, ein <strong>eingebettetes Booksy-Widget</strong> (ein externer Link ist keine Einbettung). Vor Erweiterungen aktualisieren wir die Texte und holen nötige Einwilligungen ein.</p>" +
     "<h2>Hosting und Sicherheit</h2>" +
     "<p>Die Seite nutzt eine verschlüsselte Verbindung (<strong>HTTPS / SSL</strong>) und Hosting mit üblichem Schutz der über den Server übertragenen Daten.</p>" +
     "<h2>Fotos und Bild</h2>" +
@@ -117,11 +119,12 @@
     "<p><strong>After you click “I accept” in the banner:</strong></p>" +
     "<ul class=\"legal-page__list\">" +
     "<li><strong>Google Fonts</strong> — the browser connects to Google servers,</li>" +
-    "<li><strong>OpenStreetMap</strong> (embedded frame) — the browser connects to the map service.</li>" +
+    "<li><strong>Google Maps</strong> (embedded iframe) — the browser connects to Google; Google’s Maps and privacy rules apply.</li>" +
     "</ul>" +
+    "<p><strong>Booksy link:</strong> the contact section may contain a normal link to Booksy (no Booksy embed on our site) — this banner is not required for that click; Booksy’s own cookies and rules apply there.</p>" +
     "<p>In both cases data such as IP address and technical details may be processed according to those providers’ rules.</p>" +
     "<h2>What we <em>do not</em> use (today)</h2>" +
-    "<p>We do not run on this site, among others: <strong>Google Analytics 4</strong>, <strong>Google Tag Manager</strong>, <strong>Meta Pixel</strong>, third-party <strong>marketing</strong> ad cookies, embedded <strong>Calendly</strong> or <strong>Booksy</strong>. If that changes, we will update this text and show a new consent banner if required.</p>" +
+    "<p>We do not run on this site, among others: <strong>Google Analytics 4</strong>, <strong>Google Tag Manager</strong>, <strong>Meta Pixel</strong>, third-party <strong>marketing</strong> ad cookies, embedded <strong>Calendly</strong> or an <strong>embedded Booksy widget</strong>. If that changes, we will update this text and show a new consent banner if required.</p>" +
     "<h2>How to disable or change cookies</h2>" +
     "<p>You can <strong>clear site data</strong> in your browser settings or click the button below — you will return to the home page and see the banner again.</p>" +
     "<p><button type=\"button\" class=\"btn btn--outline\" id=\"cookie-prefs-reset\">Change cookie settings</button></p>" +
@@ -136,11 +139,12 @@
     "<p><strong>Nach Klick auf „Akzeptieren“ im Banner:</strong></p>" +
     "<ul class=\"legal-page__list\">" +
     "<li><strong>Google Fonts</strong> — der Browser verbindet sich mit Google-Servern,</li>" +
-    "<li><strong>OpenStreetMap</strong> (eingebetteter Rahmen) — Verbindung zum Karten-Dienst.</li>" +
+    "<li><strong>Google Maps</strong> (eingebetteter iframe) — Verbindung zu Google; es gelten die Regeln von Google zu Maps und Datenschutz.</li>" +
     "</ul>" +
+    "<p><strong>Booksy-Link:</strong> Im Kontakt kann ein normaler Link zu Booksy stehen (keine Booksy-Einbettung auf unserer Seite) — für diesen Klick ist dieser Banner nicht nötig; bei Booksy gelten dort eigene Cookies und Regeln.</p>" +
     "<p>Dabei können u. a. IP-Adresse und technische Daten nach den Regeln dieser Anbieter verarbeitet werden.</p>" +
     "<h2>Was wir <em>derzeit nicht</em> nutzen</h2>" +
-    "<p>Wir setzen u. a. nicht ein: <strong>Google Analytics 4</strong>, <strong>Google Tag Manager</strong>, <strong>Meta Pixel</strong>, Marketing-Cookies von Werbenetzwerken, eingebettetes <strong>Calendly</strong> oder <strong>Booksy</strong>. Bei Änderungen aktualisieren wir diesen Text und zeigen ggf. einen neuen Zustimmungs-Banner.</p>" +
+    "<p>Wir setzen u. a. nicht ein: <strong>Google Analytics 4</strong>, <strong>Google Tag Manager</strong>, <strong>Meta Pixel</strong>, Marketing-Cookies von Werbenetzwerken, eingebettetes <strong>Calendly</strong> oder ein <strong>eingebettetes Booksy-Widget</strong>. Bei Änderungen aktualisieren wir diesen Text und zeigen ggf. einen neuen Zustimmungs-Banner.</p>" +
     "<h2>Cookies abschalten oder ändern</h2>" +
     "<p>Sie können <strong>Website-Daten löschen</strong> in den Browsereinstellungen oder den Button unten klicken — Sie gelangen zur Startseite und sehen den Banner erneut.</p>" +
     "<p><button type=\"button\" class=\"btn btn--outline\" id=\"cookie-prefs-reset\">Cookie-Einstellungen ändern</button></p>" +
@@ -149,7 +153,8 @@
 
   var enTerms =
     "<h2>1. Booking appointments</h2>" +
-    "<p>You can book e.g. via <strong>WhatsApp</strong>, <strong>phone</strong> or <strong>Instagram</strong> — as indicated in the contact section. A time slot is <strong>confirmed</strong> when both sides accept it (e.g. a short reply such as “saved”, “confirmed”).</p>" +
+    "<p>You can book e.g. via <strong>WhatsApp</strong>, <strong>phone</strong>, <strong>Instagram</strong>, <strong>Facebook</strong> (when the link is active) or the external <strong>Booksy</strong> service (when the link is active) — as shown in the website contact section. A slot is <strong>confirmed</strong> when both sides accept it (e.g. a short reply such as “saved”, “confirmed”) or when confirmation follows that channel’s mechanism (e.g. booking status in Booksy), unless agreed otherwise.</p>" +
+    "<p>Bookings made through <strong>Booksy</strong> or another external calendar offered as a link are also subject to <strong>that provider’s terms and privacy policy</strong> for processing and payments on their side; for <strong>cancellations, lateness, contraindications, conduct in the studio and payment for the service with us</strong>, these terms and any direct arrangements with the studio apply.</p>" +
     "<h2>2. Lateness</h2>" +
     "<p>Please be on time. <strong>Arrival more than about 15 minutes late</strong> may mean a <strong>shorter treatment</strong> or, if the schedule cannot be adjusted safely, <strong>rescheduling the visit</strong>. We want the next clients to keep their calm and time as well.</p>" +
     "<h2>3. Cancellations and changes</h2>" +
@@ -169,7 +174,8 @@
 
   var deTerms =
     "<h2>1. Terminvereinbarung</h2>" +
-    "<p>Buchung z. B. per <strong>WhatsApp</strong>, <strong>Telefon</strong> oder <strong>Instagram</strong> — wie im Kontaktbereich angegeben. Ein Termin gilt als <strong>bestätigt</strong>, wenn beide Seiten zustimmen (z. B. kurze Antwort „gespeichert“, „bestätigt“).</p>" +
+    "<p>Buchung z. B. per <strong>WhatsApp</strong>, <strong>Telefon</strong>, <strong>Instagram</strong>, <strong>Facebook</strong> (wenn der Link aktiv ist) oder externem Dienst <strong>Booksy</strong> (wenn der Link aktiv ist) — wie im Kontaktbereich der Website angegeben. Ein Termin gilt als <strong>bestätigt</strong>, wenn beide Seiten zustimmen (z. B. „gespeichert“, „bestätigt“) oder die Bestätigung dem Kanal entspricht (z. B. Status in Booksy), sofern nicht anders vereinbart.</p>" +
+    "<p>Buchungen über <strong>Booksy</strong> oder einen anderen externen Kalender (als Link) unterliegen auch den <strong>AGB und der Datenschutzerklärung dieses Anbieters</strong> für Daten und Zahlungen dort; für <strong>Absagen, Verspätung, Kontraindikationen, Verhalten im Studio und Abrechnung der Leistung bei uns</strong> gelten diese Bedingungen und die direkte Absprache mit dem Studio.</p>" +
     "<h2>2. Verspätung</h2>" +
     "<p>Bitte pünktlich erscheinen. Bei <strong>Verspätung von mehr als ca. 15 Minuten</strong> kann die <strong>Behandlungsdauer verkürzt</strong> werden oder — wenn es sich im Zeitplan nicht sicher ausgeht — kann eine <strong>Terminverschiebung</strong> erforderlich werden. So behalten auch nachfolgende Kundinnen ihren ruhigen Ablauf.</p>" +
     "<h2>3. Absage und Terminänderung</h2>" +

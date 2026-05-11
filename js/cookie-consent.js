@@ -1,5 +1,5 @@
 /**
- * Zgoda na cookies / osadzenia (OpenStreetMap, Google Fonts).
+ * Zgoda na cookies / osadzenia (Google Fonts, osadzona mapa Google Maps).
  * Klucz localStorage: slodkotu_cookie_prefs — wartości: "essential" | "full"
  */
 (function () {
@@ -47,9 +47,9 @@
   function mapIframeTitle() {
     var lang = (document.documentElement.getAttribute("lang") || "pl").toLowerCase().slice(0, 2);
     var titles = {
-      pl: "Mapa okolicy — Szczecin, Zdroje",
-      en: "Area map — Szczecin, Zdroje",
-      de: "Karte der Umgebung — Stettin, Zdroje",
+      pl: "Mapa okolicy — Szczecin, Prawobrzeże",
+      en: "Area map — Szczecin, right bank",
+      de: "Karte der Umgebung — Stettin, rechtes Ufer",
     };
     return titles[lang] || titles.pl;
   }
@@ -57,7 +57,10 @@
   function injectMap() {
     var slot = document.getElementById("contact-map-slot");
     if (!slot) return;
-    var src = slot.getAttribute("data-osm-src");
+    var cfg = window.SLODKOTU_SITE || {};
+    var src =
+      (cfg.googleMapsEmbedUrl && String(cfg.googleMapsEmbedUrl).trim()) ||
+      slot.getAttribute("data-map-src");
     if (!src || slot.querySelector("iframe.contact-map")) return;
     var ph = document.getElementById("contact-map-placeholder");
     var ifr = document.createElement("iframe");
@@ -65,6 +68,7 @@
     ifr.title = mapIframeTitle();
     ifr.loading = "lazy";
     ifr.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+    ifr.setAttribute("allowfullscreen", "");
     ifr.src = src;
     slot.insertBefore(ifr, slot.firstChild);
     if (ph) ph.remove();

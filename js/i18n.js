@@ -14,30 +14,33 @@
   }
 
   var LANG_KEY = "slodkotu-lang";
+  /** HTML pages that share ?lang= in internal links (see patchInternalLinks). */
+  var INTERNAL_HTML_NAMES =
+    /^(index\.html|cennik\.html|przygotowanie-do-wizyty\.html|polityka-prywatnosci\.html|polityka-cookies\.html|regulamin\.html)$/i;
 
   var PAGE_META = {
     index: {
       en: {
-        title: "SłodkoTu — sugar hair removal & spray tan Szczecin-Zdroje | beauty studio",
+        title: "SłodkoTu — sugar hair removal & spray tan Szczecin right bank | beauty studio",
         description:
-          "Sugar paste and spray tan in Zdroje, Szczecin. Smooth skin, natural glow, book via WhatsApp — easy from Gryfino and nearby.",
+          "Sugar paste and spray tan in Szczecin (Prawobrzeże / Andrzejewskiego). Smooth skin, natural glow, book via WhatsApp — easy from Gryfino and nearby.",
       },
       de: {
-        title: "SłodkoTu — Zuckerpaste & Spray-Tan Stettin-Zdroje | Beauty-Studio",
+        title: "SłodkoTu — Zuckerpaste & Spray-Tan Stettin rechtes Ufer | Beauty-Studio",
         description:
-          "Haarentfernung mit Zuckerpaste und Spray-Tan in Zdroje, Stettin. Natürlicher Glow, Termin per WhatsApp — gut erreichbar aus Gryfino und Umgebung.",
+          "Haarentfernung mit Zuckerpaste und Spray-Tan in Stettin (Prawobrzeże). Natürlicher Glow, Termin per WhatsApp — gut erreichbar aus Gryfino und Umgebung.",
       },
     },
     cennik: {
       en: {
-        title: "Guide prices — SłodkoTu | sugar paste and spray tan Szczecin Zdroje",
+        title: "Guide prices | SłodkoTu | sugar paste and spray tan Szczecin",
         description:
-          "A short overview of popular treatments at SłodkoTu in Zdroje. Full pricing is agreed individually when you get in touch.",
+          "A short overview of popular treatments at SłodkoTu. Full pricing is agreed individually when you get in touch.",
       },
       de: {
-        title: "Orientierungspreise — SłodkoTu | Zuckerpaste und Spray-Tan Stettin Zdroje",
+        title: "Orientierungspreise | SłodkoTu | Zuckerpaste und Spray-Tan Stettin",
         description:
-          "Kurzer Überblick über häufige Leistungen bei SłodkoTu in Zdroje. Den vollständigen Preis klären wir individuell im Kontakt.",
+          "Kurzer Überblick über häufige Leistungen bei SłodkoTu. Den vollständigen Preis klären wir individuell im Kontakt.",
       },
     },
     privacy: {
@@ -68,6 +71,18 @@
       de: {
         title: "Leistungsbedingungen — SłodkoTu",
         description: "Regeln für Terminbuchung, Absagen und Ablauf im Beauty-Studio SłodkoTu.",
+      },
+    },
+    prepGuide: {
+      en: {
+        title: "Visit preparation | SłodkoTu | sugar paste and spray tan Szczecin",
+        description:
+          "Full before-and-after tips for sugar paste hair removal and spray tanning at SłodkoTu: TanExpert-friendly prep, first rinse after spray tan, aftercare.",
+      },
+      de: {
+        title: "Vorbereitung auf den Besuch | SłodkoTu | Zuckerpaste und Spray-Tan Stettin",
+        description:
+          "Ausführliche Tipps vor und nach Zuckerpaste und Spray-Tan bei SłodkoTu: TanExpert, erste Dusche, Pflege danach.",
       },
     },
   };
@@ -220,7 +235,6 @@
   }
 
   function patchInternalLinks(lang) {
-    var names = /^(index\.html|cennik\.html|polityka-prywatnosci\.html|polityka-cookies\.html|regulamin\.html)$/i;
     document.querySelectorAll('a[href]').forEach(function (a) {
       var href = a.getAttribute("href");
       if (!href || /^(https?:|mailto:|tel:|#)/i.test(href)) return;
@@ -234,7 +248,7 @@
       var qIdx = pathPart.indexOf("?");
       var path = qIdx >= 0 ? pathPart.slice(0, qIdx) : pathPart;
       var qs = qIdx >= 0 ? pathPart.slice(qIdx + 1) : "";
-      if (!names.test(path)) return;
+      if (!INTERNAL_HTML_NAMES.test(path)) return;
       var params = new URLSearchParams(qs);
       if (lang === "pl") params.delete("lang");
       else params.set("lang", lang);
@@ -304,7 +318,7 @@
       legal_cookies_h1: "Cookie policy",
       legal_terms_h1: "Terms of service",
       hero_aria_bg: "Studio mood — soft light, intimate treatment room",
-      hero_kicker: "Beauty studio · Szczecin-Zdroje",
+      hero_kicker: "Beauty studio · Szczecin right bank",
       hero_lead: "Sugar paste and spray tan — calm visits, with real care for your skin.",
       hero_cta_wa: "Book via WhatsApp",
       hero_cta_ig: "Instagram",
@@ -325,28 +339,64 @@
       gallery_title: "Studio atmosphere",
       gallery_subtitle: "Warm light and a clean space — so you can really switch off.",
       gallery_note: "Linen, ceramics and soft light — one calm visual story.",
-      prep_title: "How to prepare for your visit?",
-      prep_lead: "Short tips to make your treatment as comfortable as possible.",
+      prep_title: "Preparing for your visit",
+      prep_lead:
+        "A few simple tips before sugar paste hair removal and spray tanning — for a more even result and gentler comfort for your skin.",
       prep_sugar_h3: "Sugar hair removal",
       prep_tan_h3: "Spray tanning",
-      prep_sugar_li1: "Clean skin, without heavy oils before the appointment.",
-      prep_sugar_li2: "Hair length about 0.5 cm — ideal for paste work.",
-      prep_sugar_li3: "Gentle exfoliation the day before (unless contraindicated).",
-      prep_tan_li1: "Exfoliate 24 hours before the visit.",
-      prep_tan_li2: "On the day, clean skin — no scented creams or deodorant on the area.",
-      prep_tan_li3: "Loose, darker clothing after the session for comfort.",
+      prep_sugar_li1: "Best when hair is about 0.5 cm long.",
+      prep_sugar_li2: "The day before, a gentle peel helps.",
+      prep_sugar_li3: "On the day of your visit, skip heavy oils and body lotions.",
+      prep_tan_short_li1: "The day before, do a gentle peel.",
+      prep_tan_short_li2: "Come without body lotion and perfume.",
+      prep_tan_short_li3: "Bring loose, darker clothing.",
+      prep_cta_full: "See full visit preparation →",
+      prep_guide_back: "← Back to the short summary on the home page",
+      prep_guide_intro:
+        "Below is the full checklist before and after treatments: sugar paste hair removal and spray tan (TanExpert and MineTan). On the home page we only keep a short reminder.",
+      prep_tan_intro:
+        "Well-prepped skin means a more even tan. Below are our TanExpert-friendly tips so self-tan care at home stays safe and predictable.",
+      prep_tan_before_h: "Before the treatment",
+      prep_tan_after_h: "After the treatment",
+      prep_tan_b1:
+        "Exfoliate 24 hours before (e.g. in the bath), paying extra attention to elbows, knees, ankles and dry patches — the TanExpert Exclusive Line Magic Eraser mitt works great.",
+      prep_tan_b2:
+        "Do any hair removal at least 48 hours earlier so pores can close — otherwise dark dots in pores are more likely.",
+      prep_tan_b3:
+        "24 hours before, avoid high-pH soaps and shower products, oil-based formulas and heavy moisturisers — they can block the tanning actives.",
+      prep_tan_b4:
+        "Right before application skin should be clean and dry. Do not moisturise the whole body — only a thin layer on knees and elbows so they don’t over-absorb bronzer.",
+      prep_tan_b5:
+        "On the day of the visit, do not use moisturiser, perfume, deodorant or makeup on the spray area.",
+      prep_tan_b6: "Bring loose, dark clothing to the appointment.",
+      prep_tan_a1:
+        "The longer the product stays on before the first rinse, the deeper the tan — we’ll agree timing during your visit.",
+      prep_tan_a2:
+        "Within 1–3 hours, take a short (~45 s), lukewarm shower — hot water slows colour development. The cosmetic bronzer rinses off while the tanning ingredients keep working.",
+      prep_tan_a3:
+        "For the first wash use water only — no shower gels, scrubs or shampoo. The final shade keeps developing for up to 24 hours.",
+      prep_tan_a4: "Pat skin dry with a towel — don’t rub hard.",
+      prep_tan_a5:
+        "After that first rinse you can wear favourite clothes — no staining worries on clothes or bedding if you follow the plan.",
+      prep_tan_a6: "For the first 24 hours, skip gym and swimming.",
+      prep_tan_a7: "Try not to touch skin before the product is rinsed off.",
+      prep_tan_a8:
+        "Moisturise — e.g. TanExpert Desert Rose to extend the tan; wash your hands after applying cream.",
+      prep_tan_a9:
+        "Very long baths and heavy sweating soften the tan — keep that in mind for the first days.",
       review_stars_aria: "Rating: 5 out of 5 stars",
       reviews_title: "Client reviews",
       reviews_subtitle: "Short voices after visits — no hype.",
       faq_title: "Frequently asked questions",
       contact_title: "Book a visit",
-      contact_subtitle: "WhatsApp or phone — no long forms.",
+      contact_subtitle:
+        "WhatsApp, phone or pick a time in the Booksy calendar — no long forms on our site.",
       contact_big_phone: "Phone",
       contact_big_wa: "WhatsApp",
       contact_big_ig: "Instagram",
-      contact_map_zoom: "Larger map",
+      contact_map_zoom: "Open in Google Maps",
       cennik_back: "← Back to services",
-      cennik_h1: "Guide prices",
+      cennik_h1: "Pricing",
       price_from: "from … PLN",
       price_extra: "add-on … PLN",
       price_quote_ind: "Individual pricing",
@@ -356,11 +406,11 @@
       wa_faq: "I have a question after reading the FAQ — writing from the SłodkoTu website.",
       hero_cta_pricing: "See pricing",
       hero_trust_row_aria: "At a glance",
-      hero_trust_1: "Szczecin-Zdroje",
+      hero_trust_1: "Szczecin · right bank",
       hero_trust_2: "Quick replies",
       hero_trust_3: "Easy from Gryfino & nearby",
       trust_badges_title: "First things first",
-      trust_badge_1: "Intimate studio in Zdroje",
+      trust_badge_1: "Intimate studio on the right bank",
       trust_badge_2: "Sensitive skin — gentle method",
       trust_badge_3: "Book via WhatsApp",
       trust_badge_4: "Convenient from Gryfino & the area",
@@ -383,9 +433,9 @@
       why_tan_h3: "Spray tanning",
       why_tan_p:
         "DHA gives an even, natural tone without sunbeds. We adjust the shade to your complexion — fresh-looking skin without excess.",
-      local_title: "Beauty studio in Zdroje — travel from Gryfino & nearby",
+      local_title: "Beauty studio in Szczecin right bank — travel from Gryfino & nearby",
       local_p_html:
-        "We’re in <strong>Zdroje, Szczecin</strong> — easy to reach from the right bank, <strong>Gryfino, Chojna, Widuchowa, Banie and Stare Czarnowo</strong>. After booking we send precise directions.",
+        "The studio is at <strong>29c Jerzego Andrzejewskiego St</strong> on <strong>Szczecin’s right bank (Prawobrzeże)</strong> — easy to reach from <strong>Gryfino, Chojna, Widuchowa, Banie and Stare Czarnowo</strong>. After booking we can fine-tune door-to-door directions.",
       local_cta: "Ask about directions",
       reviews_cta_btn: "Match the service to your skin",
       review1_tag: "After sugar bikini",
@@ -398,19 +448,24 @@
       cta_band_final_btn: "Book via WhatsApp",
       float_dock_wa: "Book a visit — WhatsApp",
       contact_ig_link: "Instagram",
+      contact_booksy_link: "Calendar & booking — Booksy",
+      contact_booksy_big: "Booksy — pick a time slot",
+      contact_facebook_link: "Facebook — Słodko Tu",
     };
 
-    en.hero_kicker = "Beauty studio · Szczecin-Zdroje";
+    en.hero_kicker = "Beauty studio · Szczecin right bank";
     en.hero_title = "Sugar paste & spray tan<br />in an intimate beauty studio";
     en.hero_lead =
-      "Smooth skin, a natural glow and zero pressure — thoughtful comfort in our Zdroje studio.";
+      "Smooth skin, a natural glow and zero pressure — thoughtful comfort in our Szczecin studio.";
     en.hero_cta_wa = "Book via WhatsApp";
-    en.about_title = "SłodkoTu — studio in Zdroje";
+    en.about_title = "SłodkoTu — studio on the right bank";
     en.about_p1_html =
       'At <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span> we focus on two things: <strong>sugar hair removal</strong> and <strong>spray tan</strong>. Cleanliness, discretion and a pace that suits you — without a “factory” rush.';
+    en.about_p2_html =
+      "I have <strong>over 7 years’ experience</strong> with sugar paste hair removal — it’s the studio’s daily practice, with your comfort first.";
     en.review1_quote =
       "“Quiet, clean, no rush. Finally hair removal where I don’t tense up.”";
-    en.review1_meta = "Kasia · <span>Szczecin-Zdroje</span>";
+    en.review1_meta = "Kasia · <span>Szczecin</span>";
     en.review2_quote =
       "“The colour looked natural in my wedding photos — exactly what I asked for.”";
     en.review2_meta = "Marta · <span>Szczecin</span>";
@@ -430,89 +485,138 @@
     en.faq_a4 =
       "Usually around 5–10 days of nice glow, depending on aftercare. We share tips so it fades evenly.";
     en.faq_q5 = "How should I prepare for spray tanning?";
-    en.faq_a5 =
-      "Exfoliate the day before; on the day, clean skin with no scented products on the area; loose, darker clothes after the visit.";
+    en.faq_a5_html =
+      '<p>On the home page you’ll find a short summary in <a href="#przygotowanie">“Preparing for your visit”</a>. The full before-and-after checklist (TanExpert, including Magic Eraser and Desert Rose) is on <a href="przygotowanie-do-wizyty.html">the visit preparation page</a>.</p>';
     en.faq_q6 = "How do I book?";
     en.faq_a6 =
-      "WhatsApp or phone — we confirm the time and send directions to Zdroje if needed.";
+      "We reply fastest on WhatsApp and phone — we confirm your slot and can send directions to our right-bank Szczecin studio. Prefer to choose a free time yourself? Use the Booksy calendar (link in Contact). You can also message us on Facebook when that link is active.";
     en.contact_line1_html =
-      '<span class="contact-aside__ic" aria-hidden="true">◎</span> Studio in Zdroje — Szczecin, West Pomerania';
+      '<span class="contact-aside__ic" aria-hidden="true">◎</span> <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">29c Jerzego Andrzejewskiego St, 70-779 Szczecin (right bank / Prawobrzeże), West Pomerania, Poland</a>';
     en.contact_line_ig_html =
       '<span class="contact-aside__ic" aria-hidden="true">@</span> <a href="https://instagram.com/" rel="noopener noreferrer">Instagram</a>';
     en.contact_hint =
-      "Full address in Zdroje and directions are sent after you book.";
+      "Tell us where you’re coming from and we’ll fine-tune door-to-door directions when you book.";
     en.contact_trust =
-      "A short first message is enough to pick a time. We reply on WhatsApp and phone — no long forms.";
+      "A short first message is enough. We reply on WhatsApp and phone; you can also grab a slot on Booksy — no long forms on this site.";
     en.contact_map_ph_html =
-      'The neighbourhood map loads here after you choose <strong>I accept</strong> in the cookie notice (your browser then connects to OpenStreetMap — like opening a map site). <a href="https://www.openstreetmap.org/?mlat=53.4085&amp;mlon=14.5825#map=15/53.4085/14.5825" rel="noopener noreferrer">Open map in a new tab</a>.';
+      'The map (Google Maps) loads here after you choose <strong>I accept</strong> in the cookie notice — your browser then connects to Google’s servers (like opening Google Maps). <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">Open location in Google Maps</a>.';
     en.footer_index_html =
-      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin Zdroje · <a href="cennik.html">Pricing</a> · sugar paste · spray tan';
+      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin right bank · <a href="cennik.html">Pricing</a> · sugar paste · spray tan';
     en.footer_cennik_html =
-      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin Zdroje · <a href="cennik.html">Pricing</a>';
+      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin right bank · <a href="cennik.html">Pricing</a>';
     en.footer_sub_html =
-      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin Zdroje · <a href="index.html">Home</a> · <a href="cennik.html">Pricing</a>';
+      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin right bank · <a href="index.html">Home</a> · <a href="cennik.html">Pricing</a>';
     en.footer_legal_short_html =
       '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> · <a href="index.html">Home</a>';
+    en.footer_prep_html =
+      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> · beauty studio Szczecin right bank · <a href="index.html">Home</a> · <a href="cennik.html">Pricing</a>';
     en.cookie_banner_html_index =
-      'Google Fonts and the OpenStreetMap map load only after you choose <strong>I accept</strong>. <strong>Essential only</strong> keeps the page without those extras (you can still open the map in a separate tab from Contact). <a href="polityka-cookies.html">Cookie policy</a> · <a href="polityka-prywatnosci.html">Privacy</a>.';
+      'Google Fonts and the embedded Google Maps frame load only after you choose <strong>I accept</strong>. <strong>Essential only</strong> keeps the page without those extras (you can still open the studio location in Google Maps from Contact without accepting the embed). <a href="polityka-cookies.html">Cookie policy</a> · <a href="polityka-prywatnosci.html">Privacy</a>.';
     en.cookie_banner_html_cennik =
       'Google Fonts load after you choose <strong>I accept</strong>. <strong>Essential only</strong> uses system fonts. <a href="polityka-cookies.html">Cookies</a> · <a href="polityka-prywatnosci.html">Privacy</a>.';
     en.cookie_banner_html_short =
-      'Google Fonts and the OSM map load after <strong>I accept</strong>. Details: <a href="polityka-cookies.html">cookie policy</a> and <a href="polityka-prywatnosci.html">privacy</a>.';
+      'Google Fonts and Google Maps embed load after <strong>I accept</strong>. Details: <a href="polityka-cookies.html">cookie policy</a> and <a href="polityka-prywatnosci.html">privacy</a>.';
     en.cookie_banner_html_min =
-      'Google Fonts and OSM map after <strong>I accept</strong>. <a href="polityka-cookies.html">Cookies</a> · <a href="polityka-prywatnosci.html">Privacy</a>';
+      'Google Fonts and Google Maps embed after <strong>I accept</strong>. <a href="polityka-cookies.html">Cookies</a> · <a href="polityka-prywatnosci.html">Privacy</a>';
     en.legal_privacy_meta_html =
-      'Effective from <time datetime="2026-05-09">9 May 2026</time>. We keep it short and clear — if anything is unclear, write or call and we’ll explain.';
+      'Effective from <time datetime="2026-05-11">11 May 2026</time>. We keep it short and clear — if anything is unclear, write or call and we’ll explain.';
     en.legal_cookies_meta_html =
-      'Short information for the <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span> website. From <time datetime="2026-05-09">9 May 2026</time>.';
+      'Short information for the <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span> website. From <time datetime="2026-05-11">11 May 2026</time>.';
     en.legal_terms_meta_html =
-      'Applies to beauty services at <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. Effective <time datetime="2026-05-09">9 May 2026</time>.';
-    en.cennik_subtitle =
-      "A calm overview of our most booked visits — no endless tables. Full pricing and the final amount are agreed individually when you message or call.";
+      'Applies to beauty services at <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. Effective <time datetime="2026-05-11">11 May 2026</time>.';
     en.cennik_sugar_h2 = "Sugar paste hair removal";
     en.cennik_sugar_p1 =
-      "Warm sugar-and-lemon paste — gentler than wax, often kinder to sensitive skin and bikini areas. Expect smooth skin for weeks and calmer regrowth with regular appointments.";
+      "A gentle hair removal method based on sugar and lemon juice, especially valued on sensitive skin and in bikini zones. Regular visits help keep skin smooth for longer and make regrowing hair less of a hassle.";
     en.price_sugar_basic_label = "Most chosen areas";
-    en.price_sugar_basic_hint = "Sample brackets — exact quote after we plan zones together";
+    en.price_sugar_basic_hint = "Sample prices for selected treatments.";
     en.price_sugar_pack_label = "Most chosen packages";
-    en.price_sugar_pack_hint = "One visit, several areas — unhurried pace";
+    en.price_sugar_pack_hint = "Several zones in one calm visit.";
     en.price_row_underarms = "Underarms";
     en.price_row_legs = "Lower legs / thighs";
+    en.price_row_legs_full_short = "Full legs";
     en.price_row_bikini_cl = "Classic bikini";
     en.price_row_bikini_deep = "Deep bikini";
     en.price_row_legs_full = "Full legs";
     en.price_row_combo1 = "Legs + classic bikini";
+    en.price_row_combo_ext = "Legs + extended bikini";
     en.price_row_combo2 = "Legs + deep bikini";
     en.price_row_pack_neck_down = "“Neck down” package";
-    en.price_amt_pachy = "from 50 PLN";
+    en.price_amt_pachy = "from 49 PLN";
     en.price_amt_lydki = "from 90 PLN";
-    en.price_amt_bikini_cl = "from 100 PLN";
-    en.price_amt_bikini_deep = "from 140 PLN";
-    en.price_amt_legs_full = "from 150 PLN";
-    en.price_amt_combo1 = "from 220 PLN";
-    en.price_amt_combo2 = "from 270 PLN";
+    en.price_amt_bikini_cl = "from 99 PLN";
+    en.price_amt_bikini_deep = "from 129 PLN";
+    en.price_amt_legs_full = "from 139 PLN";
+    en.price_amt_combo1 = "from 199 PLN";
+    en.price_amt_combo_ext = "from 209 PLN";
+    en.price_amt_combo2 = "from 229 PLN";
     en.cennik_tan_h2 = "Spray tanning";
     en.cennik_tan_p1 =
-      "DHA spray tan without UV, with a natural glow. We match the tone to your skin — popular before weddings, shoots or holidays. Short aftercare tips are given at your visit.";
+      "A natural-looking tan without UV and without orange tones. We tailor the shade to your skin and the look you want, from a subtle glow to a deeper tan.";
+    en.cennik_tan_p2 =
+      "After your visit you receive short aftercare tips that help the result last as long as possible.";
+    en.cennik_tan_h3 = "Certified training and premium products";
+    en.cennik_tan_p3 =
+      "We work with TanExpert and MineTan cosmetics and equipment, following completed professional spray tanning training.";
     en.price_tan_overview_label = "Popular applications";
-    en.price_tan_overview_hint = "Indicative — full scope agreed when you book";
-    en.price_row_torso = "Torso + arms";
-    en.price_row_body_no_face = "Full body (no face)";
-    en.price_row_body_face = "Full body + face";
-    en.price_amt_tan_torso = "from 110 PLN";
-    en.price_amt_tan_body = "from 170 PLN";
-    en.price_amt_tan_full = "from 210 PLN";
+    en.price_tan_overview_hint = "Most often chosen spray tanning options.";
+    en.price_row_tan_half = "Half body";
+    en.price_row_tan_whole = "Full body";
+    en.price_amt_tan_half = "from 40 PLN";
+    en.price_amt_tan_whole = "from 80 PLN";
+    en.cennik_full_h2 = "Full sugar paste hair removal price list";
+    en.cennik_full_p =
+      "Open a category to see the full range of treatments and guide prices.";
+    en.cennik_acc_women_sum = "Price list: women";
+    en.cennik_acc_men_sum = "Price list: men";
+    en.cennik_acc_bikini_sum = "Bikini types";
+    en.cennik_acc_w_face = "Face";
+    en.cennik_acc_w_body = "Body";
+    en.cennik_acc_m_face = "Face";
+    en.cennik_acc_m_body = "Body";
+    en.cennik_acc_w_face_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Eyebrows</span> <span class="price-card__amount">39 PLN · 10 min</span></li><li><span class="price-card__name">Upper lip</span> <span class="price-card__amount">39 PLN · 10 min</span></li><li><span class="price-card__name">Chin</span> <span class="price-card__amount">39 PLN · 10 min</span></li><li><span class="price-card__name">Brow arches</span> <span class="price-card__amount">39 PLN · 10 min</span></li><li><span class="price-card__name">Tip of nose</span> <span class="price-card__amount">39 PLN · 10 min</span></li><li><span class="price-card__name">Neck</span> <span class="price-card__amount">39 PLN · 10 min</span></li><li><span class="price-card__name">Cheeks</span> <span class="price-card__amount">39 PLN · 10 min</span></li><li><span class="price-card__name">Ears</span> <span class="price-card__amount">39 PLN · 10 min</span></li><li><span class="price-card__name">Full face &amp; décolleté</span> <span class="price-card__amount">199 PLN</span></li></ul>';
+    en.cennik_acc_w_body_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Underarms</span> <span class="price-card__amount">49 PLN · 10 min</span></li><li><span class="price-card__name">Full legs</span> <span class="price-card__amount">139 PLN · 45 min</span></li><li><span class="price-card__name">Arms + underarms + hands + fingers</span> <span class="price-card__amount">149 PLN</span></li><li><span class="price-card__name">Full legs + feet + toes</span> <span class="price-card__amount">179 PLN</span></li><li><span class="price-card__name">Buttocks</span> <span class="price-card__amount">69 PLN</span></li><li><span class="price-card__name">Stomach</span> <span class="price-card__amount">49 PLN</span></li><li><span class="price-card__name">Back</span> <span class="price-card__amount">69 PLN</span></li></ul>';
+    en.cennik_acc_m_face_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Eyebrows</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Upper lip</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Chin</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Brow arches</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Tip of nose</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Neck</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Cheeks</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Ears</span> <span class="price-card__amount">49 PLN</span></li><li><span class="price-card__name">Full face &amp; décolleté</span> <span class="price-card__amount">199 PLN</span></li></ul>';
+    en.cennik_acc_m_body_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Underarms</span> <span class="price-card__amount">69 PLN · 10 min</span></li><li><span class="price-card__name">Full legs</span> <span class="price-card__amount">219 PLN · 60 min</span></li><li><span class="price-card__name">Arms + underarms + hands + fingers</span> <span class="price-card__amount">219 PLN</span></li><li><span class="price-card__name">Full legs + feet + toes</span> <span class="price-card__amount">239 PLN</span></li><li><span class="price-card__name">Full back</span> <span class="price-card__amount">199 PLN · 60 min</span></li><li><span class="price-card__name">Torso</span> <span class="price-card__amount">149 PLN · 30 min</span></li><li><span class="price-card__name">Back + shoulders</span> <span class="price-card__amount">249 PLN</span></li><li><span class="price-card__name">Back + shoulders + torso</span> <span class="price-card__amount">359 PLN</span></li></ul>';
+    en.cennik_acc_bikini_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Classic bikini · 30 min</span> <span class="price-card__amount">99 PLN / with legs 199 PLN</span></li><li><span class="price-card__name">Extended bikini · 30 min</span> <span class="price-card__amount">109 PLN / with legs 209 PLN</span></li><li><span class="price-card__name">Partial + strip · 30 min</span> <span class="price-card__amount">109 PLN / with legs 209 PLN</span></li><li><span class="price-card__name">Deep bikini · 40 min</span> <span class="price-card__amount">129 PLN / with legs 229 PLN</span></li><li><span class="price-card__name">Hollywood bikini · 45 min</span> <span class="price-card__amount">139 PLN / with legs 239 PLN</span></li><li><span class="price-card__name">Hollywood + pattern · 45 min</span> <span class="price-card__amount">149 PLN / with legs 249 PLN</span></li></ul>';
+    en.cennik_acc_pack_sum = "Packages, one visit";
+    en.cennik_acc_pack_lead =
+      "Several zones in one go, the same bundles as on our flyer. Visit length is agreed when you book.";
+    en.cennik_acc_pack_w = "Packages: women";
+    en.cennik_acc_pack_m = "Packages: men";
+    en.cennik_acc_pack_bikini = "Bikini + full legs";
+    en.cennik_acc_pack_w_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Arms + underarms + hands + fingers</span> <span class="price-card__amount">149 PLN</span></li><li><span class="price-card__name">Full legs + feet + toes</span> <span class="price-card__amount">179 PLN</span></li><li><span class="price-card__name">“Neck down” package</span> <span class="price-card__amount">individual quote</span></li></ul>';
+    en.cennik_acc_pack_m_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Arms + underarms + hands + fingers</span> <span class="price-card__amount">219 PLN</span></li><li><span class="price-card__name">Full legs + feet + toes</span> <span class="price-card__amount">239 PLN</span></li><li><span class="price-card__name">Back + shoulders</span> <span class="price-card__amount">249 PLN</span></li><li><span class="price-card__name">Back + shoulders + torso</span> <span class="price-card__amount">359 PLN</span></li></ul>';
+    en.cennik_acc_pack_bikini_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Legs + classic bikini</span> <span class="price-card__amount">199 PLN</span></li><li><span class="price-card__name">Legs + extended bikini</span> <span class="price-card__amount">209 PLN</span></li><li><span class="price-card__name">Legs + partial bikini + strip</span> <span class="price-card__amount">209 PLN</span></li><li><span class="price-card__name">Legs + deep bikini</span> <span class="price-card__amount">229 PLN</span></li><li><span class="price-card__name">Legs + Hollywood bikini</span> <span class="price-card__amount">239 PLN</span></li><li><span class="price-card__name">Legs + Hollywood + pattern</span> <span class="price-card__amount">249 PLN</span></li></ul>';
     en.cennik_note_html =
-      'The amounts above are indicative. <strong>Full pricing and the right package for you</strong> are agreed individually when you get in touch — message on WhatsApp or call and we’ll prepare a preliminary quote after a short chat.';
+      "<p>Prices are indicative and may vary depending on the scope of the treatment.</p><p>If you are not sure which option is best, message us on WhatsApp or call and we will help you choose.</p>";
     en.img_gallery_1 = "Studio interior — linen and soft light";
     en.img_gallery_2 = "Sugar paste and ceramics in the treatment room";
     en.img_gallery_3 = "Skin detail in natural light";
     en.img_gallery_4 = "Intimate studio — a calm moment before the treatment";
-    en.img_gallery_5 = "Linen, towels and simple interior details";
     en.img_gallery_6 = "Even, natural tan matched to your skin";
-    en.img_prep_left = "Sugar paste, linen and ceramics — preparation for the treatment";
-    en.img_prep_right = "Fine mist and even glow after application";
-    en.img_about_media = "SłodkoTu logo — studio photos coming soon";
+    en.img_prep_left = "Sugar paste and hair removal accessories at SłodkoTu";
+    en.img_prep_right = "Professional spray tanning equipment in the studio";
+    en.img_about_cert =
+      "Certificate of professional spray tanning training — TanExpert and MineTan cosmetics and equipment";
+    en.cred_eyebrow = "Trust";
+    en.cred_h2 = "Why clients trust us";
+    en.cred_lead =
+      "We work with professional products we stand behind, and keep training up to date — so you feel calm and confident from your very first visit.";
+    en.cred_badge = "Certified TanExpert & MineTan training";
+    en.cred_zoom_hint = "View larger";
+    en.cred_thumb_aria = "Open a larger view of the training certificate";
+    en.cred_lightbox_title = "Certificate preview";
+    en.cred_lightbox_cap =
+      "Spray tanning training — TanExpert and MineTan cosmetics and equipment.";
+    en.cred_close_aria = "Close";
 
     var de = {
       skip_to_content: "Zum Inhalt springen",
@@ -550,19 +654,19 @@
       legal_cookies_h1: "Cookie-Richtlinie",
       legal_terms_h1: "Leistungsbedingungen",
       hero_aria_bg: "SłodkoTu-Atmosphäre — weiches Licht, natürliches Ambiente",
-      hero_kicker: "Beauty-Studio · Stettin-Zdroje",
+      hero_kicker: "Beauty-Studio · Stettin rechtes Ufer",
       hero_lead:
-        "Glatte Haut, natürlicher Glow — ruhige Termine im kleinen Studio in Zdroje.",
+        "Glatte Haut, natürlicher Glow — ruhige Termine im kleinen Studio am rechten Ufer.",
       hero_cta_wa: "Über WhatsApp buchen",
       hero_cta_pricing: "Preise ansehen",
       hero_trust_row_aria: "Kurz & klar",
-      hero_trust_1: "Stettin-Zdroje",
+      hero_trust_1: "Stettin · rechtes Ufer",
       hero_trust_2: "Schnelle Antworten",
       hero_trust_3: "Gut erreichbar aus Gryfino & Umgebung",
       hero_cta_ig: "Instagram",
       about_sign: "Hier sind Sie wichtig",
       trust_badges_title: "Zum Start",
-      trust_badge_1: "Kleines Studio in Zdroje",
+      trust_badge_1: "Kleines Studio am rechten Ufer",
       trust_badge_2: "Empfindliche Haut — sanfte Methode",
       trust_badge_3: "Termin per WhatsApp",
       trust_badge_4: "Gut erreichbar aus Gryfino & Umgebung",
@@ -601,16 +705,51 @@
       gallery_title: "Studio-Atmosphäre",
       gallery_subtitle: "Warmes Licht, sauberer Raum — damit Sie wirklich abschalten können.",
       gallery_note: "Leinen, Keramik, weiches Licht — eine ruhige, stimmige Bildsprache.",
-      prep_title: "Wie bereite ich den Besuch vor?",
-      prep_lead: "Kurze Tipps, damit die Behandlung für Sie möglichst angenehm ist.",
+      prep_title: "Vorbereitung auf den Besuch",
+      prep_lead:
+        "Ein paar einfache Tipps vor Zuckerpaste und Spray-Tan — für ein gleichmäßigeres Ergebnis und mehr Komfort für die Haut.",
       prep_sugar_h3: "Zuckerpaste",
       prep_tan_h3: "Spray-Tan",
-      prep_sugar_li1: "Haut sauber, ohne starke Öle vor der Behandlung.",
-      prep_sugar_li2: "Haarlänge ca. 0,5 cm — ideal für die Paste.",
-      prep_sugar_li3: "Am Tag davor sanftes Peeling (sofern keine Kontraindikation).",
-      prep_tan_li1: "Peeling 24 Stunden vor dem Termin.",
-      prep_tan_li2: "Am Behandlungstag „auf Null“ — ohne parfümierte Cremes/Deo auf der Zone.",
-      prep_tan_li3: "Danach lockere, dunklere Kleidung — angenehmer nach der Anwendung.",
+      prep_sugar_li1: "Am besten bei einer Haarlänge von ca. 0,5 cm.",
+      prep_sugar_li2: "Am Tag davor lohnt sich ein sanftes Peeling.",
+      prep_sugar_li3: "Am Behandlungstag keine schweren Öle und Bodylotions.",
+      prep_tan_short_li1: "Am Tag davor sanftes Peeling.",
+      prep_tan_short_li2: "Ohne Bodylotion und Parfüm zum Termin kommen.",
+      prep_tan_short_li3: "Lockere, dunklere Kleidung mitbringen.",
+      prep_cta_full: "Vollständige Vorbereitung ansehen →",
+      prep_guide_back: "← Zur Kurzfassung auf der Startseite",
+      prep_guide_intro:
+        "Unten die vollständige Checkliste vor und nach den Behandlungen: Haarentfernung mit Zuckerpaste und Spray-Tan (TanExpert und MineTan). Auf der Startseite bleibt nur eine kurze Erinnerung.",
+      prep_tan_intro:
+        "Gut vorbereitete Haut bräunt gleichmäßiger. Unten unsere Tipps rund um TanExpert — damit Pflege und Bräunung zu Hause sicher und planbar bleiben.",
+      prep_tan_before_h: "Vor der Behandlung",
+      prep_tan_after_h: "Nach der Behandlung",
+      prep_tan_b1:
+        "Peeling 24 Stunden vorher (z. B. beim Baden), besonders Ellbogen, Knie, Knöchel und trockene Stellen — der Handschuh TanExpert Exclusive Line Magic Eraser eignet sich dafür.",
+      prep_tan_b2:
+        "Haarentfernung mindestens 48 Stunden zuvor, damit sich die Poren schließen — sonst eher dunkle Pünktchen.",
+      prep_tan_b3:
+        "24 Stunden vorher keine hochalkalische Seife oder Duschprodukte, keine öligen oder sehr reichen Cremes — sie können die Bräunungswirkstoffe blockieren.",
+      prep_tan_b4:
+        "Vor dem Auftrag Haut sauber und trocken. Keine Bodylotion flächig — nur dünn auf Knie und Ellbogen, damit kein Überfärben entsteht.",
+      prep_tan_b5:
+        "Am Behandlungstag keine feuchtigkeitsspendende Creme, Parfüm, Deo oder Make-up auf der Sprühzone.",
+      prep_tan_b6: "Lockere, dunkle Kleidung zum Termin mitbringen.",
+      prep_tan_a1:
+        "Je länger das Produkt vor der ersten Dusche einwirken kann, desto kräftiger der Ton — Zeitfenster besprechen wir bei Ihnen.",
+      prep_tan_a2:
+        "Innerhalb von 1–3 Stunden kurze (~45 s), lauwarme Dusche — heißes Wasser bremst die Entwicklung. Kosmetischer Bronzer läuft ab, die Bräunungsstoffe arbeiten weiter.",
+      prep_tan_a3:
+        "Beim ersten Waschen nur Wasser — keine Duschgele, Peelings oder Shampoo. Der Endton entwickelt sich bis zu ca. 24 Stunden.",
+      prep_tan_a4: "Mit dem Handtuch tupfen, nicht stark reiben.",
+      prep_tan_a5:
+        "Danach normale Kleidung — ohne Fleckenängste auf Textilien und Bettwäsche bei Einhaltung der Tipps.",
+      prep_tan_a6: "Die ersten 24 Stunden kein Sport und kein Schwimmen.",
+      prep_tan_a7: "Haut möglichst nicht anfassen, bevor das Produkt abgespült ist.",
+      prep_tan_a8:
+        "Eincremen, z. B. mit TanExpert Desert Rose für längere Haltbarkeit; danach Hände waschen.",
+      prep_tan_a9:
+        "Lange Bäder und starkes Schwitzen schwächen die Bräune — in den ersten Tagen beachten.",
       review_stars_aria: "Bewertung: 5 von 5 Sternen",
       reviews_title: "Stimmen von Kundinnen",
       reviews_subtitle: "Kurze Stimmen nach dem Besuch — ohne Übertreibung.",
@@ -618,9 +757,9 @@
       review2_tag: "Spray-Tan vor der Hochzeit",
       review3_tag: "Empfindliche Haut — Beine & Achseln",
       reviews_cta_btn: "Behandlung an die Haut anpassen",
-      local_title: "Beauty-Studio in Zdroje — Anfahrt aus Gryfino & Umgebung",
+      local_title: "Beauty-Studio am rechten Ufer — Anfahrt aus Gryfino & Umgebung",
       local_p_html:
-        "Wir sind in <strong>Zdroje, Stettin</strong> — gut erreichbar vom rechten Ufer, aus <strong>Gryfino, Chojna, Widuchowa, Banie und Stare Czarnowo</strong>. Nach der Buchung senden wir genaue Wegbeschreibung.",
+        "Das Studio liegt in der <strong>Jerzego Andrzejewskiego 29c</strong> auf dem <strong>rechten Ufer in Stettin (Prawobrzeże)</strong> — gut erreichbar aus <strong>Gryfino, Chojna, Widuchowa, Banie und Stare Czarnowo</strong>. Nach der Buchung können wir die Anfahrt bis vor die Tür konkretisieren.",
       local_cta: "Nach Anfahrt fragen",
       faq_title: "Häufige Fragen",
       faq_cta_btn: "Ich habe eine Frage — WhatsApp",
@@ -631,14 +770,18 @@
       cta_band_final_btn: "Über WhatsApp buchen",
       float_dock_wa: "Termin buchen — WhatsApp",
       contact_ig_link: "Instagram",
+      contact_booksy_link: "Kalender & Buchung — Booksy",
+      contact_booksy_big: "Booksy — Termin wählen",
+      contact_facebook_link: "Facebook — Słodko Tu",
       contact_title: "Termin buchen",
-      contact_subtitle: "WhatsApp oder Telefon — ohne lange Formulare.",
+      contact_subtitle:
+        "WhatsApp, Telefon oder freien Termin im Booksy-Kalender — ohne lange Formulare auf dieser Seite.",
       contact_big_phone: "Telefon",
       contact_big_wa: "WhatsApp",
       contact_big_ig: "Instagram",
-      contact_map_zoom: "Karte vergrößern",
+      contact_map_zoom: "In Google Maps öffnen",
       cennik_back: "← Zurück zu den Leistungen",
-      cennik_h1: "Orientierungspreise",
+      cennik_h1: "Preise",
       price_from: "ab … PLN",
       price_extra: "Aufpreis … PLN",
       price_quote_ind: "Individuelle Preisierung",
@@ -646,12 +789,14 @@
 
     de.hero_title =
       "Haarentfernung mit Zuckerpaste & Spray-Tan<br />in einem kleinen Beauty-Studio";
-    de.about_title = "SłodkoTu — Studio in Zdroje";
+    de.about_title = "SłodkoTu — Studio am rechten Ufer";
     de.about_p1_html =
       'Bei <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span> stehen zwei Schwerpunkte im Mittelpunkt: <strong>Haarentfernung mit Zuckerpaste</strong> und <strong>Spray-Tan</strong>. Sauberkeit, Diskretion und ein Tempo, das zu Ihnen passt — ohne „Fabrik“-Druck.';
+    de.about_p2_html =
+      "Seit <strong>über 7 Jahren</strong> arbeite ich mit Zuckerpaste — das ist die tägliche Praxis im Studio, mit Fokus auf Ihren Komfort.";
     de.review1_quote =
       "„Ruhig, sauber, ohne Hetze. Endlich Enthaarung, bei der ich mich nicht anspanne.“";
-    de.review1_meta = "Kasia · <span>Stettin-Zdroje</span>";
+    de.review1_meta = "Kasia · <span>Stettin</span>";
     de.review2_quote =
       "„Der Farbton wirkte auf den Hochzeitsfotos natürlich — genau so wollte ich es.“";
     de.review2_meta = "Marta · <span>Stettin</span>";
@@ -671,89 +816,138 @@
     de.faq_a4 =
       "Meist etwa 5–10 Tage schöner Glanz, je nach Pflege. Wir geben Tipps, damit die Farbe gleichmäßig ausklingt.";
     de.faq_q5 = "Wie bereite ich mich auf Spray-Tan vor?";
-    de.faq_a5 =
-      "Peeling am Vortag; am Tag selbst saubere Haut ohne parfümierte Produkte auf der Zone; danach lockere, dunklere Kleidung.";
+    de.faq_a5_html =
+      '<p>Auf der Startseite finden Sie eine Kurzfassung unter <a href="#przygotowanie">„Vorbereitung auf den Besuch“</a>. Die vollständige Liste der Schritte vor und nach der Behandlung (TanExpert, u. a. Magic Eraser und Desert Rose) steht auf der Seite <a href="przygotowanie-do-wizyty.html">Vorbereitung auf den Besuch</a>.</p>';
     de.faq_q6 = "Wie buche ich?";
     de.faq_a6 =
-      "Per WhatsApp oder Telefon — wir bestätigen den Termin und senden bei Bedarf Wegbeschreibung nach Zdroje.";
+      "Am schnellsten antworten wir per WhatsApp und Telefon — wir bestätigen den Termin und senden bei Bedarf Wegbeschreibung zum Studio am rechten Ufer. Wenn Sie selbst einen freien Slot wählen möchten: Booksy-Kalender (Link im Kontaktbereich). Auf Facebook können Sie schreiben, wenn der Link aktiv ist.";
     de.contact_line1_html =
-      '<span class="contact-aside__ic" aria-hidden="true">◎</span> Studio in Zdroje — Stettin, Woiwodschaft Westpommern';
+      '<span class="contact-aside__ic" aria-hidden="true">◎</span> <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">ul. Jerzego Andrzejewskiego 29c, 70-779 Stettin (Prawobrzeże), Woiwodschaft Westpommern, Polen</a>';
     de.contact_line_ig_html =
       '<span class="contact-aside__ic" aria-hidden="true">@</span> <a href="https://instagram.com/" rel="noopener noreferrer">Instagram</a>';
     de.contact_hint =
-      "Vollständige Adresse in Zdroje und Wegbeschreibung senden wir nach der Terminbuchung.";
+      "Schreiben Sie uns kurz, woher Sie kommen — dann konkretisieren wir die Anfahrt bis vor die Tür.";
     de.contact_trust =
-      "Eine kurze erste Nachricht reicht für die Terminwahl. Wir antworten per WhatsApp und Telefon — ohne langes Formular.";
+      "Eine kurze erste Nachricht reicht. Wir antworten per WhatsApp und Telefon; Termine sind auch über Booksy möglich — ohne langes Formular auf dieser Seite.";
     de.contact_map_ph_html =
-      'Die Karte der Umgebung lädt hier nach <strong>Akzeptieren</strong> im Cookie-Hinweis (Verbindung zu OpenStreetMap — wie beim Öffnen einer Karten-Website). <a href="https://www.openstreetmap.org/?mlat=53.4085&amp;mlon=14.5825#map=15/53.4085/14.5825" rel="noopener noreferrer">Karte in neuem Tab öffnen</a>.';
+      'Die Karte (Google Maps) lädt hier nach <strong>Akzeptieren</strong> im Cookie-Hinweis — dann verbindet sich der Browser mit Google (wie beim Öffnen von Google Maps). <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">Standort in Google Maps öffnen</a>.';
     de.footer_index_html =
-      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — Beauty-Studio Stettin Zdroje · <a href="cennik.html">Preise</a> · Zuckerpaste · Spray-Tan';
+      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — Beauty-Studio Stettin rechtes Ufer · <a href="cennik.html">Preise</a> · Zuckerpaste · Spray-Tan';
     de.footer_cennik_html =
-      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — Beauty-Studio Stettin Zdroje · <a href="cennik.html">Preise</a>';
+      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — Beauty-Studio Stettin rechtes Ufer · <a href="cennik.html">Preise</a>';
     de.footer_sub_html =
-      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — Beauty-Studio Stettin Zdroje · <a href="index.html">Startseite</a> · <a href="cennik.html">Preise</a>';
+      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — Beauty-Studio Stettin rechtes Ufer · <a href="index.html">Startseite</a> · <a href="cennik.html">Preise</a>';
     de.footer_legal_short_html =
       '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> · <a href="index.html">Startseite</a>';
+    de.footer_prep_html =
+      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> · Beauty-Studio Stettin rechtes Ufer · <a href="index.html">Startseite</a> · <a href="cennik.html">Preise</a>';
     de.cookie_banner_html_index =
-      'Google Fonts und die OpenStreetMap-Karte laden erst nach <strong>Akzeptieren</strong>. <strong>Nur notwendige</strong> lässt die Seite ohne diese Elemente (Karte trotzdem im Kontakt per neuem Tab). <a href="polityka-cookies.html">Cookie-Richtlinie</a> · <a href="polityka-prywatnosci.html">Datenschutz</a>.';
+      'Google Fonts und die eingebettete Google-Maps-Karte laden erst nach <strong>Akzeptieren</strong>. <strong>Nur notwendige</strong> lässt die Seite ohne diese Elemente (den Standort können Sie im Kontakt trotzdem in Google Maps öffnen, ohne die Einbettung). <a href="polityka-cookies.html">Cookie-Richtlinie</a> · <a href="polityka-prywatnosci.html">Datenschutz</a>.';
     de.cookie_banner_html_cennik =
       'Google Fonts laden nach <strong>Akzeptieren</strong>. <strong>Nur notwendige</strong> nutzt Systemschriften. <a href="polityka-cookies.html">Cookies</a> · <a href="polityka-prywatnosci.html">Datenschutz</a>.';
     de.cookie_banner_html_short =
-      'Google Fonts und OSM-Karte nach <strong>Akzeptieren</strong>. Details: <a href="polityka-cookies.html">Cookie-Richtlinie</a> und <a href="polityka-prywatnosci.html">Datenschutz</a>.';
+      'Google Fonts und Google-Maps-Einbettung nach <strong>Akzeptieren</strong>. Details: <a href="polityka-cookies.html">Cookie-Richtlinie</a> und <a href="polityka-prywatnosci.html">Datenschutz</a>.';
     de.cookie_banner_html_min =
-      'Google Fonts und OSM-Karte nach <strong>Akzeptieren</strong>. <a href="polityka-cookies.html">Cookies</a> · <a href="polityka-prywatnosci.html">Datenschutz</a>';
+      'Google Fonts und Google-Maps-Einbettung nach <strong>Akzeptieren</strong>. <a href="polityka-cookies.html">Cookies</a> · <a href="polityka-prywatnosci.html">Datenschutz</a>';
     de.legal_privacy_meta_html =
-      'Gültig ab <time datetime="2026-05-09">9. Mai 2026</time>. Kurz und verständlich — bei Fragen schreiben oder anrufen, wir erklären es gern.';
+      'Gültig ab <time datetime="2026-05-11">11. Mai 2026</time>. Kurz und verständlich — bei Fragen schreiben oder anrufen, wir erklären es gern.';
     de.legal_cookies_meta_html =
-      'Kurzbeschreibung für die Website <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. Ab <time datetime="2026-05-09">9. Mai 2026</time>.';
+      'Kurzbeschreibung für die Website <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. Ab <time datetime="2026-05-11">11. Mai 2026</time>.';
     de.legal_terms_meta_html =
-      'Gilt für Beauty-Leistungen im Studio <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. Gültig ab <time datetime="2026-05-09">9. Mai 2026</time>.';
-    de.cennik_subtitle =
-      "Ein ruhiger Überblick über häufig gebuchte Besuche — ohne endlose Tabellen. Vollständige Preise und den Endbetrag vereinbaren wir individuell per Nachricht oder Anruf.";
+      'Gilt für Beauty-Leistungen im Studio <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. Gültig ab <time datetime="2026-05-11">11. Mai 2026</time>.';
     de.cennik_sugar_h2 = "Haarentfernung mit Zuckerpaste";
     de.cennik_sugar_p1 =
-      "Warme Paste aus Zucker und Zitronensaft — sanfter als Wachs, oft angenehmer bei empfindlicher Haut und im Bikini-Bereich. Glatte Haut für Wochen und ruhigeres Nachwachsen bei regelmäßigen Terminen.";
+      "Sanfte Methode auf Basis von Zucker und Zitronensaft, besonders geschätzt bei empfindlicher Haut und im Bikini-Bereich. Regelmäßige Termine helfen, die Haut länger glatt zu halten und das Nachwachsen angenehmer zu machen.";
     de.price_sugar_basic_label = "Beliebteste Zonen";
-    de.price_sugar_basic_hint = "Beispiel-Rahmen — genauer Preis nach Zonenplanung";
+    de.price_sugar_basic_hint = "Beispielpreise ausgewählter Behandlungen.";
     de.price_sugar_pack_label = "Beliebteste Pakete";
-    de.price_sugar_pack_hint = "Ein Termin, mehrere Zonen — ohne Hetze";
+    de.price_sugar_pack_hint = "Mehrere Zonen in einem ruhigen Termin.";
     de.price_row_underarms = "Achseln";
     de.price_row_legs = "Unterschenkel / Oberschenkel";
+    de.price_row_legs_full_short = "Beine komplett";
     de.price_row_bikini_cl = "Klassischer Bikini";
     de.price_row_bikini_deep = "Tiefer Bikini";
     de.price_row_legs_full = "Beine komplett";
     de.price_row_combo1 = "Beine + klassischer Bikini";
+    de.price_row_combo_ext = "Beine + erweiterter Bikini";
     de.price_row_combo2 = "Beine + tiefer Bikini";
     de.price_row_pack_neck_down = "Paket „von Hals abwärts“";
-    de.price_amt_pachy = "ab 70 PLN";
+    de.price_amt_pachy = "ab 49 PLN";
     de.price_amt_lydki = "ab 120 PLN";
-    de.price_amt_bikini_cl = "ab 125 PLN";
-    de.price_amt_bikini_deep = "ab 175 PLN";
-    de.price_amt_legs_full = "ab 190 PLN";
-    de.price_amt_combo1 = "ab 275 PLN";
-    de.price_amt_combo2 = "ab 330 PLN";
+    de.price_amt_bikini_cl = "ab 99 PLN";
+    de.price_amt_bikini_deep = "ab 129 PLN";
+    de.price_amt_legs_full = "ab 139 PLN";
+    de.price_amt_combo1 = "ab 199 PLN";
+    de.price_amt_combo_ext = "ab 209 PLN";
+    de.price_amt_combo2 = "ab 229 PLN";
     de.cennik_tan_h2 = "Spray-Tanning";
     de.cennik_tan_p1 =
-      "DHA-Spray-Tan ohne UV, mit natürlichem Glow. Ton passen wir Ihrer Haut an — oft vor Hochzeit, Shooting oder Urlaub. Kurze Pflegehinweise erhalten Sie beim Termin.";
+      "Natürlicher Bräunungseffekt ohne UV und ohne Orangetöne. Den Farbton passen wir individuell an Haut und Wunschbild an, von dezentem Glow bis zu kräftigerer Bräune.";
+    de.cennik_tan_p2 =
+      "Nach der Behandlung erhalten Sie kurze Pflegehinweise, die helfen, das Ergebnis möglichst lange zu halten.";
+    de.cennik_tan_h3 = "Zertifizierte Schulung und Premium-Produkte";
+    de.cennik_tan_p3 =
+      "Wir arbeiten mit Kosmetik und Geräten der Marken TanExpert und MineTan, entsprechend abgeschlossener Schulung im professionellen Spray-Tanning.";
     de.price_tan_overview_label = "Beliebte Anwendungen";
-    de.price_tan_overview_hint = "Orientierend — Umfang klären wir bei der Buchung";
-    de.price_row_torso = "Torso + Arme";
-    de.price_row_body_no_face = "Ganzer Körper (ohne Gesicht)";
-    de.price_row_body_face = "Ganzer Körper + Gesicht";
-    de.price_amt_tan_torso = "ab 130 PLN";
-    de.price_amt_tan_body = "ab 200 PLN";
-    de.price_amt_tan_full = "ab 250 PLN";
+    de.price_tan_overview_hint = "Die häufigsten Varianten des Spray-Tannings.";
+    de.price_row_tan_half = "Halbkörper";
+    de.price_row_tan_whole = "Ganzer Körper";
+    de.price_amt_tan_half = "ab 40 PLN";
+    de.price_amt_tan_whole = "ab 80 PLN";
+    de.cennik_full_h2 = "Vollständige Preisliste: Zuckerpaste";
+    de.cennik_full_p =
+      "Klappen Sie eine Kategorie auf, um den vollen Leistungsumfang und Orientierungspreise zu sehen.";
+    de.cennik_acc_women_sum = "Preisliste: Frauen";
+    de.cennik_acc_men_sum = "Preisliste: Männer";
+    de.cennik_acc_bikini_sum = "Bikini-Varianten";
+    de.cennik_acc_w_face = "Gesicht";
+    de.cennik_acc_w_body = "Körper";
+    de.cennik_acc_m_face = "Gesicht";
+    de.cennik_acc_m_body = "Körper";
+    de.cennik_acc_w_face_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Augenbrauen</span> <span class="price-card__amount">39 PLN · 10 Min.</span></li><li><span class="price-card__name">Oberlippe</span> <span class="price-card__amount">39 PLN · 10 Min.</span></li><li><span class="price-card__name">Kinn</span> <span class="price-card__amount">39 PLN · 10 Min.</span></li><li><span class="price-card__name">Brauenbögen</span> <span class="price-card__amount">39 PLN · 10 Min.</span></li><li><span class="price-card__name">Nasenspitze</span> <span class="price-card__amount">39 PLN · 10 Min.</span></li><li><span class="price-card__name">Hals</span> <span class="price-card__amount">39 PLN · 10 Min.</span></li><li><span class="price-card__name">Wangen</span> <span class="price-card__amount">39 PLN · 10 Min.</span></li><li><span class="price-card__name">Ohren</span> <span class="price-card__amount">39 PLN · 10 Min.</span></li><li><span class="price-card__name">Gesicht komplett mit Dekolleté</span> <span class="price-card__amount">199 PLN</span></li></ul>';
+    de.cennik_acc_w_body_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Achseln</span> <span class="price-card__amount">49 PLN · 10 Min.</span></li><li><span class="price-card__name">Beine komplett</span> <span class="price-card__amount">139 PLN · 45 Min.</span></li><li><span class="price-card__name">Arme + Achseln + Hände + Finger</span> <span class="price-card__amount">149 PLN</span></li><li><span class="price-card__name">Beine komplett + Füße + Zehen</span> <span class="price-card__amount">179 PLN</span></li><li><span class="price-card__name">Gesäß</span> <span class="price-card__amount">69 PLN</span></li><li><span class="price-card__name">Bauch</span> <span class="price-card__amount">49 PLN</span></li><li><span class="price-card__name">Rücken</span> <span class="price-card__amount">69 PLN</span></li></ul>';
+    de.cennik_acc_m_face_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Augenbrauen</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Oberlippe</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Kinn</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Brauenbögen</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Nasenspitze</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Hals</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Wangen</span> <span class="price-card__amount">39 PLN</span></li><li><span class="price-card__name">Ohren</span> <span class="price-card__amount">49 PLN</span></li><li><span class="price-card__name">Gesicht komplett mit Dekolleté</span> <span class="price-card__amount">199 PLN</span></li></ul>';
+    de.cennik_acc_m_body_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Achseln</span> <span class="price-card__amount">69 PLN · 10 Min.</span></li><li><span class="price-card__name">Beine komplett</span> <span class="price-card__amount">219 PLN · 60 Min.</span></li><li><span class="price-card__name">Arme + Achseln + Hände + Finger</span> <span class="price-card__amount">219 PLN</span></li><li><span class="price-card__name">Beine komplett + Füße + Zehen</span> <span class="price-card__amount">239 PLN</span></li><li><span class="price-card__name">Rücken komplett</span> <span class="price-card__amount">199 PLN · 60 Min.</span></li><li><span class="price-card__name">Torso</span> <span class="price-card__amount">149 PLN · 30 Min.</span></li><li><span class="price-card__name">Rücken + Schultern</span> <span class="price-card__amount">249 PLN</span></li><li><span class="price-card__name">Rücken + Schultern + Torso</span> <span class="price-card__amount">359 PLN</span></li></ul>';
+    de.cennik_acc_bikini_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Klassischer Bikini · 30 Min.</span> <span class="price-card__amount">99 PLN / mit Beinen 199 PLN</span></li><li><span class="price-card__name">Erweiterter Bikini · 30 Min.</span> <span class="price-card__amount">109 PLN / mit Beinen 209 PLN</span></li><li><span class="price-card__name">Teilweise + Streifen · 30 Min.</span> <span class="price-card__amount">109 PLN / mit Beinen 209 PLN</span></li><li><span class="price-card__name">Tiefer Bikini · 40 Min.</span> <span class="price-card__amount">129 PLN / mit Beinen 229 PLN</span></li><li><span class="price-card__name">Hollywood-Bikini · 45 Min.</span> <span class="price-card__amount">139 PLN / mit Beinen 239 PLN</span></li><li><span class="price-card__name">Hollywood + Muster · 45 Min.</span> <span class="price-card__amount">149 PLN / mit Beinen 249 PLN</span></li></ul>';
+    de.cennik_acc_pack_sum = "Pakete, ein Termin";
+    de.cennik_acc_pack_lead =
+      "Mehrere Zonen in einem Gang, dieselben Pakete wie auf dem Flyer. Die Dauer klären wir bei der Buchung.";
+    de.cennik_acc_pack_w = "Pakete: Frauen";
+    de.cennik_acc_pack_m = "Pakete: Männer";
+    de.cennik_acc_pack_bikini = "Bikini + Beine komplett";
+    de.cennik_acc_pack_w_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Arme + Achseln + Hände + Finger</span> <span class="price-card__amount">149 PLN</span></li><li><span class="price-card__name">Beine komplett + Füße + Zehen</span> <span class="price-card__amount">179 PLN</span></li><li><span class="price-card__name">Paket „von Hals abwärts“</span> <span class="price-card__amount">individuelles Angebot</span></li></ul>';
+    de.cennik_acc_pack_m_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Arme + Achseln + Hände + Finger</span> <span class="price-card__amount">219 PLN</span></li><li><span class="price-card__name">Beine komplett + Füße + Zehen</span> <span class="price-card__amount">239 PLN</span></li><li><span class="price-card__name">Rücken + Schultern</span> <span class="price-card__amount">249 PLN</span></li><li><span class="price-card__name">Rücken + Schultern + Torso</span> <span class="price-card__amount">359 PLN</span></li></ul>';
+    de.cennik_acc_pack_bikini_html =
+      '<ul class="price-card__rows"><li><span class="price-card__name">Beine + klassischer Bikini</span> <span class="price-card__amount">199 PLN</span></li><li><span class="price-card__name">Beine + erweiterter Bikini</span> <span class="price-card__amount">209 PLN</span></li><li><span class="price-card__name">Beine + Teil-Bikini + Streifen</span> <span class="price-card__amount">209 PLN</span></li><li><span class="price-card__name">Beine + tiefer Bikini</span> <span class="price-card__amount">229 PLN</span></li><li><span class="price-card__name">Beine + Hollywood-Bikini</span> <span class="price-card__amount">239 PLN</span></li><li><span class="price-card__name">Beine + Hollywood + Muster</span> <span class="price-card__amount">249 PLN</span></li></ul>';
     de.cennik_note_html =
-      'Die oben genannten Beträge sind orientierend und an typische <strong>EU-/DE-Rahmenpreise</strong> angelehnt — im Vergleich zur polnischen Basisversion der Website können sie höher ausfallen; darin ist u. a. ein Anteil für <strong>Umrechnungs- und Zahlungsfolgekosten</strong> berücksichtigt (siehe AGB). <strong>Abrechnung am Termin in PLN</strong> nach individueller Vereinbarung. <strong>Vollständiges Paket und Endbetrag</strong> klären wir im Kontakt — schreiben Sie per WhatsApp oder rufen Sie an, nach kurzer Absprache nennen wir eine Richtpreis-Einschätzung.';
+      "<p>Die genannten Preise sind orientierend und können je nach Umfang der Behandlung variieren.</p><p>Wenn Sie unsicher sind, welche Variante passt, schreiben Sie uns per WhatsApp oder rufen Sie an, wir helfen bei der Auswahl.</p>";
     de.img_gallery_1 = "Studio-Innenraum — Leinen und weiches Licht";
     de.img_gallery_2 = "Zuckerpaste und Keramik im Behandlungsraum";
     de.img_gallery_3 = "Hautdetail im natürlichen Licht";
     de.img_gallery_4 = "Kleines Studio — ruhiger Moment vor der Behandlung";
-    de.img_gallery_5 = "Leinen, Handtücher und schlichte Details";
     de.img_gallery_6 = "Gleichmäßiger, natürlicher Ton passend zur Haut";
-    de.img_prep_left = "Zuckerpaste, Leinen und Keramik — Vorbereitung";
-    de.img_prep_right = "Feiner Nebel und gleichmäßiger Glow nach der Anwendung";
-    de.img_about_media = "Logo SłodkoTu — Studiofotos folgen";
+    de.img_prep_left = "Zuckerpaste und Zubehör zur Haarentfernung bei SłodkoTu";
+    de.img_prep_right = "Professionelle Spray-Tan-Ausstattung im Studio";
+    de.img_about_cert =
+      "Zertifikat für professionelles Spray-Tanning — Kosmetik und Geräte von TanExpert und MineTan";
+    de.cred_eyebrow = "Vertrauen";
+    de.cred_h2 = "Warum Kundinnen uns vertrauen";
+    de.cred_lead =
+      "Wir arbeiten mit professionellen, geprüften Produkten und bilden uns regelmäßig weiter — damit Sie von der ersten Behandlung an ruhig und sicher sind.";
+    de.cred_badge = "Zertifizierte Schulung TanExpert & MineTan";
+    de.cred_zoom_hint = "Größer ansehen";
+    de.cred_thumb_aria = "Größere Ansicht des Schulungszertifikats öffnen";
+    de.cred_lightbox_title = "Zertifikat — Vorschau";
+    de.cred_lightbox_cap =
+      "Schulung im Spray-Tanning — Kosmetik und Geräte von TanExpert und MineTan.";
+    de.cred_close_aria = "Schließen";
 
     M.en = en;
     M.de = de;

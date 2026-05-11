@@ -44,11 +44,61 @@
       }
     });
 
+    function applyOptionalExternalUrl(url, linkClass, lineClass) {
+      var ok = url && /^https?:\/\//i.test(String(url).trim());
+      document.querySelectorAll(linkClass).forEach(function (a) {
+        if (!ok) {
+          a.setAttribute("hidden", "");
+          a.setAttribute("aria-hidden", "true");
+          a.style.display = "none";
+        } else {
+          a.removeAttribute("hidden");
+          a.removeAttribute("aria-hidden");
+          a.style.display = "";
+          a.setAttribute("href", String(url).trim());
+          a.setAttribute("rel", "noopener noreferrer");
+        }
+      });
+      document.querySelectorAll(lineClass).forEach(function (el) {
+        if (!ok) {
+          el.setAttribute("hidden", "");
+          el.style.display = "none";
+        } else {
+          el.removeAttribute("hidden");
+          el.style.display = "";
+        }
+      });
+    }
+
+    applyOptionalExternalUrl(cfg.facebookUrl, ".js-facebook-link", ".js-facebook-line");
+    applyOptionalExternalUrl(cfg.booksyUrl, ".js-booksy-link", ".js-booksy-line");
+
+    var pub =
+      cfg.publicSiteUrl && /^https?:\/\//i.test(String(cfg.publicSiteUrl).trim())
+        ? String(cfg.publicSiteUrl).trim().replace(/\/+$/, "")
+        : "";
     document.querySelectorAll('script[type="application/ld+json"]').forEach(function (script) {
       try {
-        var str = script.textContent;
-        str = str.replace(/"telephone"\s*:\s*"\+?\d+"/g, '"telephone": "' + tel.replace(/\s/g, "") + '"');
-        script.textContent = str;
+        var raw = script.textContent;
+        raw = raw.replace(
+          /"telephone"\s*:\s*"\+?\d+"/g,
+          '"telephone": "' + tel.replace(/\s/g, "") + '"'
+        );
+        if (pub) {
+          var data = JSON.parse(raw);
+          var graph = data && data["@graph"];
+          if (Array.isArray(graph)) {
+            for (var i = 0; i < graph.length; i++) {
+              var node = graph[i];
+              if (node && node["@type"] === "BeautySalon") {
+                node.url = pub + "/";
+                node.image = pub + "/Logo%20S%C5%82odko%20Tu.jpg";
+              }
+            }
+            raw = JSON.stringify(data);
+          }
+        }
+        script.textContent = raw;
       } catch (e) {}
     });
 
@@ -95,6 +145,38 @@
       });
     });
   });
+
+  (function initCredLightbox() {
+    var openBtn = document.getElementById("cred-open-lightbox");
+    var dlg = document.getElementById("cred-lightbox-dialog");
+    if (!openBtn || !dlg) return;
+
+    var closeTargets = dlg.querySelectorAll("[data-cred-lightbox-close]");
+
+    function onKeydown(e) {
+      if (e.key === "Escape") close();
+    }
+
+    function open() {
+      dlg.removeAttribute("hidden");
+      document.body.style.overflow = "hidden";
+      var closeBtn = dlg.querySelector(".cred-lightbox__close");
+      if (closeBtn) closeBtn.focus();
+      document.addEventListener("keydown", onKeydown);
+    }
+
+    function close() {
+      dlg.setAttribute("hidden", "");
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", onKeydown);
+      openBtn.focus();
+    }
+
+    openBtn.addEventListener("click", open);
+    closeTargets.forEach(function (el) {
+      el.addEventListener("click", close);
+    });
+  })();
 
   var header = document.querySelector(".site-header");
   if (header && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
