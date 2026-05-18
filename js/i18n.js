@@ -21,26 +21,26 @@
   var PAGE_META = {
     index: {
       en: {
-        title: "SłodkoTu — sugar hair removal & spray tan Szczecin right bank | beauty studio",
+        title: "Sugar hair removal Szczecin | SłodkoTu — sugar paste, spray tan right bank",
         description:
-          "Sugar paste and spray tan in Szczecin (Prawobrzeże / Andrzejewskiego). Smooth skin, natural glow, book via WhatsApp — easy from Gryfino and nearby.",
+          "Sugar paste hair removal in Szczecin (Prawobrzeże, Andrzejewskiego 29c). 7+ years of experience, sensitive skin welcome — from PLN 49. Book via WhatsApp or Booksy.",
       },
       de: {
-        title: "SłodkoTu — Zuckerpaste & Spray-Tan Stettin rechtes Ufer | Beauty-Studio",
+        title: "Haarentfernung mit Zucker Stettin | SłodkoTu — Zuckerpaste, Spray-Tan",
         description:
-          "Haarentfernung mit Zuckerpaste und Spray-Tan in Stettin (Prawobrzeże). Natürlicher Glow, Termin per WhatsApp — gut erreichbar aus Gryfino und Umgebung.",
+          "Zuckerpaste und Spray-Tan in Stettin (Prawobrzeże, Andrzejewskiego 29c). Über 7 Jahre Erfahrung — ab 49 PLN. Termin per WhatsApp oder Booksy.",
       },
     },
     cennik: {
       en: {
-        title: "Guide prices | SłodkoTu | sugar paste and spray tan Szczecin",
+        title: "Sugar hair removal prices Szczecin | SłodkoTu — underarms, legs, bikini",
         description:
-          "A short overview of popular treatments at SłodkoTu. Full pricing is agreed individually when you get in touch.",
+          "Price list for sugar paste hair removal at SłodkoTu on Szczecin right bank: underarms from PLN 49, full legs from PLN 139. Book via WhatsApp or Booksy.",
       },
       de: {
-        title: "Orientierungspreise | SłodkoTu | Zuckerpaste und Spray-Tan Stettin",
+        title: "Preise Zuckerpaste Stettin | SłodkoTu — Achseln, Beine, Bikini",
         description:
-          "Kurzer Überblick über häufige Leistungen bei SłodkoTu. Den vollständigen Preis klären wir individuell im Kontakt.",
+          "Preisliste für Zuckerpaste bei SłodkoTu am rechten Ufer: Achseln ab 49 PLN, ganze Beine ab 139 PLN. Termin per WhatsApp oder Booksy.",
       },
     },
     privacy: {
@@ -75,14 +75,14 @@
     },
     prepGuide: {
       en: {
-        title: "Visit preparation | SłodkoTu | sugar paste and spray tan Szczecin",
+        title: "Preparing for sugar hair removal | SłodkoTu Szczecin right bank",
         description:
-          "Full before-and-after tips for sugar paste hair removal and spray tanning at SłodkoTu: TanExpert-friendly prep, first rinse after spray tan, aftercare.",
+          "How to prepare for sugar paste hair removal at SłodkoTu: hair length, peeling, aftercare. Spray tan TanExpert tips — studio in Szczecin Prawobrzeże.",
       },
       de: {
-        title: "Vorbereitung auf den Besuch | SłodkoTu | Zuckerpaste und Spray-Tan Stettin",
+        title: "Vorbereitung Haarentfernung mit Zucker | SłodkoTu Stettin",
         description:
-          "Ausführliche Tipps vor und nach Zuckerpaste und Spray-Tan bei SłodkoTu: TanExpert, erste Dusche, Pflege danach.",
+          "Vorbereitung auf Zuckerpaste bei SłodkoTu: Haarlänge, Peeling, Pflege. Spray-Tan TanExpert — Studio am rechten Ufer in Stettin.",
       },
     },
   };
@@ -316,7 +316,7 @@
       legal_privacy_h1: "Privacy policy",
       legal_cookies_h1: "Cookie policy",
       legal_terms_h1: "Terms of service",
-      hero_aria_bg: "Studio mood — soft light, intimate treatment room",
+      hero_aria_bg: "SłodkoTu sugar hair removal studio Szczecin right bank — intimate treatment room",
       hero_kicker: "Beauty studio · Szczecin right bank",
       hero_lead: "Sugar paste and spray tan — calm visits, with real care for your skin.",
       hero_cta_wa: "Book via WhatsApp",
@@ -325,12 +325,12 @@
       trust_title: "How people find us",
       trust_strip:
         "Most clients come from word of mouth or after a first hair removal elsewhere did not work out.",
-      services_title: "Sugar hair removal & spray tan — Szczecin",
-      services_subtitle: "Choose a visit that leaves your skin smooth, even and confident.",
-      service_sugar_title: "Sugar paste hair removal",
-      service_sugar_text: "A gentler alternative to wax — great for underarms, legs and bikini, including sensitive skin.",
+      services_title: "Sugar hair removal & spray tan — Szczecin right bank",
+      services_subtitle: "Sugar hair removal and spray tan in one intimate spot on the right bank — guide prices and quick booking.",
+      service_sugar_title: "Sugar hair removal (sugar paste)",
+      service_sugar_text: "Sugaring in Szczecin — gentler than wax, works on shorter hair. Underarms, legs and bikini (including deep), sensitive skin welcome.",
       service_sugar_cta_html:
-        'Guide prices — sugar paste <span class="service-card__arrow" aria-hidden="true">→</span>',
+        'Sugar hair removal prices Szczecin <span class="service-card__arrow" aria-hidden="true">→</span>',
       service_tan_title: "Spray tanning",
       service_tan_text: "A natural sun-kissed look without UV — weddings, shoots, holidays or an everyday fresh glow.",
       service_tan_cta_html:
@@ -340,7 +340,7 @@
       gallery_note: "Linen, ceramics and soft light — one calm visual story.",
       prep_title: "Preparing for your visit",
       prep_lead:
-        "A few simple tips before sugar paste hair removal and spray tanning — for a more even result and gentler comfort for your skin.",
+        "Before sugar hair removal at SłodkoTu: hair about 0.5 cm, clean skin and a gentle peel the day before — quick notes on sugar paste and spray tan.",
       prep_sugar_h3: "Sugar hair removal",
       prep_tan_h3: "Spray tanning",
       prep_sugar_li1: "Best when hair is about 0.5 cm long.",
@@ -351,8 +351,8 @@
       prep_tan_short_li3: "Bring loose, darker clothing.",
       prep_cta_full: "See full visit preparation →",
       prep_guide_back: "← Back to the short summary on the home page",
-      prep_guide_intro:
-        "Below is the full checklist before and after treatments: sugar paste hair removal and spray tan (TanExpert and MineTan). On the home page we only keep a short reminder.",
+      prep_guide_intro_html:
+        'Full before-and-after tips for sugar paste and spray tan at SłodkoTu on the right bank (TanExpert, MineTan). Short summary on the <a href="index.html#przygotowanie">home page</a>.',
       prep_tan_intro:
         "Well-prepped skin means a more even tan. Below are our TanExpert-friendly tips so self-tan care at home stays safe and predictable.",
       prep_tan_before_h: "Before the treatment",
@@ -389,13 +389,15 @@
       faq_title: "Frequently asked questions",
       contact_title: "Book a visit",
       contact_subtitle:
-        "WhatsApp, phone or pick a time in the Booksy calendar — no long forms on our site.",
+        "Book sugar hair removal in Szczecin: WhatsApp, phone or Booksy — 29c Jerzego Andrzejewskiego St, right bank.",
       contact_big_phone: "Phone",
       contact_big_wa: "WhatsApp",
       contact_big_ig: "Instagram",
       contact_map_zoom: "Open in Google Maps",
       cennik_back: "← Back to services",
-      cennik_h1: "Pricing",
+      cennik_h1: "Sugar hair removal prices — Szczecin",
+      cennik_lead_html:
+        'Full sugar paste price list at our intimate studio on the right bank. More about <a href="index.html">sugar hair removal at SłodkoTu</a> on the home page.',
       price_from: "from … PLN",
       price_extra: "add-on … PLN",
       price_quote_ind: "Individual pricing",
@@ -425,16 +427,16 @@
       process_step3_title: "You come for your appointment",
       process_step3_text: "No unnecessary paperwork — focus on results and comfort.",
       process_cta_btn: "Send the first message",
-      why_title: "Why sugar paste and spray tan?",
-      why_sugar_h3: "Sugar hair removal",
+      why_title: "Why sugar hair removal instead of wax?",
+      why_sugar_h3: "Sugar paste — sugaring",
       why_sugar_p:
-        "The paste works mainly on the hair, not pulling live skin like wax often does — usually less irritation, a comfortable option for bikini and sensitive skin.",
+        "Paste removes hair with the bulb and doesn’t stick to skin like wax — less irritation and ingrowth. Great for underarms, legs and bikini at our right-bank studio.",
       why_tan_h3: "Spray tanning",
       why_tan_p:
         "DHA gives an even, natural tone without sunbeds. We adjust the shade to your complexion — fresh-looking skin without excess.",
-      local_title: "Beauty studio in Szczecin right bank — travel from Gryfino & nearby",
+      local_title: "Sugar hair removal Szczecin — right bank, easy from Gryfino & nearby",
       local_p_html:
-        "The studio is at <strong>29c Jerzego Andrzejewskiego St</strong> on <strong>Szczecin’s right bank (Prawobrzeże)</strong> — easy to reach from <strong>Gryfino, Chojna, Widuchowa, Banie and Stare Czarnowo</strong>. After booking we can fine-tune door-to-door directions.",
+        "<strong>Sugar hair removal Szczecin right bank:</strong> studio at <strong>29c Jerzego Andrzejewskiego St</strong> (70-779). Easy from <strong>Gryfino, Police, Chojna, Widuchowa, Banie and Stare Czarnowo</strong>. We’ll clarify entry after you book.",
       local_cta: "Ask about directions",
       reviews_cta_btn: "Match the service to your skin",
       review1_tag: "After sugar bikini",
@@ -452,16 +454,27 @@
       contact_facebook_link: "Facebook — Słodko Tu",
     };
 
-    en.hero_kicker = "Beauty studio · Szczecin right bank";
-    en.hero_title = "Sugar paste & spray tan<br />in an intimate beauty studio";
+    en.hero_kicker = "Sugar hair removal · Szczecin right bank";
+    en.trust_badge_1 = "Sugar hair removal Szczecin — right bank";
+    en.trust_badge_2 = "7+ years — sugar paste every day";
+    en.trust_badge_3 = "From PLN 49 · WhatsApp & Booksy";
+    en.trust_badge_4 = "Easy from Gryfino, Police & nearby";
+    en.seo_h2 = "Sugar paste hair removal in Szczecin — who is SłodkoTu for?";
+    en.seo_p1 =
+      "Looking for sugar hair removal on the right bank without crowds or rush? We offer sugaring — natural sugar and lemon paste — on underarms, legs, arms and bikini (classic, extended and deep).";
+    en.seo_p2 =
+      "Many people search “sugar hair removal Szczecin” or “sugar paste Prawobrzeże” — it’s the same gentle method we’ve used for years. Studio at 29c Jerzego Andrzejewskiego St; book via WhatsApp, phone or Booksy.";
+    en.hero_title = "Sugar hair removal Szczecin<br />sugar paste & spray tan — intimate studio";
     en.hero_lead =
-      "Smooth skin, a natural glow and zero pressure — thoughtful comfort in our Szczecin studio.";
+      "Sugar paste hair removal on Szczecin right bank — smooth skin, natural glow and zero pressure. 7+ years of practice, including sensitive skin and bikini.";
     en.hero_cta_wa = "Book via WhatsApp";
-    en.about_title = "SłodkoTu — studio on the right bank";
+    en.about_title = "Sugar hair removal Szczecin — intimate SłodkoTu studio";
     en.about_p1_html =
-      'At <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span> we focus on two things: <strong>sugar hair removal</strong> and <strong>spray tan</strong>. Cleanliness, discretion and a pace that suits you — without a “factory” rush.';
+      'At <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span> on the right bank we offer <strong>sugar hair removal</strong> (sugar paste) and <strong>spray tan</strong>. One client at a time, a clean room and your pace — no “factory” rush.';
     en.about_p2_html =
-      "I have <strong>over 7 years’ experience</strong> with sugar paste hair removal — it’s the studio’s daily practice, with your comfort first.";
+      "I’ve been doing <strong>sugar paste in Szczecin for over 7 years</strong> — daily practice at the studio: underarms, legs, bikini, including <strong>sensitive skin</strong>.";
+    en.about_p3_html =
+      'Looking for sugar hair removal on the right bank or travel from Gryfino, Police or nearby? Message us — we’ll match zones and timing. <a href="cennik.html">Price list</a> is online too.';
     en.review1_quote =
       "“Quiet, clean, no rush. Finally hair removal where I don’t tense up.”";
     en.review1_meta = "Kasia · <span>Szczecin</span>";
@@ -471,15 +484,25 @@
     en.review3_quote =
       "“With my skin this is finally a method without irritation. I keep coming back.”";
     en.review3_meta = "Ania · <span>Gryfino</span>";
-    en.faq_q1 = "Does sugar hair removal hurt?";
+    en.faq_title = "FAQ — sugar hair removal & sugar paste Szczecin";
+    en.faq_q1 = "Does sugar / sugar-paste hair removal hurt?";
     en.faq_a1 =
-      "It can feel like a quick tug — many people find it lighter than wax. We match the pace to you.";
+      "It can feel like a quick tug — many find sugar paste lighter than wax. We match the pace to you at our right-bank studio.";
     en.faq_q2 = "Is sugar paste good for sensitive skin?";
     en.faq_a2 =
       "Yes — the paste works mainly on the hair, not as aggressively on live skin as wax, so there’s often less irritation. Bikini and underarms are routine for us.";
+    en.faq_q7 = "How much does sugar hair removal cost in Szczecin?";
+    en.faq_a7_html =
+      'At SłodkoTu on the right bank: underarms from PLN 49, full legs from PLN 139, deep bikini from PLN 129. See the full <a href="cennik.html">price list</a> — we’ll match the zones to you when you book.';
+    en.faq_q8 = "How long does sugar hair removal last?";
+    en.faq_a8 =
+      "Usually around 3–4 weeks of smooth skin — it depends on the area, hair cycle and how often you visit. With regular sugar paste sessions hair often grows back finer and with less ingrowth.";
     en.faq_q3 = "How should I prepare for sugar hair removal?";
-    en.faq_a3 =
-      "Clean skin, no heavy oils; hair about 0.5 cm; gentle exfoliation the day before if you can.";
+    en.faq_a3_html =
+      'Clean skin, no heavy oils; hair about 0.5 cm (shorter than for wax); gentle peel the day before if you can. Full list: <a href="przygotowanie-do-wizyty.html">preparing for sugar hair removal</a>.';
+    en.faq_q9 = "Is sugar paste hair removal effective?";
+    en.faq_a9 =
+      "Yes — the paste removes hair with the bulb; with regular visits regrowth is often finer and less ingrown. Works from about 0.5 cm, so you don’t wait as long as before waxing.";
     en.faq_q4 = "How long does a spray tan last?";
     en.faq_a4 =
       "Usually around 5–10 days of nice glow, depending on aftercare. We share tips so it fades evenly.";
@@ -491,6 +514,8 @@
       "We reply fastest on WhatsApp and phone — we confirm your slot and can send directions to our right-bank Szczecin studio. Prefer to choose a free time yourself? Use the Booksy calendar (link in Contact). You can also message us on Facebook when that link is active.";
     en.contact_line1_html =
       '<span class="contact-aside__ic" aria-hidden="true">◎</span> <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">29c Jerzego Andrzejewskiego St, 70-779 Szczecin (right bank / Prawobrzeże), West Pomerania, Poland</a>';
+    en.contact_hours_html =
+      '<span class="contact-aside__ic" aria-hidden="true">⏰</span> <strong>Opening hours:</strong> Mon–Fri 10:00–21:00 · weekends (Sat–Sun) 10:00–16:00';
     en.contact_line_ig_html =
       '<span class="contact-aside__ic" aria-hidden="true">@</span> <a href="https://instagram.com/" rel="noopener noreferrer">Instagram</a>';
     en.contact_hint =
@@ -500,7 +525,7 @@
     en.contact_map_ph_html =
       'The map (Google Maps) loads here after you choose <strong>I accept</strong> in the cookie notice — your browser then connects to Google’s servers (like opening Google Maps). <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">Open location in Google Maps</a>.';
     en.footer_index_html =
-      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin right bank · <a href="cennik.html">Pricing</a> · sugar paste · spray tan';
+      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — sugar hair removal Szczecin right bank · <a href="cennik.html">Price list</a> · spray tan';
     en.footer_cennik_html =
       '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — beauty studio Szczecin right bank · <a href="cennik.html">Pricing</a>';
     en.footer_sub_html =
@@ -523,9 +548,15 @@
       'Short information for the <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span> website. From <time datetime="2026-05-11">11 May 2026</time>.';
     en.legal_terms_meta_html =
       'Applies to beauty services at <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. Effective <time datetime="2026-05-11">11 May 2026</time>.';
-    en.cennik_sugar_h2 = "Sugar paste hair removal";
+    en.cennik_sugar_h2 = "Sugar hair removal — sugar paste prices";
     en.cennik_sugar_p1 =
-      "A gentle hair removal method based on sugar and lemon juice, especially valued on sensitive skin and in bikini zones. Regular visits help keep skin smooth for longer and make regrowing hair less of a hassle.";
+      "Price list for sugar hair removal in Szczecin (right bank, SłodkoTu): sugar and lemon paste — gentler than wax, including sensitive skin and bikini. Popular zones below; full range in the expandable list.";
+    en.cennik_full_h2 = "Full sugar hair removal price list Szczecin";
+    en.cennik_full_p =
+      "Sugar paste — women and men, face and body, bikini + legs packages. Expand a category to see all zones and prices.";
+    en.prep_guide_h1 = "Preparing for sugar hair removal — Szczecin";
+    en.prep_guide_intro_html =
+      'Full before-and-after tips for sugar paste and spray tan at SłodkoTu on the right bank (TanExpert, MineTan). Short summary on the <a href="index.html#przygotowanie">home page</a>.';
     en.price_sugar_basic_label = "Most chosen areas";
     en.price_sugar_basic_hint = "Sample prices for selected treatments.";
     en.price_sugar_pack_label = "Most chosen packages";
@@ -562,9 +593,6 @@
     en.price_row_tan_whole = "Full body";
     en.price_amt_tan_half = "from 40 PLN";
     en.price_amt_tan_whole = "from 80 PLN";
-    en.cennik_full_h2 = "Full sugar paste hair removal price list";
-    en.cennik_full_p =
-      "Open a category to see the full range of treatments and guide prices.";
     en.cennik_acc_women_sum = "Price list: women";
     en.cennik_acc_men_sum = "Price list: men";
     en.cennik_acc_bikini_sum = "Bikini types";
@@ -651,7 +679,7 @@
       legal_privacy_h1: "Datenschutzerklärung",
       legal_cookies_h1: "Cookie-Richtlinie",
       legal_terms_h1: "Leistungsbedingungen",
-      hero_aria_bg: "SłodkoTu-Atmosphäre — weiches Licht, natürliches Ambiente",
+      hero_aria_bg: "SłodkoTu Studio Haarentfernung mit Zucker Stettin — kameraler Behandlungsraum",
       hero_kicker: "Beauty-Studio · Stettin rechtes Ufer",
       hero_lead:
         "Glatte Haut, natürlicher Glow — ruhige Termine im kleinen Studio am rechten Ufer.",
@@ -668,14 +696,14 @@
       trust_badge_2: "Empfindliche Haut — sanfte Methode",
       trust_badge_3: "Termin per WhatsApp",
       trust_badge_4: "Gut erreichbar aus Gryfino & Umgebung",
-      services_title: "Haarentfernung mit Zuckerpaste & Spray-Tan — Stettin",
+      services_title: "Haarentfernung mit Zucker & Spray-Tan — Stettin rechtes Ufer",
       services_subtitle:
-        "Wählen Sie eine Behandlung, nach der Sie sich leicht, glatt und sicher fühlen.",
-      service_sugar_title: "Haarentfernung mit Zuckerpaste",
+        "Haarentfernung mit Zucker und Spray-Tan an einem Ort am rechten Ufer — Orientierungspreise und schnelle Buchung.",
+      service_sugar_title: "Haarentfernung mit Zucker (Zuckerpaste)",
       service_sugar_text:
-        "Sanftere Alternative zu Wachs — ideal für Achseln, Beine und Bikini, auch bei empfindlicher Haut.",
+        "Sugaring in Stettin — sanfter als Wachs, auch kürzere Haare. Achseln, Beine, Bikini (auch tief), empfindliche Haut willkommen.",
       service_sugar_cta_html:
-        'Orientierungspreise — Zuckerpaste <span class="service-card__arrow" aria-hidden="true">→</span>',
+        'Preise Haarentfernung mit Zucker Stettin <span class="service-card__arrow" aria-hidden="true">→</span>',
       service_tan_title: "Spray-Tan",
       service_tan_text:
         "Natürlicher Bräunungseffekt ohne UV — vor Hochzeit, Shooting, Urlaub oder einfach für einen frischen Look ohne Sonne.",
@@ -693,10 +721,10 @@
       process_step3_title: "Sie kommen zum Termin",
       process_step3_text: "Ohne unnötigen Papierkram — Fokus auf Ergebnis und Komfort.",
       process_cta_btn: "Erste Nachricht senden",
-      why_title: "Warum Zuckerpaste und Spray-Tan?",
-      why_sugar_h3: "Haarentfernung mit Zuckerpaste",
+      why_title: "Warum Haarentfernung mit Zucker statt Wachs?",
+      why_sugar_h3: "Zuckerpaste — Sugaring",
       why_sugar_p:
-        "Die Paste arbeitet vor allem am Haar, nicht so stark an lebender Haut wie Wachs — oft weniger Reizungen, angenehm für Bikini und empfindliche Haut.",
+        "Die Paste entfernt Haar mit Wurzel und klebt weniger an der Haut als Wachs — weniger Reizungen und Eingewachsene. Achseln, Beine, Bikini in unserem Studio am rechten Ufer.",
       why_tan_h3: "Spray-Tan",
       why_tan_p:
         "DHA sorgt für einen natürlichen, gleichmäßigen Ton ohne Solarium. Wir passen den Farbton an Ihren Hauttyp an — frisch, ohne Übertreibung.",
@@ -705,7 +733,7 @@
       gallery_note: "Leinen, Keramik, weiches Licht — eine ruhige, stimmige Bildsprache.",
       prep_title: "Vorbereitung auf den Besuch",
       prep_lead:
-        "Ein paar einfache Tipps vor Zuckerpaste und Spray-Tan — für ein gleichmäßigeres Ergebnis und mehr Komfort für die Haut.",
+        "Vor Haarentfernung mit Zucker bei SłodkoTu: Haar ca. 0,5 cm, saubere Haut, sanftes Peeling am Vortag — kurz zu Zuckerpaste und Spray-Tan.",
       prep_sugar_h3: "Zuckerpaste",
       prep_tan_h3: "Spray-Tan",
       prep_sugar_li1: "Am besten bei einer Haarlänge von ca. 0,5 cm.",
@@ -716,8 +744,8 @@
       prep_tan_short_li3: "Lockere, dunklere Kleidung mitbringen.",
       prep_cta_full: "Vollständige Vorbereitung ansehen →",
       prep_guide_back: "← Zur Kurzfassung auf der Startseite",
-      prep_guide_intro:
-        "Unten die vollständige Checkliste vor und nach den Behandlungen: Haarentfernung mit Zuckerpaste und Spray-Tan (TanExpert und MineTan). Auf der Startseite bleibt nur eine kurze Erinnerung.",
+      prep_guide_intro_html:
+        'Ausführliche Tipps vor und nach Zuckerpaste und Spray-Tan bei SłodkoTu am rechten Ufer (TanExpert, MineTan). Kurzfassung auf der <a href="index.html#przygotowanie">Startseite</a>.',
       prep_tan_intro:
         "Gut vorbereitete Haut bräunt gleichmäßiger. Unten unsere Tipps rund um TanExpert — damit Pflege und Bräunung zu Hause sicher und planbar bleiben.",
       prep_tan_before_h: "Vor der Behandlung",
@@ -755,9 +783,9 @@
       review2_tag: "Spray-Tan vor der Hochzeit",
       review3_tag: "Empfindliche Haut — Beine & Achseln",
       reviews_cta_btn: "Behandlung an die Haut anpassen",
-      local_title: "Beauty-Studio am rechten Ufer — Anfahrt aus Gryfino & Umgebung",
+      local_title: "Haarentfernung mit Zucker Stettin — rechtes Ufer, Anfahrt aus Gryfino & Umgebung",
       local_p_html:
-        "Das Studio liegt in der <strong>Jerzego Andrzejewskiego 29c</strong> auf dem <strong>rechten Ufer in Stettin (Prawobrzeże)</strong> — gut erreichbar aus <strong>Gryfino, Chojna, Widuchowa, Banie und Stare Czarnowo</strong>. Nach der Buchung können wir die Anfahrt bis vor die Tür konkretisieren.",
+        "<strong>Haarentfernung mit Zucker Stettin rechtes Ufer:</strong> Studio in der <strong>Jerzego Andrzejewskiego 29c</strong> (70-779). Anfahrt u. a. aus <strong>Gryfino, Police, Chojna, Widuchowa, Banie und Stare Czarnowo</strong>. Eingang klären wir nach der Buchung.",
       local_cta: "Nach Anfahrt fragen",
       faq_title: "Häufige Fragen",
       faq_cta_btn: "Ich habe eine Frage — WhatsApp",
@@ -773,25 +801,41 @@
       contact_facebook_link: "Facebook — Słodko Tu",
       contact_title: "Termin buchen",
       contact_subtitle:
-        "WhatsApp, Telefon oder freien Termin im Booksy-Kalender — ohne lange Formulare auf dieser Seite.",
+        "Haarentfernung mit Zucker in Stettin buchen: WhatsApp, Telefon oder Booksy — ul. Jerzego Andrzejewskiego 29c, rechtes Ufer.",
       contact_big_phone: "Telefon",
       contact_big_wa: "WhatsApp",
       contact_big_ig: "Instagram",
       contact_map_zoom: "In Google Maps öffnen",
       cennik_back: "← Zurück zu den Leistungen",
-      cennik_h1: "Preise",
+      cennik_h1: "Preise Zuckerpaste — Stettin",
+      cennik_lead_html:
+        'Vollständige Preisliste für Zuckerpaste im kleinen Studio am rechten Ufer. Mehr zur <a href="index.html">Haarentfernung mit Zucker bei SłodkoTu</a> auf der Startseite.',
       price_from: "ab … PLN",
       price_extra: "Aufpreis … PLN",
       price_quote_ind: "Individuelle Preisierung",
     };
 
+    de.hero_kicker = "Haarentfernung mit Zucker · Stettin rechtes Ufer";
+    de.trust_badge_1 = "Haarentfernung mit Zucker Stettin — rechtes Ufer";
+    de.trust_badge_2 = "Über 7 Jahre — Zuckerpaste täglich";
+    de.trust_badge_3 = "Ab 49 PLN · WhatsApp & Booksy";
+    de.trust_badge_4 = "Gut erreichbar aus Gryfino, Police & Umgebung";
+    de.seo_h2 = "Haarentfernung mit Zuckerpaste in Stettin — für wen ist SłodkoTu?";
+    de.seo_p1 =
+      "Sie suchen Haarentfernung mit Zucker am rechten Ufer ohne Hetze? Wir bieten Sugaring — natürliche Paste aus Zucker und Zitrone — an Achseln, Beinen, Armen und im Bikini (klassisch, erweitert, tief).";
+    de.seo_p2 =
+      "Viele suchen „Haarentfernung Zuckerpaste Stettin“ oder „Prawobrzeże“ — dieselbe sanfte Methode seit Jahren. Studio: ul. Jerzego Andrzejewskiego 29c; Termin per WhatsApp, Telefon oder Booksy.";
     de.hero_title =
-      "Haarentfernung mit Zuckerpaste & Spray-Tan<br />in einem kleinen Beauty-Studio";
-    de.about_title = "SłodkoTu — Studio am rechten Ufer";
+      "Haarentfernung mit Zucker Stettin<br />Zuckerpaste & Spray-Tan — kleines Studio";
+    de.hero_lead =
+      "Zuckerpaste am rechten Ufer — glatte Haut, natürlicher Glow ohne Druck. Über 7 Jahre Erfahrung, auch empfindliche Haut und Bikini.";
+    de.about_title = "Haarentfernung mit Zucker Stettin — Studio SłodkoTu";
     de.about_p1_html =
-      'Bei <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span> stehen zwei Schwerpunkte im Mittelpunkt: <strong>Haarentfernung mit Zuckerpaste</strong> und <strong>Spray-Tan</strong>. Sauberkeit, Diskretion und ein Tempo, das zu Ihnen passt — ohne „Fabrik“-Druck.';
+      'Bei <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span> am rechten Ufer: <strong>Haarentfernung mit Zucker</strong> (Zuckerpaste) und <strong>Spray-Tan</strong>. Eine Person pro Termin, sauberer Raum, Ihr Tempo — ohne „Fabrik“-Druck.';
     de.about_p2_html =
-      "Seit <strong>über 7 Jahren</strong> arbeite ich mit Zuckerpaste — das ist die tägliche Praxis im Studio, mit Fokus auf Ihren Komfort.";
+      "Zuckerpaste in Stettin seit <strong>über 7 Jahren</strong> — tägliche Praxis: Achseln, Beine, Bikini, auch <strong>empfindliche Haut</strong>.";
+    de.about_p3_html =
+      'Zuckerpaste am rechten Ufer oder Anfahrt aus Gryfino, Police & Umgebung? Schreiben Sie — wir passen Zonen und Termin an. <a href="cennik.html">Preisliste</a> online.';
     de.review1_quote =
       "„Ruhig, sauber, ohne Hetze. Endlich Enthaarung, bei der ich mich nicht anspanne.“";
     de.review1_meta = "Kasia · <span>Stettin</span>";
@@ -801,15 +845,25 @@
     de.review3_quote =
       "„Bei meiner Haut endlich eine Methode ohne Reizungen. Ich komme wieder.“";
     de.review3_meta = "Ania · <span>Gryfino</span>";
-    de.faq_q1 = "Tut Haarentfernung mit Zuckerpaste weh?";
+    de.faq_title = "FAQ — Haarentfernung mit Zucker & Zuckerpaste Stettin";
+    de.faq_q1 = "Tut Haarentfernung mit Zucker / Zuckerpaste weh?";
     de.faq_a1 =
-      "Es kann sich wie ein kurzer Ruck anfühlen — vielen erscheint es leichter als Wachs. Wir passen das Tempo an Sie an.";
+      "Es kann sich wie ein kurzer Ruck anfühlen — vielen erscheint Zuckerpaste leichter als Wachs. Wir passen das Tempo im Studio am rechten Ufer an.";
     de.faq_q2 = "Ist Zuckerpaste gut für empfindliche Haut?";
     de.faq_a2 =
       "Ja — die Paste arbeitet vor allem am Haar, nicht so stark an lebender Haut wie Wachs, daher oft weniger Reizungen. Bikini und Achseln sind bei uns Routine.";
+    de.faq_q7 = "Was kostet Haarentfernung mit Zuckerpaste in Stettin?";
+    de.faq_a7_html =
+      'Bei SłodkoTu am rechten Ufer u. a. Achseln ab 49 PLN, ganze Beine ab 139 PLN, tiefes Bikini ab 129 PLN. Die vollständige <a href="cennik.html">Preisliste</a> finden Sie auf einer eigenen Seite — beim Buchen passen wir die Zonen an.';
+    de.faq_q8 = "Wie lange hält die Haarentfernung mit Zucker?";
+    de.faq_a8 =
+      "Meist etwa 3–4 Wochen glatte Haut — je nach Zone, Haarzyklus und Regelmäßigkeit. Bei regelmäßigen Terminen wachsen die Haare oft feiner nach und es gibt weniger Eingewachsene.";
     de.faq_q3 = "Wie bereite ich mich auf Zuckerpaste vor?";
-    de.faq_a3 =
-      "Saubere Haut, keine schweren Öle; Haar ca. 0,5 cm; am Vortag sanftes Peeling, wenn möglich.";
+    de.faq_a3_html =
+      'Saubere Haut, keine schweren Öle; Haar ca. 0,5 cm (kürzer als bei Wachs); am Vortag sanftes Peeling. Vollständige Liste: <a href="przygotowanie-do-wizyty.html">Vorbereitung Haarentfernung mit Zucker</a>.';
+    de.faq_q9 = "Ist Haarentfernung mit Zuckerpaste wirksam?";
+    de.faq_a9 =
+      "Ja — die Paste entfernt das Haar mit der Wurzel; bei regelmäßigen Terminen wächst es oft feiner nach, weniger Eingewachsene. Ab ca. 0,5 cm Haarlänge — kürzer als bei Wachs.";
     de.faq_q4 = "Wie lange hält ein Spray-Tan?";
     de.faq_a4 =
       "Meist etwa 5–10 Tage schöner Glanz, je nach Pflege. Wir geben Tipps, damit die Farbe gleichmäßig ausklingt.";
@@ -821,6 +875,8 @@
       "Am schnellsten antworten wir per WhatsApp und Telefon — wir bestätigen den Termin und senden bei Bedarf Wegbeschreibung zum Studio am rechten Ufer. Wenn Sie selbst einen freien Slot wählen möchten: Booksy-Kalender (Link im Kontaktbereich). Auf Facebook können Sie schreiben, wenn der Link aktiv ist.";
     de.contact_line1_html =
       '<span class="contact-aside__ic" aria-hidden="true">◎</span> <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">ul. Jerzego Andrzejewskiego 29c, 70-779 Stettin (Prawobrzeże), Woiwodschaft Westpommern, Polen</a>';
+    de.contact_hours_html =
+      '<span class="contact-aside__ic" aria-hidden="true">⏰</span> <strong>Öffnungszeiten:</strong> Mo–Fr 10:00–21:00 · Wochenende (Sa–So) 10:00–16:00';
     de.contact_line_ig_html =
       '<span class="contact-aside__ic" aria-hidden="true">@</span> <a href="https://instagram.com/" rel="noopener noreferrer">Instagram</a>';
     de.contact_hint =
@@ -830,7 +886,7 @@
     de.contact_map_ph_html =
       'Die Karte (Google Maps) lädt hier nach <strong>Akzeptieren</strong> im Cookie-Hinweis — dann verbindet sich der Browser mit Google (wie beim Öffnen von Google Maps). <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">Standort in Google Maps öffnen</a>.';
     de.footer_index_html =
-      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — Beauty-Studio Stettin rechtes Ufer · <a href="cennik.html">Preise</a> · Zuckerpaste · Spray-Tan';
+      '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — Haarentfernung mit Zucker Stettin · <a href="cennik.html">Preisliste</a> · Spray-Tan';
     de.footer_cennik_html =
       '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — Beauty-Studio Stettin rechtes Ufer · <a href="cennik.html">Preise</a>';
     de.footer_sub_html =
@@ -853,9 +909,15 @@
       'Kurzbeschreibung für die Website <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. Ab <time datetime="2026-05-11">11. Mai 2026</time>.';
     de.legal_terms_meta_html =
       'Gilt für Beauty-Leistungen im Studio <span class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></span>. Gültig ab <time datetime="2026-05-11">11. Mai 2026</time>.';
-    de.cennik_sugar_h2 = "Haarentfernung mit Zuckerpaste";
+    de.cennik_sugar_h2 = "Haarentfernung mit Zucker — Preise Zuckerpaste";
     de.cennik_sugar_p1 =
-      "Sanfte Methode auf Basis von Zucker und Zitronensaft, besonders geschätzt bei empfindlicher Haut und im Bikini-Bereich. Regelmäßige Termine helfen, die Haut länger glatt zu halten und das Nachwachsen angenehmer zu machen.";
+      "Preisliste Zuckerpaste in Stettin (rechtes Ufer, SłodkoTu): sanfter als Wachs, auch empfindliche Haut und Bikini. Beliebte Zonen unten; voller Umfang in der ausklappbaren Liste.";
+    de.cennik_full_h2 = "Vollständige Preisliste Haarentfernung Zuckerpaste Stettin";
+    de.cennik_full_p =
+      "Zuckerpaste — Frauen und Männer, Gesicht und Körper, Pakete Bikini + Beine. Kategorie aufklappen für alle Zonen und Preise.";
+    de.prep_guide_h1 = "Vorbereitung Haarentfernung mit Zucker — Stettin";
+    de.prep_guide_intro_html =
+      'Ausführliche Tipps vor und nach Zuckerpaste und Spray-Tan bei SłodkoTu am rechten Ufer (TanExpert, MineTan). Kurzfassung auf der <a href="index.html#przygotowanie">Startseite</a>.';
     de.price_sugar_basic_label = "Beliebteste Zonen";
     de.price_sugar_basic_hint = "Beispielpreise ausgewählter Behandlungen.";
     de.price_sugar_pack_label = "Beliebteste Pakete";
@@ -892,9 +954,6 @@
     de.price_row_tan_whole = "Ganzer Körper";
     de.price_amt_tan_half = "ab 40 PLN";
     de.price_amt_tan_whole = "ab 80 PLN";
-    de.cennik_full_h2 = "Vollständige Preisliste: Zuckerpaste";
-    de.cennik_full_p =
-      "Klappen Sie eine Kategorie auf, um den vollen Leistungsumfang und Orientierungspreise zu sehen.";
     de.cennik_acc_women_sum = "Preisliste: Frauen";
     de.cennik_acc_men_sum = "Preisliste: Männer";
     de.cennik_acc_bikini_sum = "Bikini-Varianten";
