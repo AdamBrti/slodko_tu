@@ -73,6 +73,25 @@
     applyOptionalExternalUrl(cfg.facebookUrl, ".js-facebook-link", ".js-facebook-line");
     applyOptionalExternalUrl(cfg.booksyUrl, ".js-booksy-link", ".js-booksy-line");
 
+    var mapsOpen =
+      (cfg.googleMapsOpenUrl && String(cfg.googleMapsOpenUrl).trim()) || "";
+    var mapsReviews =
+      (cfg.googleMapsReviewsUrl && String(cfg.googleMapsReviewsUrl).trim()) || mapsOpen;
+    if (mapsOpen) {
+      document.querySelectorAll(".js-maps-link").forEach(function (a) {
+        a.setAttribute("href", mapsOpen);
+        a.setAttribute("rel", "noopener noreferrer");
+        if (!a.getAttribute("target")) a.setAttribute("target", "_blank");
+      });
+    }
+    if (mapsReviews) {
+      document.querySelectorAll(".js-maps-reviews-link").forEach(function (a) {
+        a.setAttribute("href", mapsReviews);
+        a.setAttribute("rel", "noopener noreferrer");
+        if (!a.getAttribute("target")) a.setAttribute("target", "_blank");
+      });
+    }
+
     var pub =
       cfg.publicSiteUrl && /^https?:\/\//i.test(String(cfg.publicSiteUrl).trim())
         ? String(cfg.publicSiteUrl).trim().replace(/\/+$/, "")
@@ -93,6 +112,24 @@
               if (node && node["@type"] === "BeautySalon") {
                 node.url = pub + "/";
                 node.image = pub + "/Logo%20S%C5%82odko%20Tu.jpg";
+                if (cfg.addressStreet) {
+                  node.address = node.address || {};
+                  node.address["@type"] = "PostalAddress";
+                  node.address.streetAddress = cfg.addressStreet;
+                  node.address.postalCode = cfg.addressPostalCode || "";
+                  node.address.addressLocality = cfg.addressLocality || "Szczecin";
+                  node.address.addressNeighborhood = cfg.addressNeighborhood || "";
+                  node.address.addressRegion = "Zachodniopomorskie";
+                  node.address.addressCountry = "PL";
+                }
+                if (cfg.geoLat != null && cfg.geoLng != null) {
+                  node.geo = {
+                    "@type": "GeoCoordinates",
+                    latitude: cfg.geoLat,
+                    longitude: cfg.geoLng,
+                  };
+                }
+                if (mapsOpen) node.hasMap = mapsOpen;
               }
             }
             raw = JSON.stringify(data);
@@ -111,6 +148,7 @@
   if (y) y.textContent = String(new Date().getFullYear());
 
   applySiteConfig();
+  document.addEventListener("slodkotu-i18n-applied", applySiteConfig);
 
   document.body.addEventListener("click", function (e) {
     var btn = e.target && e.target.closest && e.target.closest("#cookie-prefs-reset");

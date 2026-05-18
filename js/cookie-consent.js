@@ -47,9 +47,9 @@
   function mapIframeTitle() {
     var lang = (document.documentElement.getAttribute("lang") || "pl").toLowerCase().slice(0, 2);
     var titles = {
-      pl: "Mapa okolicy — Szczecin, Prawobrzeże",
-      en: "Area map — Szczecin, right bank",
-      de: "Karte der Umgebung — Stettin, rechtes Ufer",
+      pl: "Mapa — SłodkoTu, ul. Jerzego Andrzejewskiego 29, Szczecin",
+      en: "Map — SłodkoTu, 29 Jerzego Andrzejewskiego St, Szczecin",
+      de: "Karte — SłodkoTu, ul. Jerzego Andrzejewskiego 29, Stettin",
     };
     return titles[lang] || titles.pl;
   }

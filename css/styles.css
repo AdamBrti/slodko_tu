@@ -2059,6 +2059,38 @@ a:hover {
   background: var(--blush-soft);
 }
 
+.reviews-google {
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+  padding: 1.35rem 1.5rem;
+  text-align: center;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid color-mix(in srgb, var(--gold-soft) 45%, transparent);
+  box-shadow: var(--shadow-card);
+}
+
+.reviews-google__title {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--chocolate-muted);
+}
+
+.reviews-google__text {
+  margin: 0 0 1.1rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--chocolate);
+}
+
+.reviews-google__actions {
+  margin: 0;
+}
+
 .review-slider {
   max-width: 68rem;
   margin: 0 auto;

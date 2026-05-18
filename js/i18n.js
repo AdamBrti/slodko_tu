@@ -23,12 +23,12 @@
       en: {
         title: "Sugar hair removal Szczecin | SłodkoTu — sugar paste, spray tan right bank",
         description:
-          "Sugar paste hair removal in Szczecin (Prawobrzeże, Andrzejewskiego 29c). 7+ years of experience, sensitive skin welcome — from PLN 49. Book via WhatsApp or Booksy.",
+          "Sugar paste hair removal in Szczecin (Prawobrzeże, Andrzejewskiego 29). 7+ years of experience, sensitive skin welcome — from PLN 49. Book via WhatsApp or Booksy.",
       },
       de: {
         title: "Haarentfernung mit Zucker Stettin | SłodkoTu — Zuckerpaste, Spray-Tan",
         description:
-          "Zuckerpaste und Spray-Tan in Stettin (Prawobrzeże, Andrzejewskiego 29c). Über 7 Jahre Erfahrung — ab 49 PLN. Termin per WhatsApp oder Booksy.",
+          "Zuckerpaste und Spray-Tan in Stettin (Prawobrzeże, Andrzejewskiego 29). Über 7 Jahre Erfahrung — ab 49 PLN. Termin per WhatsApp oder Booksy.",
       },
     },
     cennik: {
@@ -283,6 +283,9 @@
     applyLegalBodies(lang);
     patchInternalLinks(lang);
     updateLangSwitchUI(lang);
+    try {
+      document.dispatchEvent(new CustomEvent("slodkotu-i18n-applied"));
+    } catch (e) {}
   }
 
   function mergeMessages() {
@@ -385,15 +388,19 @@
         "Very long baths and heavy sweating soften the tan — keep that in mind for the first days.",
       review_stars_aria: "Rating: 5 out of 5 stars",
       reviews_title: "Client reviews",
-      reviews_subtitle: "Short voices after visits — no hype.",
+      reviews_subtitle: "Voices after visits here — and reviews on our Google Maps profile (SłodkoTu).",
+      reviews_google_h3: "Google Maps reviews",
+      reviews_google_p:
+        "We’re a new studio, but the first ratings are already on Google — thank you! If you were happy with your visit, leaving a review on the SłodkoTu profile helps others find us on the right bank.",
+      reviews_google_btn: "See reviews on Google",
       faq_title: "Frequently asked questions",
       contact_title: "Book a visit",
       contact_subtitle:
-        "Book sugar hair removal in Szczecin: WhatsApp, phone or Booksy — 29c Jerzego Andrzejewskiego St, right bank.",
+        "Book sugar hair removal in Szczecin: WhatsApp, phone or Booksy — ul. Jerzego Andrzejewskiego 29, right bank.",
       contact_big_phone: "Phone",
       contact_big_wa: "WhatsApp",
       contact_big_ig: "Instagram",
-      contact_map_zoom: "Open in Google Maps",
+      contact_map_zoom: "Open SłodkoTu in Google Maps",
       cennik_back: "← Back to services",
       cennik_h1: "Sugar hair removal prices — Szczecin",
       cennik_lead_html:
@@ -436,7 +443,7 @@
         "DHA gives an even, natural tone without sunbeds. We adjust the shade to your complexion — fresh-looking skin without excess.",
       local_title: "Sugar hair removal Szczecin — right bank, easy from Gryfino & nearby",
       local_p_html:
-        "<strong>Sugar hair removal Szczecin right bank:</strong> studio at <strong>29c Jerzego Andrzejewskiego St</strong> (70-779). Easy from <strong>Gryfino, Police, Chojna, Widuchowa, Banie and Stare Czarnowo</strong>. We’ll clarify entry after you book.",
+        "<strong>Sugar hair removal Szczecin right bank:</strong> studio at <strong>ul. Jerzego Andrzejewskiego 29</strong> (70-786). Easy from <strong>Gryfino, Police, Chojna, Widuchowa, Banie and Stare Czarnowo</strong>. We’ll clarify entry after you book.",
       local_cta: "Ask about directions",
       reviews_cta_btn: "Match the service to your skin",
       review1_tag: "After sugar bikini",
@@ -463,7 +470,7 @@
     en.seo_p1 =
       "Looking for sugar hair removal on the right bank without crowds or rush? We offer sugaring — natural sugar and lemon paste — on underarms, legs, arms and bikini (classic, extended and deep).";
     en.seo_p2 =
-      "Many people search “sugar hair removal Szczecin” or “sugar paste Prawobrzeże” — it’s the same gentle method we’ve used for years. Studio at 29c Jerzego Andrzejewskiego St; book via WhatsApp, phone or Booksy.";
+      "Many people search “sugar hair removal Szczecin” or “sugar paste Prawobrzeże” — it’s the same gentle method we’ve used for years. Studio at ul. Jerzego Andrzejewskiego 29; book via WhatsApp, phone or Booksy.";
     en.hero_title = "Sugar hair removal Szczecin<br />sugar paste & spray tan — intimate studio";
     en.hero_lead =
       "Sugar paste hair removal on Szczecin right bank — smooth skin, natural glow and zero pressure. 7+ years of practice, including sensitive skin and bikini.";
@@ -513,7 +520,7 @@
     en.faq_a6 =
       "We reply fastest on WhatsApp and phone — we confirm your slot and can send directions to our right-bank Szczecin studio. Prefer to choose a free time yourself? Use the Booksy calendar (link in Contact). You can also message us on Facebook when that link is active.";
     en.contact_line1_html =
-      '<span class="contact-aside__ic" aria-hidden="true">◎</span> <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">29c Jerzego Andrzejewskiego St, 70-779 Szczecin (right bank / Prawobrzeże), West Pomerania, Poland</a>';
+      '<span class="contact-aside__ic" aria-hidden="true">◎</span> <a class="js-maps-link" href="https://maps.app.goo.gl/TydezwR44vfidsL5A" target="_blank" rel="noopener noreferrer">ul. Jerzego Andrzejewskiego 29, 70-786 Szczecin (right bank / Prawobrzeże), West Pomerania, Poland</a>';
     en.contact_hours_html =
       '<span class="contact-aside__ic" aria-hidden="true">⏰</span> <strong>Opening hours:</strong> Mon–Fri 10:00–21:00 · weekends (Sat–Sun) 10:00–16:00';
     en.contact_line_ig_html =
@@ -523,7 +530,7 @@
     en.contact_trust =
       "A short first message is enough. We reply on WhatsApp and phone; you can also grab a slot on Booksy — no long forms on this site.";
     en.contact_map_ph_html =
-      'The map (Google Maps) loads here after you choose <strong>I accept</strong> in the cookie notice — your browser then connects to Google’s servers (like opening Google Maps). <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">Open location in Google Maps</a>.';
+      'The map (Google Maps) loads here after you choose <strong>I accept</strong> in the cookie notice — your browser then connects to Google’s servers. <a class="js-maps-link" href="https://maps.app.goo.gl/TydezwR44vfidsL5A" target="_blank" rel="noopener noreferrer">Open the SłodkoTu profile in Google Maps</a>.';
     en.footer_index_html =
       '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — sugar hair removal Szczecin right bank · <a href="cennik.html">Price list</a> · spray tan';
     en.footer_cennik_html =
@@ -778,14 +785,18 @@
         "Lange Bäder und starkes Schwitzen schwächen die Bräune — in den ersten Tagen beachten.",
       review_stars_aria: "Bewertung: 5 von 5 Sternen",
       reviews_title: "Stimmen von Kundinnen",
-      reviews_subtitle: "Kurze Stimmen nach dem Besuch — ohne Übertreibung.",
+      reviews_subtitle: "Stimmen nach dem Besuch bei uns — und Bewertungen auf Google Maps (SłodkoTu).",
+      reviews_google_h3: "Bewertungen auf Google Maps",
+      reviews_google_p:
+        "Das Studio ist noch jung, aber die ersten Sterne sind schon auf Google — danke! Wenn Sie zufrieden waren, freuen wir uns über eine Bewertung im SłodkoTu-Profil; das hilft anderen, uns am rechten Ufer zu finden.",
+      reviews_google_btn: "Bewertungen auf Google ansehen",
       review1_tag: "Nach Zuckerpaste — Bikini",
       review2_tag: "Spray-Tan vor der Hochzeit",
       review3_tag: "Empfindliche Haut — Beine & Achseln",
       reviews_cta_btn: "Behandlung an die Haut anpassen",
       local_title: "Haarentfernung mit Zucker Stettin — rechtes Ufer, Anfahrt aus Gryfino & Umgebung",
       local_p_html:
-        "<strong>Haarentfernung mit Zucker Stettin rechtes Ufer:</strong> Studio in der <strong>Jerzego Andrzejewskiego 29c</strong> (70-779). Anfahrt u. a. aus <strong>Gryfino, Police, Chojna, Widuchowa, Banie und Stare Czarnowo</strong>. Eingang klären wir nach der Buchung.",
+        "<strong>Haarentfernung mit Zucker Stettin rechtes Ufer:</strong> Studio in der <strong>Jerzego Andrzejewskiego 29</strong> (70-786). Anfahrt u. a. aus <strong>Gryfino, Police, Chojna, Widuchowa, Banie und Stare Czarnowo</strong>. Eingang klären wir nach der Buchung.",
       local_cta: "Nach Anfahrt fragen",
       faq_title: "Häufige Fragen",
       faq_cta_btn: "Ich habe eine Frage — WhatsApp",
@@ -801,11 +812,11 @@
       contact_facebook_link: "Facebook — Słodko Tu",
       contact_title: "Termin buchen",
       contact_subtitle:
-        "Haarentfernung mit Zucker in Stettin buchen: WhatsApp, Telefon oder Booksy — ul. Jerzego Andrzejewskiego 29c, rechtes Ufer.",
+        "Haarentfernung mit Zucker in Stettin buchen: WhatsApp, Telefon oder Booksy — ul. Jerzego Andrzejewskiego 29, rechtes Ufer.",
       contact_big_phone: "Telefon",
       contact_big_wa: "WhatsApp",
       contact_big_ig: "Instagram",
-      contact_map_zoom: "In Google Maps öffnen",
+      contact_map_zoom: "SłodkoTu in Google Maps öffnen",
       cennik_back: "← Zurück zu den Leistungen",
       cennik_h1: "Preise Zuckerpaste — Stettin",
       cennik_lead_html:
@@ -824,7 +835,7 @@
     de.seo_p1 =
       "Sie suchen Haarentfernung mit Zucker am rechten Ufer ohne Hetze? Wir bieten Sugaring — natürliche Paste aus Zucker und Zitrone — an Achseln, Beinen, Armen und im Bikini (klassisch, erweitert, tief).";
     de.seo_p2 =
-      "Viele suchen „Haarentfernung Zuckerpaste Stettin“ oder „Prawobrzeże“ — dieselbe sanfte Methode seit Jahren. Studio: ul. Jerzego Andrzejewskiego 29c; Termin per WhatsApp, Telefon oder Booksy.";
+      "Viele suchen „Haarentfernung Zuckerpaste Stettin“ oder „Prawobrzeże“ — dieselbe sanfte Methode seit Jahren. Studio: ul. Jerzego Andrzejewskiego 29; Termin per WhatsApp, Telefon oder Booksy.";
     de.hero_title =
       "Haarentfernung mit Zucker Stettin<br />Zuckerpaste & Spray-Tan — kleines Studio";
     de.hero_lead =
@@ -874,7 +885,7 @@
     de.faq_a6 =
       "Am schnellsten antworten wir per WhatsApp und Telefon — wir bestätigen den Termin und senden bei Bedarf Wegbeschreibung zum Studio am rechten Ufer. Wenn Sie selbst einen freien Slot wählen möchten: Booksy-Kalender (Link im Kontaktbereich). Auf Facebook können Sie schreiben, wenn der Link aktiv ist.";
     de.contact_line1_html =
-      '<span class="contact-aside__ic" aria-hidden="true">◎</span> <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">ul. Jerzego Andrzejewskiego 29c, 70-779 Stettin (Prawobrzeże), Woiwodschaft Westpommern, Polen</a>';
+      '<span class="contact-aside__ic" aria-hidden="true">◎</span> <a class="js-maps-link" href="https://maps.app.goo.gl/TydezwR44vfidsL5A" target="_blank" rel="noopener noreferrer">ul. Jerzego Andrzejewskiego 29, 70-786 Stettin (Prawobrzeże), Woiwodschaft Westpommern, Polen</a>';
     de.contact_hours_html =
       '<span class="contact-aside__ic" aria-hidden="true">⏰</span> <strong>Öffnungszeiten:</strong> Mo–Fr 10:00–21:00 · Wochenende (Sa–So) 10:00–16:00';
     de.contact_line_ig_html =
@@ -884,7 +895,7 @@
     de.contact_trust =
       "Eine kurze erste Nachricht reicht. Wir antworten per WhatsApp und Telefon; Termine sind auch über Booksy möglich — ohne langes Formular auf dieser Seite.";
     de.contact_map_ph_html =
-      'Die Karte (Google Maps) lädt hier nach <strong>Akzeptieren</strong> im Cookie-Hinweis — dann verbindet sich der Browser mit Google (wie beim Öffnen von Google Maps). <a href="https://www.google.com/maps/search/?api=1&amp;query=53.38108%2C14.66285" target="_blank" rel="noopener noreferrer">Standort in Google Maps öffnen</a>.';
+      'Die Karte (Google Maps) lädt hier nach <strong>Akzeptieren</strong> im Cookie-Hinweis — dann verbindet sich der Browser mit Google. <a class="js-maps-link" href="https://maps.app.goo.gl/TydezwR44vfidsL5A" target="_blank" rel="noopener noreferrer">SłodkoTu-Profil in Google Maps öffnen</a>.';
     de.footer_index_html =
       '<strong class="brand-mark"><span class="brand-mark__slodko">Słodko</span><span class="brand-mark__tu">Tu</span></strong> — Haarentfernung mit Zucker Stettin · <a href="cennik.html">Preisliste</a> · Spray-Tan';
     de.footer_cennik_html =
